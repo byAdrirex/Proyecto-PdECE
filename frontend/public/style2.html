@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style 2 — Neo-Brutalist</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #f5f0e8; color: #111; font-family: 'Space Grotesk', sans-serif; min-height: 100vh; padding: 2rem; }
+  .container { max-width: 800px; margin: 0 auto; }
+  .hero { border: 4px solid #111; padding: 2.5rem; margin-bottom: 2rem; background: #ffe66d; position: relative; }
+  .hero::before { content: ''; position: absolute; top: 12px; left: 12px; width: 100%; height: 100%; border: 4px solid #111; background: #ff6b6b; z-index: -1; }
+  h1 { font-size: 3rem; line-height: 1; text-transform: uppercase; letter-spacing: -.03em; }
+  .subtitle { font-size: 1rem; margin-top: .8rem; font-weight: 700; text-transform: uppercase; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
+  .card { border: 3px solid #111; padding: 1.5rem; background: #fff; position: relative; transition: transform .15s; cursor: pointer; text-decoration: none; color: #111; display: block; }
+  .card:hover { transform: translate(-4px, -4px); box-shadow: 4px 4px 0 #111; }
+  .card:active { transform: translate(0, 0); box-shadow: none; }
+  .card h2 { font-size: 1.3rem; text-transform: uppercase; margin-bottom: .4rem; }
+  .card p { font-size: .8rem; color: #555; }
+  .card:nth-child(1) { background: #c7f464; }
+  .card:nth-child(2) { background: #4ecdc4; }
+  .card:nth-child(3) { background: #ff6b6b; color: #fff; }
+  .card:nth-child(3) p { color: #ddd; }
+  .card:nth-child(4) { background: #a8d8ea; }
+  .tag { display: inline-block; border: 2px solid #111; padding: .15rem .5rem; font-size: .65rem; font-weight: 700; text-transform: uppercase; margin-top: .6rem; }
+  footer { margin-top: 2rem; padding-top: 1rem; border-top: 3px solid #111; font-size: .75rem; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="hero">
+    <h1>Planificador<br>Académico</h1>
+    <p class="subtitle">Economía · UMSS 2026</p>
+  </div>
+  <div class="grid">
+    <a href="/malla" class="card">
+      <h2>Malla Curricular</h2>
+      <p>Explora las 9 materias por semestre, prerrequisitos y trayectorias.</p>
+      <span class="tag">9 semestres</span>
+    </a>
+    <a href="/horario" class="card">
+      <h2>Armar Horario</h2>
+      <p>Selecciona grupos, compara horarios y detecta conflictos.</p>
+      <span class="tag">Oferta 2026-2</span>
+    </a>
+    <a href="/progreso" class="card">
+      <h2>Mi Progreso</h2>
+      <p>Carga tu kardex y visualiza tu avance académico.</p>
+      <span class="tag">Kardex</span>
+    </a>
+    <a href="/guia" class="card">
+      <h2>Guía</h2>
+      <p>Cómo usar el planificador paso a paso.</p>
+      <span class="tag">Ayuda</span>
+    </a>
+  </div>
+  <footer>Planificador Académico · Facultad de Ciencias Económicas · UMSS</footer>
+</div>
+</body>
+</html>

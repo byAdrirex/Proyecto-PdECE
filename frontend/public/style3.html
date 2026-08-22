@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style 3 — Minimalista</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fff; color: #111; font-family: 'Inter', sans-serif; min-height: 100vh; }
+  .container { max-width: 600px; margin: 0 auto; padding: 6rem 2rem 4rem; }
+  h1 { font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .2em; color: #999; margin-bottom: .5rem; }
+  .title { font-size: 2.8rem; font-weight: 300; line-height: 1.1; margin-bottom: 1.5rem; }
+  .divider { width: 40px; height: 1px; background: #ccc; margin: 2rem 0; }
+  p { font-size: .9rem; color: #666; line-height: 1.7; margin-bottom: .5rem; }
+  nav { margin-top: 2rem; }
+  nav a { display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 0; border-bottom: 1px solid #eee; text-decoration: none; color: #111; font-size: .85rem; font-weight: 400; transition: padding-left .2s; }
+  nav a:hover { padding-left: .5rem; }
+  nav a span { color: #ccc; font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; }
+  .arrow { font-size: .8rem; color: #ccc; transition: transform .2s; }
+  nav a:hover .arrow { transform: translateX(4px); color: #111; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Universidad Mayor de San Simón</h1>
+  <div class="title">Planificador<br>Académico</div>
+  <div class="divider"></div>
+  <p>Carrera de Economía — Herramienta para explorar la malla curricular, verificar prerrequisitos y organizar tu horario de clases.</p>
+  <nav>
+    <a href="/malla"><span>Malla curricular</span><span class="arrow">→</span></a>
+    <a href="/horario"><span>Armar horario</span><span class="arrow">→</span></a>
+    <a href="/progreso"><span>Mi progreso</span><span class="arrow">→</span></a>
+    <a href="/guia"><span>Guía de uso</span><span class="arrow">→</span></a>
+  </nav>
+</div>
+</body>
+</html>

@@ -57,7 +57,7 @@ h2 { font-size: clamp(1.35rem, 2vw, 2rem); }
 .status--abandonada, .status--sin_historial, .status--bloqueada { color: #59687a; background: #eef1f4; border-color: #ccd5df; }
 .status--en_curso { color: #225fa4; background: #eaf3ff; border-color: #b9d2f1; }
 .status--disponible, .status--sin_prerrequisitos { color: #8a5a13; background: #fff7df; border-color: #edd399; }
-.semester-scroll { overflow-x: auto; padding: .15rem 0 1.2rem; scroll-snap-type: x proximity; }
+.semester-scroll { overflow-x: auto; padding: .15rem 0 1.2rem; scroll-snap-type: x proximity; position: relative; }
 .semester-grid { display: grid; grid-template-columns: repeat(9,minmax(230px,1fr)); gap: .8rem; min-width: 2200px; }
 .semester-column { scroll-snap-align: start; padding: .7rem; border: 1px solid #d5e0ea; border-radius: 14px; background: rgba(249,251,253,.82); }
 .semester-column > h2 { position: sticky; top: 0; z-index: 2; margin: -.7rem -.7rem .7rem; padding: .78rem; border-radius: 13px 13px 0 0; background: #dcebf5; color: #164e7a; font-family: inherit; font-size: .82rem; text-align: center; }
@@ -217,6 +217,8 @@ th { color: var(--muted); font-size: .65rem; text-transform: uppercase; }
 .guide-links { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .6rem; }
 .guide-links a { display: grid; padding: .8rem; border: 1px solid var(--line); border-radius: 10px; text-decoration: none; }
 .guide-links span { color: var(--muted); font-size: .68rem; }
+.calendar-image-container { margin-top: 1.5rem; padding: 1rem; background: #fff; border-radius: 14px; box-shadow: 0 5px 20px rgba(0,0,0,.12); }
+.calendar-image { display: block; width: 100%; height: auto; border-radius: 8px; }
 .pdf-viewer { min-height: 520px; padding: 1rem; }
 .pdf-pages { display: grid; gap: 1rem; }
 .pdf-page { display: block; width: 100%; height: auto; background: #fff; box-shadow: 0 5px 20px rgba(0,0,0,.12); }
@@ -225,4 +227,6 @@ th { color: var(--muted); font-size: .65rem; text-transform: uppercase; }
 .pdf-external { display: block; padding-top: 1rem; text-align: center; font-size: .78rem; font-weight: 700; }
 @media (max-width: 900px) { .site-nav { align-items: flex-start; padding: .8rem 0; flex-direction: column; gap: .4rem; } .site-links { width: 100%; justify-content: flex-start; overflow-x: auto; } .site-links a { white-space: nowrap; } .planner-layout { grid-template-columns: 1fr; } .planner-browser { position: static; max-height: none; } .objective-grid, .guide-links { grid-template-columns: repeat(2,1fr); } .quick-links, .metric-grid { grid-template-columns: repeat(2,1fr); } }
 @media (max-width: 600px) { .site-main, .site-nav { width: min(100% - 1rem,1680px); } .site-footer { flex-direction: column; } .floating-actions a span { display: none; } .page-heading h1 { font-size: 2.35rem; } .quick-links, .objective-grid, .guide-links, .import-grid, .metric-grid, .relation-grid, .progress-hero, .calendar-event-list { grid-template-columns: 1fr; } .planner-heading { align-items: flex-start; flex-direction: column; } .semester-grid { grid-template-columns: repeat(9,80vw); min-width: calc(9 * 80vw + 8 * .8rem); } .action-row { flex-direction: column; } .metric-grid--planner { grid-template-columns: 1fr; } .search-results li { align-items: stretch; flex-direction: column; } .site-links a { font-size: .75rem; } }
+.malla-connections-svg { position: absolute; top: 0; left: 0; pointer-events: none; z-index: 5; }
+.malla-connection-path { opacity: 0.85; transition: opacity 0.15s; }
 @media print { body { background: #fff; } .site-header, .site-footer, .floating-actions, .quick-links, .planner-toolbar, .back-link, .button, input, .action-row, .level-filter, .aux-toggle button { display: none !important; } .subject-card, .objective-grid button { display: block !important; color: #17263b !important; } .site-main { width: 100%; max-width: none; padding: 0; } .surface { box-shadow: none; } .semester-scroll, .calendar-overflow { overflow: visible; } .semester-grid { transform-origin: top left; transform: scale(.56); width: 178%; min-width: 0; grid-template-columns: repeat(9,1fr); } .planner-layout { display: block; } .planner-browser { display: none; } .calendar-canvas { min-width: 0; } }

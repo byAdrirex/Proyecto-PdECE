@@ -1,5 +1,4 @@
 ---
-import { PdfViewer } from '../components/PdfViewer';
 import AppLayout from '../layouts/AppLayout.astro';
 ---
 
@@ -11,10 +10,12 @@ import AppLayout from '../layouts/AppLayout.astro';
       <h1>Calendario Académico</h1>
       <p>Consulta las fechas académicas en el documento oficial.</p>
     </header>
-    <PdfViewer
-      src="/calendario-academico.pdf"
-      fallbackHref="https://www.fce.umss.edu.bo/webpage/"
-      client:only="react"
-    />
+    <div class="calendar-image-container">
+      <img
+        src="https://www.fce.umss.edu.bo/webpage/sites/default/files/inline-images/Calendario%20Academico%20FCE%20II-2026_.jpg"
+        alt="Calendario Académico FCE II-2026"
+        class="calendar-image"
+      />
+    </div>
   </section>
 </AppLayout>

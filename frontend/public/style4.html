@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style 4 — Retro DOS</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #000080; color: #fff; font-family: 'Courier New', monospace; min-height: 100vh; padding: 1.5rem; }
+  .window { max-width: 600px; margin: 0 auto; border: 2px solid #c0c0c0; background: #c0c0c0; }
+  .title-bar { background: linear-gradient(90deg, #000080, #1084d0); padding: .25rem .4rem; display: flex; justify-content: space-between; align-items: center; }
+  .title-bar span { color: #fff; font-size: .7rem; font-weight: bold; }
+  .btn-group { display: flex; gap: 2px; }
+  .btn-group button { width: 16px; height: 14px; border: 1px solid #fff; border-right-color: #808080; border-bottom-color: #808080; background: #c0c0c0; font-size: .5rem; cursor: pointer; display: grid; place-items: center; }
+  .content { padding: 1rem; }
+  .menu-bar { border-bottom: 1px solid #808080; padding-bottom: .3rem; margin-bottom: .8rem; }
+  .menu-bar span { font-size: .7rem; color: #000; padding: 0 .5rem; }
+  .menu-bar span u { text-decoration: underline; }
+  h1 { color: #000; font-size: 1.1rem; margin-bottom: .8rem; }
+  p { color: #000; font-size: .75rem; line-height: 1.6; margin-bottom: .5rem; }
+  .list-box { background: #fff; border: 2px inset #c0c0c0; padding: .5rem; margin: .8rem 0; }
+  .list-box a { display: block; color: #000; font-size: .75rem; padding: .3rem .5rem; text-decoration: none; }
+  .list-box a:hover { background: #000080; color: #fff; }
+  .status-bar { border-top: 2px solid #fff; border-left: 2px solid #fff; border-right: 2px solid #808080; border-bottom: 2px solid #808080; padding: .2rem .5rem; font-size: .65rem; color: #000; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+<div class="window">
+  <div class="title-bar">
+    <span>Planificador Academico — UMSS</span>
+    <div class="btn-group"><button>_</button><button>□</button><button>×</button></div>
+  </div>
+  <div class="content">
+    <div class="menu-bar"><span><u>A</u>rchivo</span><span><u>V</u>er</span><span>A<u>y</u>uda</span></div>
+    <h1>PLANIFICADOR ACADEMICO v2.0</h1>
+    <p>Universidad Mayor de San Simón — Facultad de Ciencias Económicas</p>
+    <p>Sistema de planificación para la carrera de Economía.</p>
+    <div class="list-box">
+      <a href="/malla">▸ MALLA CURRICULAR — 9 semestres, 76 materias</a>
+      <a href="/horario">▸ ARMAR MI HORARIO — Oferta 2026-2</a>
+      <a href="/progreso">▸ MI PROGRESO — Seguimiento académico</a>
+      <a href="/guia">▸ GUÍA — Cómo usar el sistema</a>
+    </div>
+    <p>[ ENTER ] para seleccionar · [ TAB ] para navegar</p>
+  </div>
+  <div class="status-bar"><span>Listo</span><span>C:FREEBUFF</span></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style 5 — Glassmorphism</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); font-family: 'Poppins', sans-serif; min-height: 100vh; display: grid; place-items: center; padding: 2rem; }
+  .container { max-width: 500px; width: 100%; }
+  .glass { background: rgba(255,255,255,.15); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,.25); border-radius: 20px; padding: 2.5rem; color: #fff; }
+  h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: .3rem; }
+  .subtitle { font-size: .8rem; opacity: .7; margin-bottom: 1.5rem; }
+  p { font-size: .82rem; opacity: .8; line-height: 1.6; margin-bottom: 1.5rem; }
+  nav { display: grid; gap: .7rem; }
+  nav a { display: block; padding: 1rem 1.2rem; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.15); border-radius: 12px; color: #fff; text-decoration: none; font-size: .85rem; font-weight: 500; transition: background .2s, transform .15s; }
+  nav a:hover { background: rgba(255,255,255,.22); transform: translateY(-2px); }
+  nav a small { display: block; font-size: .7rem; opacity: .6; font-weight: 300; margin-top: .2rem; }
+  .footer { text-align: center; margin-top: 1.5rem; font-size: .65rem; opacity: .4; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="glass">
+    <h1>Planificador Académico</h1>
+    <p class="subtitle">Economía · UMSS 2026</p>
+    <p>Explora la malla curricular, verifica prerrequisitos y organiza tu horario de clases.</p>
+    <nav>
+      <a href="/malla">Malla Curricular<small>9 semestres · 76 materias</small></a>
+      <a href="/horario">Armar Mi Horario<small>Oferta 2026-2 · Grupos disponibles</small></a>
+      <a href="/progreso">Mi Progreso<small>Seguimiento de avance académico</small></a>
+      <a href="/guia">Guía de Uso<small>Paso a paso</small></a>
+    </nav>
+  </div>
+  <p class="footer">Planificador Académico · Facultad de Ciencias Económicas</p>
+</div>
+</body>
+</html>

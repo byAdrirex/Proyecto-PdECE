@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style 10 — SaaS Moderno</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafbfc; color: #1a1a2e; font-family: 'Plus Jakarta Sans', sans-serif; min-height: 100vh; }
+  .nav { max-width: 900px; margin: 0 auto; padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-weight: 800; font-size: 1.1rem; color: #4f46e5; }
+  .nav-links { display: flex; gap: 1.5rem; }
+  .nav-links a { font-size: .8rem; color: #666; text-decoration: none; font-weight: 600; }
+  .nav-links a:hover { color: #4f46e5; }
+  .hero { max-width: 650px; margin: 5rem auto 3rem; text-align: center; padding: 0 2rem; }
+  .pill { display: inline-flex; align-items: center; gap: .4rem; padding: .35rem .9rem; background: #eef2ff; color: #4f46e5; border-radius: 999px; font-size: .7rem; font-weight: 600; margin-bottom: 1.2rem; }
+  .pill .dot { width: 6px; height: 6px; border-radius: 50%; background: #22c55e; }
+  h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.1; letter-spacing: -.03em; margin-bottom: 1rem; }
+  h1 span { color: #4f46e5; }
+  .desc { font-size: 1rem; color: #666; line-height: 1.6; max-width: 480px; margin: 0 auto 2rem; }
+  .btn-group { display: flex; gap: .8rem; justify-content: center; }
+  .btn { display: inline-flex; align-items: center; gap: .4rem; padding: .75rem 1.5rem; border-radius: 10px; font-size: .85rem; font-weight: 600; text-decoration: none; transition: transform .15s, box-shadow .2s; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: #4f46e5; color: #fff; box-shadow: 0 4px 14px rgba(79,70,229,.3); }
+  .btn-primary:hover { box-shadow: 0 6px 20px rgba(79,70,229,.4); }
+  .btn-secondary { background: #fff; color: #333; border: 1px solid #e5e7eb; }
+  .features { max-width: 750px; margin: 0 auto 4rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; padding: 0 2rem; }
+  .feature { padding: 1.5rem; background: #fff; border: 1px solid #f0f0f0; border-radius: 14px; text-decoration: none; color: #1a1a2e; transition: box-shadow .2s, transform .15s; }
+  .feature:hover { box-shadow: 0 8px 30px rgba(0,0,0,.06); transform: translateY(-2px); }
+  .feature-icon { font-size: 1.5rem; margin-bottom: .6rem; }
+  .feature h3 { font-size: .85rem; font-weight: 800; margin-bottom: .3rem; }
+  .feature p { font-size: .75rem; color: #888; line-height: 1.5; }
+  .footer { text-align: center; padding: 2rem; font-size: .7rem; color: #bbb; border-top: 1px solid #f0f0f0; }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="logo">Planificador</div>
+  <div class="nav-links">
+    <a href="/malla">Malla</a>
+    <a href="/horario">Horario</a>
+    <a href="/progreso">Progreso</a>
+    <a href="/guia">Guía</a>
+  </div>
+</nav>
+<div class="hero">
+  <div class="pill"><span class="dot"></span> Oferta 2026-2 disponible</div>
+  <h1>Organiza tu<br><span>carrera</span> sin estrés</h1>
+  <p class="desc">Explora la malla curricular, verifica prerrequisitos y arma tu horario ideal en minutos.</p>
+  <div class="btn-group">
+    <a href="/malla" class="btn btn-primary">Ver malla →</a>
+    <a href="/horario" class="btn btn-secondary">Armar horario</a>
+  </div>
+</div>
+<div class="features">
+  <a href="/malla" class="feature">
+    <div class="feature-icon">📐</div>
+    <h3>Malla Curricular</h3>
+    <p>9 semestres, 76 materias con prerrequisitos y dependencias.</p>
+  </a>
+  <a href="/horario" class="feature">
+    <div class="feature-icon">🗓️</div>
+    <h3>Armar Horario</h3>
+    <p>Compara grupos, detecta conflictos y organiza tu semana.</p>
+  </a>
+  <a href="/progreso" class="feature">
+    <div class="feature-icon">📈</div>
+    <h3>Mi Progreso</h3>
+    <p>Carga tu kardex y visualiza tu avance académico.</p>
+  </a>
+</div>
+<div class="footer">Planificador Académico · Facultad de Ciencias Económicas · UMSS</div>
+</body>
+</html>

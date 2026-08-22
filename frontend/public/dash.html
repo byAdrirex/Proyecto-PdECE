@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dash — Estilos</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #f8f9fa; font-family: 'Inter', sans-serif; min-height: 100vh; padding: 2rem; }
+  h1 { font-size: 1.6rem; font-weight: 800; text-align: center; margin-bottom: .3rem; }
+  .sub { text-align: center; color: #888; font-size: .8rem; margin-bottom: 2rem; }
+  .grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+  .tile { border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; background: #fff; transition: box-shadow .2s, transform .15s; text-decoration: none; color: inherit; display: flex; flex-direction: column; }
+  .tile:hover { box-shadow: 0 8px 30px rgba(0,0,0,.08); transform: translateY(-3px); }
+  .preview { height: 160px; display: flex; align-items: center; justify-content: center; font-size: .65rem; color: #999; overflow: hidden; position: relative; }
+  .preview iframe { width: 200%; height: 300%; transform: scale(.35); transform-origin: top left; border: none; pointer-events: none; position: absolute; top: 0; left: 0; }
+  .info { padding: 1rem; border-top: 1px solid #f0f0f0; flex: 1; display: flex; flex-direction: column; }
+  .info .num { font-size: .6rem; font-weight: 600; color: #bbb; letter-spacing: .1em; }
+  .info h2 { font-size: .95rem; font-weight: 800; margin: .2rem 0 .3rem; }
+  .info p { font-size: .72rem; color: #888; line-height: 1.4; flex: 1; }
+  .info .go { display: inline-block; margin-top: .6rem; font-size: .72rem; font-weight: 600; color: #4f46e5; }
+  .info .go::after { content: ' →'; }
+</style>
+</head>
+<body>
+<h1>🎨 Estilos de Landing</h1>
+<p class="sub">14 alternativas visuales · landing + malla curricular</p>
+<div class="grid">
+
+  <a href="/style1.html" class="tile">
+    <div class="preview" style="background:#1a1a2e;"><iframe src="/style1.html" loading="lazy"></iframe></div>
+    <div class="info"><span class="num">01</span><h2>Mac Terminal</h2><p>Consola verde, cursor parpadeante, monoespaciado.</p><span class="go">Ver</span></div>
+  </a>
+
+  <a href="/style2.html" class="tile">
+    <div class="preview" style="background:#f5f0e8;"><iframe src="/style2.html" loading="lazy"></iframe></div>
+    <div class="info"><span class="num">02</span><h2>Neo-Brutalist</h2><p>Bordes gruesos, colores planos, sombras offset.</p><span class="go">Ver</span></div>
+  </a>
+
+  <a href="/style3.html" class="tile">
+    <div class="preview" style="background:#fff;"><iframe src="/style3.html" loading="lazy"></iframe></div>
+    <div class="info"><span class="num">03</span><h2>Minimalista Swiss</h2><p>Limpio, tipografía pura, mucho espacio blanco.</p><span class="go">Ver</span></div>
+  </a>
+
+  <a href="/style4.html" class="tile">
+    <div class="preview" style="background:#000080;"><iframe src="/style4.html" loading="lazy"></iframe></div>
+    <div class="info"><span class="num">04</span><h2>Retro DOS / Win95</h2><p>Ventana clásica, colores 16-bit, serif de consola.</p><span class="go">Ver</span></div>
+  </a>
+
+  <a href="/style5.html" class="tile">
+    <div class="preview" style="background:linear-gradient(135deg,#667eea,#764ba2);"><iframe src="/style5.html" loading="lazy"></iframe></div>
+    <div class="info"><span class="num">05</span><h2>Glassmorphism</h2><p>Fondo degradado, tarjetas translúcidas con blur.</p><span class="go">Ver</span></div>
+  </a>
+
+  <a href="/style6.html" class="tile">
+    <div class="preview" style="background:#0a0a0f;"><iframe src="/style6.html" loading="lazy"></iframe></div>
+    <div class="info"><span class="num">06</span><h2>Cyberpunk</h2><p>Neón cyan/rosa, scanlines, glitch text.</p><span class="go">Ver</span></div>
+  </a>
+
+  <a href="/style7.html" class="tile">
+    <div class="preview" style="background:#f4efe6;"><iframe src="/style7.html" loading="lazy"></iframe></div>
+    <div class="info"><span class="num">07</span><h2>Cuaderno</h2><p>Papel, líneas, tinta, estilo manuscrito.</p><span class="go">Ver</span></div>
+  </a>
+
+  <a href="/style8.html" class="tile">
+    <div class="preview" style="background:#faf6f1;"><iframe src="/style8.html" loading="lazy"></iframe></div>
+    <div class="info"><span class="num">08</span><h2>Cálido Terracota</h2><p>Tonos tierra, bordes suaves, emojis cálidos.</p><span class="go">Ver</span></div>
+  </a>
+
+  <a href="/style9.html" class="tile">
+    <div class="preview" style="background:#1a0033;"><iframe src="/style9.html" loading="lazy"></iframe></div>
+    <div class="info"><span class="num">09</span><h2>Synthwave</h2><p>Sol neón, rejilla en perspectiva, rosa/morado.</p><span class="go">Ver</span></div>
+  </a>
+
+  <a href="/style10.html" class="tile">
+    <div class="preview" style="background:#fafbfc;"><iframe src="/style10.html" loading="lazy"></iframe></div>
+    <div class="info"><span class="num">10</span><h2>SaaS Moderno</h2><p>Pills, botones con sombra, grid de features.</p><span class="go">Ver</span></div>
+  </a>
+
+  <a href="/style11.html" class="tile">
+    <div class="preview" style="background:#faf8f4;"><iframe src="/style11.html" loading="lazy"></iframe></div>
+    <div class="info"><span class="num">11</span><h2>Editorial · Malla</h2><p>Serif tipo revista, reglas finas, papel crema. Vista de la malla curricular.</p><span class="go">Ver</span></div>
+  </a>
+
+  <a href="/style12.html" class="tile">
+    <div class="preview" style="background:#08090a;"><iframe src="/style12.html" loading="lazy"></iframe></div>
+    <div class="info"><span class="num">12</span><h2>Linear · Malla</h2><p>Oscuro refinado, bordes sutiles, acento índigo. Vista de la malla curricular.</p><span class="go">Ver</span></div>
+  </a>
+
+  <a href="/style13.html" class="tile">
+    <div class="preview" style="background:#282828;"><iframe src="/style13.html" loading="lazy"></iframe></div>
+    <div class="info"><span class="num">13</span><h2>Gruvbox · Malla</h2><p>Tonos tierra cálidos, monoespaciado, retro-terminal. Vista de la malla curricular.</p><span class="go">Ver</span></div>
+  </a>
+
+  <a href="/style14.html" class="tile">
+    <div class="preview" style="background:#1a1b26;"><iframe src="/style14.html" loading="lazy"></iframe></div>
+    <div class="info"><span class="num">14</span><h2>Tokyo Night · Malla</h2><p>Azul nocturno, neones suaves, glow morado. Vista de la malla curricular.</p><span class="go">Ver</span></div>
+  </a>
+
+</div>
+</body>
+</html>

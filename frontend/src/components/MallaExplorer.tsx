@@ -7,6 +7,7 @@ import { buildMallaModel } from '../lib/domain/curriculum';
 import { normalizeAttempts } from '../lib/domain/kardex';
 import { applyObjectiveSelections } from '../lib/domain/objectives';
 import type { Catalog, MallaSubject, ObjectivesData, Offer } from '../lib/domain/types';
+import { MallaConnections } from './MallaConnections';
 import { Button } from './ui/Button';
 import { StatusBadge } from './ui/StatusBadge';
 import { useWorkspace } from './useWorkspace';
@@ -22,6 +23,7 @@ export interface MallaExplorerProps {
 export function MallaExplorer({ showBackLink = false }: MallaExplorerProps) {
   const [workspace, updateWorkspace] = useWorkspace();
   const [selectedCode, setSelectedCode] = useState<string | null>(null);
+  const [hoveredCode, setHoveredCode] = useState<string | null>(null);
   const closeButton = useRef<HTMLButtonElement>(null);
   const lastSubjectTrigger = useRef<HTMLButtonElement>(null);
   const base = useMemo(
@@ -42,6 +44,9 @@ export function MallaExplorer({ showBackLink = false }: MallaExplorerProps) {
   const related = useMemo(() => selectedCode
     ? new Set([selectedCode, ...selectedConnections.flatMap(({ from, to }) => [from, to])])
     : new Set<string>(), [selectedCode, selectedConnections]);
+
+  // Lines appear on hover or on selection
+  const activeCode = hoveredCode ?? selectedCode;
 
   const closeDialog = useCallback((): void => {
     setSelectedCode(null);
@@ -78,6 +83,8 @@ export function MallaExplorer({ showBackLink = false }: MallaExplorerProps) {
         lastSubjectTrigger.current = event.currentTarget;
         setSelectedCode(subject.code);
       }}
+      onMouseEnter={() => setHoveredCode(subject.code)}
+      onMouseLeave={() => setHoveredCode(null)}
       style={subject.colorGradient ? { background: subject.colorGradient } : undefined}
     >
       <span className="subject-card__code">{subject.code}</span>
@@ -139,6 +146,7 @@ export function MallaExplorer({ showBackLink = false }: MallaExplorerProps) {
             </section>
           ))}
         </div>
+        <MallaConnections connections={model.connections} activeCode={activeCode} />
       </div>
 
       <section className="surface compact-requirements">

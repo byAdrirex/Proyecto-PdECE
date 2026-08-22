@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style 7 — Cuaderno</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #f4efe6; font-family: 'Lora', serif; min-height: 100vh; padding: 2rem; }
+  .notebook { max-width: 550px; margin: 0 auto; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 2.5rem 2.5rem 2.5rem 3.5rem; position: relative; box-shadow: 2px 3px 12px rgba(0,0,0,.08); }
+  .notebook::before { content: ''; position: absolute; left: 2.5rem; top: 0; bottom: 0; width: 2px; background: #e8a0a0; }
+  .notebook::after { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2.5rem; background: linear-gradient(90deg, #f4efe6, #fff); }
+  .lines { background-image: repeating-linear-gradient(transparent, transparent 27px, #d4e4f7 27px, #d4e4f7 28px); background-position: 0 -4px; }
+  h1 { font-family: 'Caveat', cursive; font-size: 2.2rem; color: #2c5f2d; margin-bottom: .3rem; }
+  .date { font-family: 'Caveat', cursive; font-size: .9rem; color: #aaa; margin-bottom: 1rem; }
+  p { font-size: .85rem; color: #444; line-height: 1.85; margin-bottom: .8rem; }
+  .links { margin-top: 1.5rem; }
+  .links a { display: block; padding: .6rem 0; border-bottom: 1px dashed #ddd; color: #2c5f2d; text-decoration: none; font-size: .9rem; line-height: 1.85; }
+  .links a:hover { color: #8b4513; }
+  .links a::before { content: '☐ '; color: #ccc; }
+  .checkbox { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #eee; }
+  .checkbox label { font-size: .8rem; color: #888; display: flex; align-items: center; gap: .4rem; }
+  .footer { max-width: 550px; margin: 1.5rem auto 0; text-align: center; font-size: .7rem; color: #bbb; font-style: italic; }
+</style>
+</head>
+<body>
+<div class="notebook lines">
+  <h1>Planificador Académico</h1>
+  <p class="date">Lunes, 22 de agosto 2026</p>
+  <p>Bienvenido al sistema de planificación de la carrera de Economía de la UMSS. Aquí puedes explorar la malla curricular completa, verificar qué prerrequisitos necesitas y armar tu horario semanal.</p>
+  <div class="links">
+    <a href="/malla">Ver la malla curricular completa</a>
+    <a href="/horario">Armar mi horario de clases</a>
+    <a href="/progreso">Revisar mi progreso académico</a>
+    <a href="/guia">Leer la guía de uso</a>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox"> Recordar que el límite normal es 7 materias</label>
+  </div>
+</div>
+<p class="footer">Facultad de Ciencias Económicas · UMSS</p>
+</body>
+</html>

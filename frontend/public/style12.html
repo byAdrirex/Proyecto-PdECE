@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style 12 — Linear · Malla Curricular</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #08090a; color: #f7f8f8; font-family: 'Inter', sans-serif; padding: 2.5rem; font-size: 14px; }
+  .eyebrow { color: #6b7080; font-size: 12px; font-weight: 500; letter-spacing: .02em; }
+  h1 { font-size: 26px; font-weight: 700; letter-spacing: -.02em; margin: .4rem 0 .3rem; }
+  .sub { color: #8a8f98; font-size: 13px; margin-bottom: 1.4rem; }
+  .quick-links { display: inline-flex; gap: 4px; background: #16171a; border: 1px solid #23252a; border-radius: 10px; padding: 4px; margin-bottom: 1.5rem; }
+  .quick-links a { color: #b4b8bf; text-decoration: none; font-size: 12.5px; font-weight: 500; padding: 5px 12px; border-radius: 7px; }
+  .quick-links a:hover, .quick-links a.on { background: #1e2024; color: #f7f8f8; }
+  .legend { display: flex; gap: 14px; font-size: 11.5px; color: #8a8f98; margin-bottom: 1.5rem; }
+  .legend b { display: inline-flex; align-items: center; gap: 6px; font-weight: 500; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .grid { display: grid; grid-template-columns: repeat(3, 230px); gap: 16px; }
+  h2 { font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #6b7080; margin-bottom: 10px; }
+  .col { background: #101114; border: 1px solid #1f2126; border-radius: 14px; padding: 12px; box-shadow: 0 1px 2px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.03); }
+  .card { display: block; width: 100%; text-align: left; background: #17181c; border: 1px solid #24262c; border-radius: 9px; padding: 9px 11px; margin-bottom: 7px; cursor: pointer; transition: border-color .12s, transform .12s; }
+  .card:hover { border-color: #5e6ad2; transform: translateY(-1px); }
+  .code { font-size: 10.5px; font-weight: 600; color: #8a8f98; }
+  strong { display: block; font-size: 12.5px; font-weight: 500; color: #eceef1; margin: 3px 0; line-height: 1.35; }
+  meta { font-size: 10.5px; color: #6b7080; }
+  .aprobada { border-left: 3px solid #4cb782; }
+  .en_curso { border-left: 3px solid #6cb0fb; }
+  .disponible { border-left: 3px solid #d8a03d; }
+  .bloqueada { border-left: 3px solid #33363d; opacity: .55; }
+</style>
+</head>
+<body>
+  <p class="eyebrow">Carrera de Economía · UMSS</p>
+  <h1>Malla curricular</h1>
+  <p class="sub">Explora materias, prerrequisitos y trayectorias del plan de estudios.</p>
+
+  <nav class="quick-links">
+    <a href="#" class="on">Malla</a><a href="#">Mi progreso</a><a href="#">Horario</a><a href="#">Guía</a><a href="#">Calendario</a>
+  </nav>
+
+  <div class="legend">
+    <b><i class="dot" style="background:#4cb782"></i>Aprobada</b>
+    <b><i class="dot" style="background:#6cb0fb"></i>En curso</b>
+    <b><i class="dot" style="background:#d8a03d"></i>Disponible</b>
+    <b><i class="dot" style="background:#33363d"></i>Bloqueada</b>
+    <b><i class="dot" style="background:#eb5757"></i>Reprobada</b>
+  </div>
+
+  <div class="grid">
+    <section class="col">
+      <h2>Semestre 1</h2>
+      <div class="card disponible"><span class="code">ECO-101</span><strong>Introducción a la Economía</strong><meta>6 cr. · 80 h.</meta></div>
+      <div class="card disponible"><span class="code">MAT-101</span><strong>Matemáticas I</strong><meta>8 cr. · 96 h.</meta></div>
+      <div class="card aprobada"><span class="code">CONT-100</span><strong>Contabilidad General</strong><meta>5 cr. · 64 h.</meta></div>
+    </section>
+    <section class="col">
+      <h2>Semestre 3</h2>
+      <div class="card en_curso"><span class="code">ECO-201</span><strong>Microeconomía I</strong><meta>8 cr. · 96 h.</meta></div>
+      <div class="card disponible"><span class="code">EST-201</span><strong>Estadística I</strong><meta>6 cr. · 80 h.</meta></div>
+      <div class="card bloqueada"><span class="code">ECO-204</span><strong>Economía Boliviana</strong><meta>5 cr. · 64 h.</meta></div>
+    </section>
+    <section class="col">
+      <h2>Semestre 5</h2>
+      <div class="card bloqueada"><span class="code">ECO-301</span><strong>Macroeconomía II</strong><meta>8 cr. · 96 h.</meta></div>
+      <div class="card disponible"><span class="code">TMI-301</span><strong>Econometría I</strong><meta>6 cr. · 80 h.</meta></div>
+      <div class="card disponible"><span class="code">ELE-000</span><strong>Electiva</strong><meta>4 cr. · 48 h.</meta></div>
+    </section>
+  </div>
+</body>
+</html>

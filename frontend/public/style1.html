@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style 1 — Mac Terminal</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1a2e; color: #00ff41; font-family: 'JetBrains Mono', monospace; min-height: 100vh; padding: 2rem; }
+  .terminal { max-width: 720px; margin: 0 auto; border: 1px solid #333; border-radius: 8px; overflow: hidden; }
+  .terminal-bar { background: #2d2d44; padding: .5rem .8rem; display: flex; align-items: center; gap: .5rem; }
+  .terminal-bar span { width: 12px; height: 12px; border-radius: 50%; }
+  .dot-r { background: #ff5f56; } .dot-y { background: #ffbd2e; } .dot-g { background: #27c93f; }
+  .terminal-body { padding: 1.5rem; line-height: 1.8; font-size: .85rem; }
+  .prompt { color: #00ff41; }
+  .prompt::before { content: '$ '; color: #ff6b9d; }
+  .comment { color: #555; }
+  .output { color: #aaa; margin-left: 1rem; }
+  h1 { color: #ff6b9d; font-size: 1.1rem; margin: 1rem 0 .5rem; }
+  a { color: #00d4ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .links { margin-top: 1rem; }
+  .links a { display: block; padding: .3rem 0; }
+  .cursor { display: inline-block; width: 8px; height: 1rem; background: #00ff41; animation: blink 1s step-end infinite; vertical-align: text-bottom; }
+  @keyframes blink { 50% { opacity: 0; } }
+</style>
+</head>
+<body>
+<div class="terminal">
+  <div class="terminal-bar"><span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span></div>
+  <div class="terminal-body">
+    <p class="comment"># Planificador Academico — Economia UMSS</p>
+    <h1> Universidad Mayor de San Simón</h1>
+    <br>
+    <p class="prompt">cat bienvenida.txt</p>
+    <p class="output">Sistema de planificación académica para la carrera de Economía.</p>
+    <p class="output">Explora la malla curricular, consulta prerrequisitos y arma tu horario.</p>
+    <br>
+    <p class="prompt">ls modulos/</p>
+    <div class="links">
+      <a href="/malla">→ malla-curricular/</a>
+      <a href="/horario">→ planificador-horario/</a>
+      <a href="/progreso">→ mi-progreso/</a>
+      <a href="/guia">→ guia/</a>
+    </div>
+    <br>
+    <p class="prompt">echo "Listo para planificar"<span class="cursor"></span></p>
+  </div>
+</div>
+</body>
+</html>

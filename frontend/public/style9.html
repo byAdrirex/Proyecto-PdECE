@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style 9 — Synthwave</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a0033; font-family: 'Audiowide', cursive; min-height: 100vh; display: grid; place-items: center; padding: 2rem; overflow: hidden; }
+  .sun { width: 180px; height: 90px; background: linear-gradient(180deg, #ff6ec7 0%, #ff3366 50%, #ff9933 100%); border-radius: 180px 180px 0 0; position: fixed; top: 8%; filter: blur(1px); }
+  .grid-floor { position: fixed; bottom: 0; left: -50%; width: 200%; height: 40vh; background: repeating-linear-gradient(90deg, transparent, transparent 58px, #ff6ec733 58px, #ff6ec733 60px), repeating-linear-gradient(0deg, transparent, transparent 38px, #ff6ec733 38px, #ff6ec733 40px); transform: perspective(400px) rotateX(60deg); transform-origin: bottom; }
+  .container { max-width: 500px; width: 100%; position: relative; z-index: 5; }
+  .card { background: rgba(26,0,51,.85); border: 2px solid #ff6ec7; border-radius: 8px; padding: 2rem; box-shadow: 0 0 30px rgba(255,110,199,.2), inset 0 0 30px rgba(255,110,199,.05); }
+  h1 { font-size: 1.5rem; color: #ff6ec7; text-shadow: 0 0 10px #ff6ec7; text-align: center; margin-bottom: .2rem; }
+  .sub { text-align: center; font-size: .6rem; color: #ff3366; letter-spacing: .3em; margin-bottom: 1.5rem; }
+  .links { display: grid; gap: .6rem; }
+  .links a { display: block; padding: .9rem 1rem; border: 1px solid #ff6ec744; background: rgba(255,110,199,.05); color: #ff99cc; text-decoration: none; font-size: .75rem; text-transform: uppercase; letter-spacing: .15em; transition: all .2s; border-radius: 4px; text-align: center; }
+  .links a:hover { background: rgba(255,110,199,.15); color: #fff; border-color: #ff6ec7; box-shadow: 0 0 15px rgba(255,110,199,.3); text-shadow: 0 0 8px #ff6ec7; }
+  .footer { text-align: center; margin-top: 1.5rem; font-size: .5rem; color: #ff6ec744; letter-spacing: .3em; position: relative; z-index: 5; }
+</style>
+</head>
+<body>
+<div class="sun"></div>
+<div class="grid-floor"></div>
+<div class="container">
+  <div class="card">
+    <h1>Planificador</h1>
+    <div class="sub">Economía · UMSS · 2026</div>
+    <div class="links">
+      <a href="/malla">Malla Curricular</a>
+      <a href="/horario">Armar Horario</a>
+      <a href="/progreso">Mi Progreso</a>
+      <a href="/guia">Guía</a>
+    </div>
+  </div>
+</div>
+<p class="footer">Facultad de Ciencias Económicas · UMSS</p>
+</body>
+</html>
