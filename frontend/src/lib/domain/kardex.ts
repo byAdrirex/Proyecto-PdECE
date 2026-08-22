@@ -172,7 +172,7 @@ export function determineAttemptState(
   const latest = attempts.reduce((mostRecent, candidate) => {
     const left = [mostRecent.year ?? 0, mostRecent.term ?? 0];
     const right = [candidate.year ?? 0, candidate.term ?? 0];
-    return right[0]! > left[0]! || (right[0] === left[0] && right[1]! >= left[1]!)
+    return right[0]! > left[0]! || (right[0] === left[0] && right[1]! > left[1]!)
       ? candidate
       : mostRecent;
   });

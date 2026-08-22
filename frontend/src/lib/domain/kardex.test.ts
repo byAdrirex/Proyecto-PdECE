@@ -59,6 +59,16 @@ describe('determineAttemptState', () => {
     expect(result.latest?.year).toBe(2026);
   });
 
+  it('keeps the first record when attempts share the same year and term', () => {
+    const result = determineAttemptState([
+      { year: 2026, term: 1, final: 40, result: 'REP' },
+      { year: 2026, term: 1, result: 'ABA' },
+    ]);
+
+    expect(result.status).toBe('REPROBADA');
+    expect(result.latest?.result).toBe('REP');
+  });
+
   it('marks an unfinished current-period attempt as in progress', () => {
     const result = determineAttemptState(
       [{ year: 2026, term: 2 }],
