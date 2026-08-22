@@ -1,5 +1,5 @@
 import { normalizeAttempts } from './domain/kardex';
-import type { KardexState } from './domain/types';
+import type { Attempt, KardexState } from './domain/types';
 import type {
   PlannerAuxiliary,
   PlannerConflict,
@@ -135,11 +135,39 @@ const isPlannerPlan = (value: unknown): value is PlannerPlan =>
 const nullableNumber = (value: unknown): boolean =>
   value === null || (typeof value === 'number' && Number.isFinite(value));
 
+const isAttempt = (value: unknown): value is Attempt =>
+  isRecord(value)
+  && nullableNumber(value.year)
+  && nullableNumber(value.term)
+  && nullableNumber(value.final)
+  && (value.result === null
+    || value.result === 'APR'
+    || value.result === 'REP'
+    || value.result === 'ABA')
+  && nullableString(value.mode)
+  && nullableString(value.modality)
+  && nullableString(value.period)
+  && (typeof value.number === 'string' || nullableNumber(value.number))
+  && nullableString(value.level)
+  && nullableString(value.type)
+  && nullableString(value.validation)
+  && nullableString(value.group)
+  && nullableString(value.practicalGroup)
+  && nullableNumber(value.t1)
+  && nullableNumber(value.t2)
+  && nullableNumber(value.t3)
+  && nullableNumber(value.p1)
+  && nullableNumber(value.p2)
+  && nullableNumber(value.exam)
+  && nullableNumber(value.secondExam)
+  && nullableString(value.tableMode)
+  && nullableNumber(value.generalExam);
+
 const isKardexState = (value: unknown): boolean =>
   isRecord(value)
   && isRecord(value.attempts)
   && Object.values(value.attempts).every(
-    (attempts) => Array.isArray(attempts) && attempts.every(isRecord),
+    (attempts) => Array.isArray(attempts) && attempts.every(isAttempt),
   )
   && nullableNumber(value.currentYear)
   && nullableNumber(value.currentTerm);

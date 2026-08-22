@@ -131,6 +131,20 @@ describe('workspace storage', () => {
     expect(loadWorkspace()).toEqual(emptyWorkspace);
     expect(localStorage.getItem(workspaceStorageKey)).toBeNull();
   });
+
+  it('rejects and removes a persisted Kardex with an incomplete attempt', () => {
+    localStorage.setItem(workspaceStorageKey, JSON.stringify({
+      ...emptyWorkspace,
+      kardex: {
+        attempts: { '1304001': [{ result: 'APR' }] },
+        currentYear: 2026,
+        currentTerm: 2,
+      },
+    }));
+
+    expect(loadWorkspace()).toEqual(emptyWorkspace);
+    expect(localStorage.getItem(workspaceStorageKey)).toBeNull();
+  });
 });
 
 describe('Kardex text parsing', () => {
