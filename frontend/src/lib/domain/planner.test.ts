@@ -168,6 +168,25 @@ describe('planner limits and selection', () => {
       }),
     ]);
   });
+
+  it('warns in manual mode from structural prerequisites even when none are missing', () => {
+    const result = selectGroup(
+      createPlan('manual', 2026, 2),
+      group('1304026', '01'),
+      {
+        ...contextFor('REPROBADA'),
+        prerequisites: ['1304007', '1304016'],
+      },
+    );
+
+    expect(result.ok).toBe(true);
+    expect(result.plan.warnings).toEqual([
+      expect.objectContaining({
+        code: '1304026',
+        message: expect.stringContaining('1304007, 1304016'),
+      }),
+    ]);
+  });
 });
 
 describe('planner conflicts, recommendations and summary', () => {
@@ -229,6 +248,30 @@ describe('planner conflicts, recommendations and summary', () => {
     }));
     expect(conflicting.comment).toContain('Coincide con MATERIA C1 (G01)');
   });
+
+  it.each([
+    ['REPROBADA', 'Reprobada en tu historial'],
+    ['EN_CURSO', 'Materia en curso'],
+  ] as const)(
+    'adds %s history commentary only in academic mode',
+    (status, commentary) => {
+      const academic = contextFor(status).academic!;
+
+      const manual = recommendGroup(
+        group('H1', '01'),
+        createPlan('manual', 2026, 2),
+        academic,
+      );
+      const academicMode = recommendGroup(
+        group('H1', '01'),
+        createPlan('academic', 2026, 2),
+        academic,
+      );
+
+      expect(manual.comment).not.toContain(commentary);
+      expect(academicMode.comment).toContain(commentary);
+    },
+  );
 
   it('removes a group, its warning and stale conflicts', () => {
     let plan = selectGroup(

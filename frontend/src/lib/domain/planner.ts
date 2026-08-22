@@ -68,6 +68,7 @@ export interface PlannerLimits {
 
 export interface SelectionContext {
   academic?: AcademicState | null;
+  prerequisites?: string[];
 }
 
 export interface SelectionResult {
@@ -338,6 +339,8 @@ export function selectGroup(
   }
 
   const warnings = [...plan.warnings];
+  const structuralPrerequisites =
+    context.prerequisites ?? academic?.missingPrerequisites ?? [];
   if (!mesa && currentLimits.normalUsed >= currentLimits.normalMax) {
     warnings.push({
       code: group.code,
@@ -349,15 +352,14 @@ export function selectGroup(
   }
   if (
     plan.mode === 'manual' &&
-    academic != null &&
-    academic.missingPrerequisites.length > 0
+    structuralPrerequisites.length > 0
   ) {
     warnings.push({
       code: group.code,
       group: group.group,
       message:
         'Esta materia tiene prerrequisitos. En modo manual no se verificara tu historial ' +
-        `academico. Prerrequisitos: ${academic.missingPrerequisites.join(', ')}`,
+        `academico. Prerrequisitos: ${structuralPrerequisites.join(', ')}`,
     });
   }
 
@@ -482,10 +484,10 @@ export function recommendGroup(
     }
     if (group.auxiliaries.length > 0) commentParts.push('Dispone de auxiliar.');
   }
-  if (academic?.status === 'REPROBADA') {
+  if (plan.mode === 'academic' && academic?.status === 'REPROBADA') {
     commentParts.push('Reprobada en tu historial: puedes volver a cursarla.');
   }
-  if (academic?.status === 'EN_CURSO') {
+  if (plan.mode === 'academic' && academic?.status === 'EN_CURSO') {
     commentParts.push('Materia en curso en la gestion actual.');
   }
   const comment = commentParts.join(' ') || 'Seleccion posible.';
