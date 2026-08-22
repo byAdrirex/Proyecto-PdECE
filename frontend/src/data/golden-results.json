@@ -1,0 +1,50 @@
+{
+  "kardex": {
+    "approved": 26,
+    "subjects": 26
+  },
+  "notOffered": [
+    "TI01",
+    "TI02",
+    "TI03",
+    "TI04",
+    "1304140",
+    "1304162"
+  ],
+  "offer": {
+    "groups": 146,
+    "subjects": 70
+  },
+  "representativeSubjects": {
+    "1304001": {
+      "groupCount": 3,
+      "kardexStatus": "APROBADA",
+      "offered": true
+    },
+    "1304003": {
+      "groupCount": 4,
+      "kardexStatus": "APROBADA",
+      "offered": true
+    },
+    "1304022": {
+      "groupCount": 2,
+      "kardexStatus": "SIN_HISTORIAL",
+      "offered": true
+    },
+    "1304026": {
+      "groupCount": 2,
+      "kardexStatus": "SIN_HISTORIAL",
+      "offered": true
+    },
+    "1304134": {
+      "groupCount": 1,
+      "kardexStatus": "SIN_HISTORIAL",
+      "offered": true
+    },
+    "TI01": {
+      "groupCount": 0,
+      "kardexStatus": "SIN_HISTORIAL",
+      "offered": false
+    }
+  }
+}

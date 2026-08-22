@@ -1,0 +1,1574 @@
+{
+  "areas": [
+    "Cuantitativa",
+    "Histotia y Apoyo",
+    "Materia Electiva",
+    "Materia Obligatoria No Curricular",
+    "Tecnicas y Metodos de Investigacion",
+    "Teoria Economica y Aplicada",
+    "e"
+  ],
+  "edges": [
+    {
+      "from": "1304023",
+      "to": "1301031"
+    },
+    {
+      "from": "1301031",
+      "to": "1301034"
+    },
+    {
+      "from": "1304024",
+      "to": "1302004"
+    },
+    {
+      "from": "1304024",
+      "to": "1302006"
+    },
+    {
+      "from": "1304001",
+      "to": "1304007"
+    },
+    {
+      "from": "1304004",
+      "to": "1304007"
+    },
+    {
+      "from": "1304001",
+      "to": "1304008"
+    },
+    {
+      "from": "1304003",
+      "to": "1304008"
+    },
+    {
+      "from": "1304004",
+      "to": "1304008"
+    },
+    {
+      "from": "1304007",
+      "to": "1304011"
+    },
+    {
+      "from": "1304158",
+      "to": "1304011"
+    },
+    {
+      "from": "1304007",
+      "to": "1304013"
+    },
+    {
+      "from": "1304008",
+      "to": "1304014"
+    },
+    {
+      "from": "1304008",
+      "to": "1304015"
+    },
+    {
+      "from": "1304012",
+      "to": "1304015"
+    },
+    {
+      "from": "1304157",
+      "to": "1304015"
+    },
+    {
+      "from": "1304158",
+      "to": "1304016"
+    },
+    {
+      "from": "1304003",
+      "to": "1304018"
+    },
+    {
+      "from": "1304008",
+      "to": "1304019"
+    },
+    {
+      "from": "1304014",
+      "to": "1304020"
+    },
+    {
+      "from": "1304007",
+      "to": "1304021"
+    },
+    {
+      "from": "1304018",
+      "to": "1304021"
+    },
+    {
+      "from": "1304157",
+      "to": "1304021"
+    },
+    {
+      "from": "1304008",
+      "to": "1304022"
+    },
+    {
+      "from": "1304013",
+      "to": "1304022"
+    },
+    {
+      "from": "1304016",
+      "to": "1304023"
+    },
+    {
+      "from": "1304018",
+      "to": "1304024"
+    },
+    {
+      "from": "1304008",
+      "to": "1304025"
+    },
+    {
+      "from": "1304019",
+      "to": "1304026"
+    },
+    {
+      "from": "1304020",
+      "to": "1304026"
+    },
+    {
+      "from": "1304013",
+      "to": "1304027"
+    },
+    {
+      "from": "1304021",
+      "to": "1304027"
+    },
+    {
+      "from": "1304022",
+      "to": "1304028"
+    },
+    {
+      "from": "1304007",
+      "to": "1304030"
+    },
+    {
+      "from": "1304008",
+      "to": "1304030"
+    },
+    {
+      "from": "1304023",
+      "to": "1304030"
+    },
+    {
+      "from": "1304014",
+      "to": "1304032"
+    },
+    {
+      "from": "1304014",
+      "to": "1304033"
+    },
+    {
+      "from": "1304013",
+      "to": "1304034"
+    },
+    {
+      "from": "1304021",
+      "to": "1304034"
+    },
+    {
+      "from": "1304024",
+      "to": "1304034"
+    },
+    {
+      "from": "1304014",
+      "to": "1304035"
+    },
+    {
+      "from": "1304014",
+      "to": "1304036"
+    },
+    {
+      "from": "1304030",
+      "to": "1304036"
+    },
+    {
+      "from": "1304020",
+      "to": "1304038"
+    },
+    {
+      "from": "1304026",
+      "to": "1304039"
+    },
+    {
+      "from": "1304034",
+      "to": "1304040"
+    },
+    {
+      "from": "1304026",
+      "to": "1304041"
+    },
+    {
+      "from": "1304030",
+      "to": "1304041"
+    },
+    {
+      "from": "1304038",
+      "to": "1304045"
+    },
+    {
+      "from": "1304033",
+      "to": "1304046"
+    },
+    {
+      "from": "1304041",
+      "to": "1304048"
+    },
+    {
+      "from": "1304023",
+      "to": "1304063"
+    },
+    {
+      "from": "1304014",
+      "to": "1304113"
+    },
+    {
+      "from": "1304016",
+      "to": "1304129"
+    },
+    {
+      "from": "1304028",
+      "to": "1304131"
+    },
+    {
+      "from": "1304023",
+      "to": "1304132"
+    },
+    {
+      "from": "1304024",
+      "to": "1304133"
+    },
+    {
+      "from": "1304027",
+      "to": "1304133"
+    },
+    {
+      "from": "1304024",
+      "to": "1304134"
+    },
+    {
+      "from": "1304027",
+      "to": "1304134"
+    },
+    {
+      "from": "1304027",
+      "to": "1304135"
+    },
+    {
+      "from": "1304038",
+      "to": "1304135"
+    },
+    {
+      "from": "1304024",
+      "to": "1304139"
+    },
+    {
+      "from": "1304023",
+      "to": "1304140"
+    },
+    {
+      "from": "1304013",
+      "to": "1304141"
+    },
+    {
+      "from": "1304024",
+      "to": "1304141"
+    },
+    {
+      "from": "1304023",
+      "to": "1304142"
+    },
+    {
+      "from": "1304019",
+      "to": "1304144"
+    },
+    {
+      "from": "1304032",
+      "to": "1304149"
+    },
+    {
+      "from": "1304014",
+      "to": "1304154"
+    },
+    {
+      "from": "1304008",
+      "to": "1304155"
+    },
+    {
+      "from": "1304017",
+      "to": "1304155"
+    },
+    {
+      "from": "1304032",
+      "to": "1304156"
+    },
+    {
+      "from": "1304003",
+      "to": "1304157"
+    },
+    {
+      "from": "1304004",
+      "to": "1304158"
+    },
+    {
+      "from": "1304027",
+      "to": "1304159"
+    },
+    {
+      "from": "1304210",
+      "to": "1304159"
+    },
+    {
+      "from": "1304008",
+      "to": "1304160"
+    },
+    {
+      "from": "1304013",
+      "to": "1304160"
+    },
+    {
+      "from": "1304040",
+      "to": "1304161"
+    },
+    {
+      "from": "1304141",
+      "to": "1304162"
+    },
+    {
+      "from": "1304001",
+      "to": "1304210"
+    },
+    {
+      "from": "1304002",
+      "to": "1304210"
+    },
+    {
+      "from": "1304003",
+      "to": "1304210"
+    },
+    {
+      "from": "1304008",
+      "to": "1304210"
+    },
+    {
+      "from": "1304013",
+      "to": "1304210"
+    },
+    {
+      "from": "1304157",
+      "to": "1304210"
+    },
+    {
+      "from": "1803021",
+      "to": "1803024"
+    },
+    {
+      "from": "1803024",
+      "to": "1803027"
+    }
+  ],
+  "levels": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I"
+  ],
+  "subjects": [
+    {
+      "abbreviation": "ADM461",
+      "area": "Materia Electiva",
+      "code": "1301031",
+      "credits": 3,
+      "dependents": [
+        "1301034"
+      ],
+      "hours": null,
+      "level": "E",
+      "name": "MERCADOTECNIA I",
+      "prerequisites": [
+        "1304023"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": "ADM471",
+      "area": "Materia Electiva",
+      "code": "1301034",
+      "credits": 3,
+      "dependents": [],
+      "hours": null,
+      "level": "G",
+      "name": "MERCADOTECNIA II",
+      "prerequisites": [
+        "1301031"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": "DER311",
+      "area": "Materia Electiva",
+      "code": "1302004",
+      "credits": 2,
+      "dependents": [],
+      "hours": null,
+      "level": "H",
+      "name": "DERECHO COMERCIAL",
+      "prerequisites": [
+        "1304024"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": "AUD321",
+      "area": "Materia Electiva",
+      "code": "1302006",
+      "credits": 3,
+      "dependents": [],
+      "hours": null,
+      "level": "H",
+      "name": "CONTABILIDAD II",
+      "prerequisites": [
+        "1304024"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": null,
+      "area": "Materia Electiva",
+      "code": "1302080",
+      "credits": 2,
+      "dependents": [],
+      "hours": null,
+      "level": "D",
+      "name": "GESTION DE RIESGOS",
+      "prerequisites": [],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": "ECO216",
+      "area": "e",
+      "code": "1304001",
+      "credits": 2,
+      "dependents": [
+        "1304007",
+        "1304008",
+        "1304210"
+      ],
+      "hours": 6,
+      "level": "A",
+      "name": "ECONOMIA GENERAL",
+      "prerequisites": [],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "LEN211",
+      "area": "Tecnicas y Metodos de Investigacion",
+      "code": "1304002",
+      "credits": 2,
+      "dependents": [
+        "1304210"
+      ],
+      "hours": 4,
+      "level": "A",
+      "name": "TALLER DE LENGUAJE Y REDACCION",
+      "prerequisites": [],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "MAT211",
+      "area": "Cuantitativa",
+      "code": "1304003",
+      "credits": 2,
+      "dependents": [
+        "1304008",
+        "1304018",
+        "1304157",
+        "1304210"
+      ],
+      "hours": 6,
+      "level": "A",
+      "name": "ALGEBRA",
+      "prerequisites": [],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "MAT212",
+      "area": "Cuantitativa",
+      "code": "1304004",
+      "credits": 2,
+      "dependents": [
+        "1304007",
+        "1304008",
+        "1304158"
+      ],
+      "hours": 6,
+      "level": "A",
+      "name": "CALCULO",
+      "prerequisites": [],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "SOC211",
+      "area": "Histotia y Apoyo",
+      "code": "1304005",
+      "credits": 2,
+      "dependents": [],
+      "hours": 4,
+      "level": "A",
+      "name": "SOCIOLOGIA ECONOMICA",
+      "prerequisites": [],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "HIS211",
+      "area": "Histotia y Apoyo",
+      "code": "1304006",
+      "credits": 2,
+      "dependents": [],
+      "hours": 4,
+      "level": "A",
+      "name": "HISTORIA ECONOMICA DE AMERICA LATINA",
+      "prerequisites": [],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "ECO221",
+      "area": "Teoria Economica y Aplicada",
+      "code": "1304007",
+      "credits": 2,
+      "dependents": [
+        "1304011",
+        "1304013",
+        "1304021",
+        "1304030"
+      ],
+      "hours": 6,
+      "level": "B",
+      "name": "MICROECONOMIA I",
+      "prerequisites": [
+        "1304001",
+        "1304004"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "ECO222",
+      "area": "Teoria Economica y Aplicada",
+      "code": "1304008",
+      "credits": 2,
+      "dependents": [
+        "1304014",
+        "1304015",
+        "1304019",
+        "1304022",
+        "1304025",
+        "1304030",
+        "1304155",
+        "1304160",
+        "1304210"
+      ],
+      "hours": 6,
+      "level": "C",
+      "name": "MACROECONOMIA I",
+      "prerequisites": [
+        "1304001",
+        "1304003",
+        "1304004"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "RNM221",
+      "area": "Histotia y Apoyo",
+      "code": "1304011",
+      "credits": 2,
+      "dependents": [],
+      "hours": 6,
+      "level": "E",
+      "name": "ECONOMIA DE LOS RR.NN. Y M.A.",
+      "prerequisites": [
+        "1304007",
+        "1304158"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "HiS211",
+      "area": "Histotia y Apoyo",
+      "code": "1304012",
+      "credits": 2,
+      "dependents": [
+        "1304015"
+      ],
+      "hours": 4,
+      "level": "B",
+      "name": "HISTORIA ECONOMICA DE BOLIVIA",
+      "prerequisites": [],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "ECO231",
+      "area": "Teoria Economica y Aplicada",
+      "code": "1304013",
+      "credits": 2,
+      "dependents": [
+        "1304022",
+        "1304027",
+        "1304034",
+        "1304141",
+        "1304160",
+        "1304210"
+      ],
+      "hours": 6,
+      "level": "C",
+      "name": "MICROECONOMIA II",
+      "prerequisites": [
+        "1304007"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "ECO232",
+      "area": "Teoria Economica y Aplicada",
+      "code": "1304014",
+      "credits": 2,
+      "dependents": [
+        "1304020",
+        "1304032",
+        "1304033",
+        "1304035",
+        "1304036",
+        "1304113",
+        "1304154"
+      ],
+      "hours": 6,
+      "level": "D",
+      "name": "MACROECONOMIA II",
+      "prerequisites": [
+        "1304008"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "ECO233",
+      "area": "Teoria Economica y Aplicada",
+      "code": "1304015",
+      "credits": 2,
+      "dependents": [],
+      "hours": 4,
+      "level": "E",
+      "name": "HISTORIA DEL PENSAMIENTO ECONOMICO",
+      "prerequisites": [
+        "1304008",
+        "1304012",
+        "1304157"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "MAT232",
+      "area": "Cuantitativa",
+      "code": "1304016",
+      "credits": 2,
+      "dependents": [
+        "1304023",
+        "1304129"
+      ],
+      "hours": 6,
+      "level": "C",
+      "name": "ESTADISTICA I",
+      "prerequisites": [
+        "1304158"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "ADM231",
+      "area": "Histotia y Apoyo",
+      "code": "1304017",
+      "credits": 2,
+      "dependents": [
+        "1304155"
+      ],
+      "hours": 4,
+      "level": "B",
+      "name": "ADMINISTRACION",
+      "prerequisites": [],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "CON231",
+      "area": "Histotia y Apoyo",
+      "code": "1304018",
+      "credits": 2,
+      "dependents": [
+        "1304021",
+        "1304024"
+      ],
+      "hours": 6,
+      "level": "B",
+      "name": "CONTABILIDAD BASICA",
+      "prerequisites": [
+        "1304003"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "ECO241",
+      "area": "Teoria Economica y Aplicada",
+      "code": "1304019",
+      "credits": 2,
+      "dependents": [
+        "1304026",
+        "1304144"
+      ],
+      "hours": 4,
+      "level": "D",
+      "name": "TEORIA FISCAL",
+      "prerequisites": [
+        "1304008"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "ECO242",
+      "area": "Teoria Economica y Aplicada",
+      "code": "1304020",
+      "credits": 3,
+      "dependents": [
+        "1304026",
+        "1304038"
+      ],
+      "hours": 4,
+      "level": "E",
+      "name": "TEORIA MONETARIA",
+      "prerequisites": [
+        "1304014"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "ECO243",
+      "area": "Teoria Economica y Aplicada",
+      "code": "1304021",
+      "credits": 2,
+      "dependents": [
+        "1304027",
+        "1304034"
+      ],
+      "hours": 4,
+      "level": "C",
+      "name": "ECONOMIA FINANCIERA I",
+      "prerequisites": [
+        "1304007",
+        "1304018",
+        "1304157"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "ECO244",
+      "area": "Teoria Economica y Aplicada",
+      "code": "1304022",
+      "credits": 3,
+      "dependents": [
+        "1304028"
+      ],
+      "hours": 6,
+      "level": "D",
+      "name": "ECONOMIA POLITICA I",
+      "prerequisites": [
+        "1304008",
+        "1304013"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "MAT241",
+      "area": "Cuantitativa",
+      "code": "1304023",
+      "credits": 2,
+      "dependents": [
+        "1301031",
+        "1304030",
+        "1304063",
+        "1304132",
+        "1304140",
+        "1304142"
+      ],
+      "hours": 6,
+      "level": "D",
+      "name": "ESTADISTICA II",
+      "prerequisites": [
+        "1304016"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "CON241",
+      "area": "Histotia y Apoyo",
+      "code": "1304024",
+      "credits": 3,
+      "dependents": [
+        "1302004",
+        "1302006",
+        "1304034",
+        "1304133",
+        "1304134",
+        "1304139",
+        "1304141"
+      ],
+      "hours": 6,
+      "level": "C",
+      "name": "CONTABILIDAD DE GESTION",
+      "prerequisites": [
+        "1304018"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "ECO256",
+      "area": "Teoria Economica y Aplicada",
+      "code": "1304025",
+      "credits": 2,
+      "dependents": [],
+      "hours": 4,
+      "level": "E",
+      "name": "EPISTEMOLOGIA DE LA ECONOMIA",
+      "prerequisites": [
+        "1304008"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "ECO257",
+      "area": "Teoria Economica y Aplicada",
+      "code": "1304026",
+      "credits": 3,
+      "dependents": [
+        "1304039",
+        "1304041"
+      ],
+      "hours": 8,
+      "level": "F",
+      "name": "POLITICAS MACROECONOMICAS",
+      "prerequisites": [
+        "1304019",
+        "1304020"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "ECO258",
+      "area": "Teoria Economica y Aplicada",
+      "code": "1304027",
+      "credits": 3,
+      "dependents": [
+        "1304133",
+        "1304134",
+        "1304135",
+        "1304159"
+      ],
+      "hours": 6,
+      "level": "D",
+      "name": "ECONOMIA FINANCIERA II",
+      "prerequisites": [
+        "1304013",
+        "1304021"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "ECO254",
+      "area": "Teoria Economica y Aplicada",
+      "code": "1304028",
+      "credits": 3,
+      "dependents": [
+        "1304131"
+      ],
+      "hours": 6,
+      "level": "E",
+      "name": "ECONOMIA POLITICA II",
+      "prerequisites": [
+        "1304022"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "ECO255",
+      "area": "Cuantitativa",
+      "code": "1304030",
+      "credits": 2,
+      "dependents": [
+        "1304036",
+        "1304041"
+      ],
+      "hours": 6,
+      "level": "E",
+      "name": "ECONOMETRIA I",
+      "prerequisites": [
+        "1304007",
+        "1304008",
+        "1304023"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "ECO266",
+      "area": "Teoria Economica y Aplicada",
+      "code": "1304032",
+      "credits": 3,
+      "dependents": [
+        "1304149",
+        "1304156"
+      ],
+      "hours": 6,
+      "level": "G",
+      "name": "DESARROLLO ECONOMICO I",
+      "prerequisites": [
+        "1304014"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "ECO267",
+      "area": "Teoria Economica y Aplicada",
+      "code": "1304033",
+      "credits": 2,
+      "dependents": [
+        "1304046"
+      ],
+      "hours": 4,
+      "level": "F",
+      "name": "TEORIAS ECONOMICAS ACTUALES",
+      "prerequisites": [
+        "1304014"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "ECO268",
+      "area": "Teoria Economica y Aplicada",
+      "code": "1304034",
+      "credits": 3,
+      "dependents": [
+        "1304040"
+      ],
+      "hours": 6,
+      "level": "F",
+      "name": "FORMULACION DE PROYECTOS",
+      "prerequisites": [
+        "1304013",
+        "1304021",
+        "1304024"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "ECO269",
+      "area": "Teoria Economica y Aplicada",
+      "code": "1304035",
+      "credits": 2,
+      "dependents": [],
+      "hours": 6,
+      "level": "F",
+      "name": "TEORIA DE LAS INSTITUCIONES ECONOMICAS",
+      "prerequisites": [
+        "1304014"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "ECO265",
+      "area": "Cuantitativa",
+      "code": "1304036",
+      "credits": 2,
+      "dependents": [],
+      "hours": 6,
+      "level": "F",
+      "name": "ECONOMETRIA II",
+      "prerequisites": [
+        "1304014",
+        "1304030"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "ECO275",
+      "area": "Teoria Economica y Aplicada",
+      "code": "1304038",
+      "credits": 3,
+      "dependents": [
+        "1304045",
+        "1304135"
+      ],
+      "hours": 6,
+      "level": "G",
+      "name": "ECONOMIA INTERNACIONAL I",
+      "prerequisites": [
+        "1304020"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "ECO276",
+      "area": "Teoria Economica y Aplicada",
+      "code": "1304039",
+      "credits": 3,
+      "dependents": [],
+      "hours": 6,
+      "level": "G",
+      "name": "POLITICA ECONOMICA",
+      "prerequisites": [
+        "1304026"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "ECO277",
+      "area": "Teoria Economica y Aplicada",
+      "code": "1304040",
+      "credits": 3,
+      "dependents": [
+        "1304161"
+      ],
+      "hours": 6,
+      "level": "G",
+      "name": "EVALUACION DE PROYECTOS",
+      "prerequisites": [
+        "1304034"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "INV271",
+      "area": "Tecnicas y Metodos de Investigacion",
+      "code": "1304041",
+      "credits": 2,
+      "dependents": [
+        "1304048"
+      ],
+      "hours": 4,
+      "level": "H",
+      "name": "SEMINARIO DE INVESTIGACION",
+      "prerequisites": [
+        "1304026",
+        "1304030"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "ECO289",
+      "area": "Materia Electiva",
+      "code": "1304045",
+      "credits": 2,
+      "dependents": [],
+      "hours": null,
+      "level": "H",
+      "name": "ECONOMIA INTERNACIONAL II",
+      "prerequisites": [
+        "1304038"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": "ECO286",
+      "area": "Materia Electiva",
+      "code": "1304046",
+      "credits": 2,
+      "dependents": [],
+      "hours": null,
+      "level": "H",
+      "name": "ECONOMIA MUNDIAL CONTEMPORANEA",
+      "prerequisites": [
+        "1304033"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": "TIT291",
+      "area": "Teoria Economica y Aplicada",
+      "code": "1304048",
+      "credits": 2,
+      "dependents": [],
+      "hours": null,
+      "level": "I",
+      "name": "TALLER DE TITULACION",
+      "prerequisites": [
+        "1304041"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "ECO253",
+      "area": "Materia Electiva",
+      "code": "1304063",
+      "credits": 3,
+      "dependents": [],
+      "hours": null,
+      "level": "E",
+      "name": "MUESTREO",
+      "prerequisites": [
+        "1304023"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": "ADM213",
+      "area": "Materia Electiva",
+      "code": "1304065",
+      "credits": 3,
+      "dependents": [],
+      "hours": null,
+      "level": "H",
+      "name": "SISTEMAS ADMINISTRATIVOS",
+      "prerequisites": [],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": "ECO263",
+      "area": "Materia Electiva",
+      "code": "1304113",
+      "credits": 2,
+      "dependents": [],
+      "hours": null,
+      "level": "G",
+      "name": "CONTABILIDAD NACIONAL E INSUMO-PRODUCTO",
+      "prerequisites": [
+        "1304014"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": "DEM271",
+      "area": "Materia Electiva",
+      "code": "1304129",
+      "credits": 3,
+      "dependents": [],
+      "hours": null,
+      "level": "E",
+      "name": "DEMOGRAFIA",
+      "prerequisites": [
+        "1304016"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": "ECO283",
+      "area": "Materia Electiva",
+      "code": "1304131",
+      "credits": 2,
+      "dependents": [],
+      "hours": null,
+      "level": "F",
+      "name": "ECONOMIA AGRARIA",
+      "prerequisites": [
+        "1304028"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": "MAT291",
+      "area": "Materia Electiva",
+      "code": "1304132",
+      "credits": 3,
+      "dependents": [],
+      "hours": null,
+      "level": "E",
+      "name": "ESTADISTICA APLICADA",
+      "prerequisites": [
+        "1304023"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": "EST281",
+      "area": "Materia Electiva",
+      "code": "1304133",
+      "credits": 2,
+      "dependents": [],
+      "hours": null,
+      "level": "G",
+      "name": "ESTRATEGIA EMPRESARIAL",
+      "prerequisites": [
+        "1304024",
+        "1304027"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": "FEM291",
+      "area": "Materia Electiva",
+      "code": "1304134",
+      "credits": 3,
+      "dependents": [],
+      "hours": null,
+      "level": "E",
+      "name": "FINANZAS DE EMPRESAS",
+      "prerequisites": [
+        "1304024",
+        "1304027"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": "MER291",
+      "area": "Materia Electiva",
+      "code": "1304135",
+      "credits": 3,
+      "dependents": [],
+      "hours": null,
+      "level": "H",
+      "name": "MERCADO DE CAPITALES",
+      "prerequisites": [
+        "1304027",
+        "1304038"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": "PEM291",
+      "area": "Materia Electiva",
+      "code": "1304139",
+      "credits": 2,
+      "dependents": [],
+      "hours": null,
+      "level": "E",
+      "name": "PRESUPUESTOS EMPRESARIALES",
+      "prerequisites": [
+        "1304024"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": "PRE291",
+      "area": "Materia Electiva",
+      "code": "1304140",
+      "credits": 3,
+      "dependents": [],
+      "hours": null,
+      "level": "E",
+      "name": "PROGRAMAS ESTADISTICOS",
+      "prerequisites": [
+        "1304023"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": "PSO291",
+      "area": "Materia Electiva",
+      "code": "1304141",
+      "credits": 3,
+      "dependents": [
+        "1304162"
+      ],
+      "hours": null,
+      "level": "F",
+      "name": "PROYECTOS SOCIALES",
+      "prerequisites": [
+        "1304013",
+        "1304024"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": null,
+      "area": "Materia Electiva",
+      "code": "1304142",
+      "credits": 3,
+      "dependents": [],
+      "hours": null,
+      "level": "E",
+      "name": "SEMINARIO DE ESTADISTICA",
+      "prerequisites": [
+        "1304023"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": "TRI291",
+      "area": "Materia Electiva",
+      "code": "1304144",
+      "credits": 2,
+      "dependents": [],
+      "hours": null,
+      "level": "E",
+      "name": "TRIBUTACION",
+      "prerequisites": [
+        "1304019"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": "ECO287",
+      "area": "Materia Electiva",
+      "code": "1304149",
+      "credits": 2,
+      "dependents": [],
+      "hours": null,
+      "level": "H",
+      "name": "DESARROLLO ECONOMICO II",
+      "prerequisites": [
+        "1304032"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": "SET292",
+      "area": "Materia Electiva",
+      "code": "1304154",
+      "credits": 2,
+      "dependents": [],
+      "hours": null,
+      "level": "H",
+      "name": "SEMINARIO DE MENCION",
+      "prerequisites": [
+        "1304014"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": "GRH291",
+      "area": "Materia Electiva",
+      "code": "1304155",
+      "credits": 2,
+      "dependents": [],
+      "hours": null,
+      "level": "E",
+      "name": "GESTION DE RECURSOS HUMANOS",
+      "prerequisites": [
+        "1304008",
+        "1304017"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": "PLA288",
+      "area": "Materia Electiva",
+      "code": "1304156",
+      "credits": 3,
+      "dependents": [],
+      "hours": null,
+      "level": "H",
+      "name": "PLANIFICACION",
+      "prerequisites": [
+        "1304032"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": "MAT223",
+      "area": "Cuantitativa",
+      "code": "1304157",
+      "credits": 2,
+      "dependents": [
+        "1304015",
+        "1304021",
+        "1304210"
+      ],
+      "hours": 6,
+      "level": "B",
+      "name": "ALGEBRA APLICADA",
+      "prerequisites": [
+        "1304003"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": "MAT222",
+      "area": "Cuantitativa",
+      "code": "1304158",
+      "credits": 2,
+      "dependents": [
+        "1304011",
+        "1304016"
+      ],
+      "hours": 6,
+      "level": "B",
+      "name": "CALCULO APLICADO",
+      "prerequisites": [
+        "1304004"
+      ],
+      "type": "Obligatoria"
+    },
+    {
+      "abbreviation": null,
+      "area": "Materia Electiva",
+      "code": "1304159",
+      "credits": 2,
+      "dependents": [],
+      "hours": null,
+      "level": "F",
+      "name": "SEMINARIO COMERCIAL",
+      "prerequisites": [
+        "1304027",
+        "1304210"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": null,
+      "area": "Materia Electiva",
+      "code": "1304160",
+      "credits": 2,
+      "dependents": [],
+      "hours": null,
+      "level": "D",
+      "name": "ECONOMIA INDUSTRIAL",
+      "prerequisites": [
+        "1304008",
+        "1304013"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": null,
+      "area": "Materia Electiva",
+      "code": "1304161",
+      "credits": 3,
+      "dependents": [],
+      "hours": null,
+      "level": "F",
+      "name": "GESTION DE PROYECTOS DE INVERSION",
+      "prerequisites": [
+        "1304040"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": null,
+      "area": "Materia Electiva",
+      "code": "1304162",
+      "credits": 3,
+      "dependents": [],
+      "hours": null,
+      "level": "F",
+      "name": "GESTION DE PROYECTOS SOCIALES",
+      "prerequisites": [
+        "1304141"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": "MAT221",
+      "area": "Materia Electiva",
+      "code": "1304210",
+      "credits": 3,
+      "dependents": [
+        "1304159"
+      ],
+      "hours": null,
+      "level": "E",
+      "name": "INVESTIGACION OPERATIVA",
+      "prerequisites": [
+        "1304001",
+        "1304002",
+        "1304003",
+        "1304008",
+        "1304013",
+        "1304157"
+      ],
+      "type": "Materia Electiva"
+    },
+    {
+      "abbreviation": "LEN116",
+      "area": "Materia Obligatoria No Curricular",
+      "code": "1803021",
+      "credits": 3,
+      "dependents": [
+        "1803024"
+      ],
+      "hours": 6,
+      "level": "C",
+      "name": "INGLES I",
+      "prerequisites": [],
+      "type": "Obligatoria No Curricular"
+    },
+    {
+      "abbreviation": "LEN117",
+      "area": "Materia Obligatoria No Curricular",
+      "code": "1803024",
+      "credits": 3,
+      "dependents": [
+        "1803027"
+      ],
+      "hours": 6,
+      "level": "D",
+      "name": "INGLES II",
+      "prerequisites": [
+        "1803021"
+      ],
+      "type": "Obligatoria No Curricular"
+    },
+    {
+      "abbreviation": "LEN118",
+      "area": "Materia Obligatoria No Curricular",
+      "code": "1803027",
+      "credits": 3,
+      "dependents": [],
+      "hours": 6,
+      "level": "E",
+      "name": "INGLES III",
+      "prerequisites": [
+        "1803024"
+      ],
+      "type": "Obligatoria No Curricular"
+    },
+    {
+      "abbreviation": null,
+      "area": "Materia Obligatoria No Curricular",
+      "code": "TI01",
+      "credits": null,
+      "dependents": [],
+      "hours": 2,
+      "level": null,
+      "name": "MICROSOFT WORD",
+      "prerequisites": [],
+      "type": "Obligatoria No Curricular"
+    },
+    {
+      "abbreviation": null,
+      "area": "Materia Obligatoria No Curricular",
+      "code": "TI02",
+      "credits": null,
+      "dependents": [],
+      "hours": 2,
+      "level": null,
+      "name": "MICROSOFT EXEL",
+      "prerequisites": [],
+      "type": "Obligatoria No Curricular"
+    },
+    {
+      "abbreviation": null,
+      "area": "Materia Obligatoria No Curricular",
+      "code": "TI03",
+      "credits": null,
+      "dependents": [],
+      "hours": 2,
+      "level": null,
+      "name": "IBM SPSS STATISTICS",
+      "prerequisites": [],
+      "type": "Obligatoria No Curricular"
+    },
+    {
+      "abbreviation": null,
+      "area": "Materia Obligatoria No Curricular",
+      "code": "TI04",
+      "credits": null,
+      "dependents": [],
+      "hours": 2,
+      "level": null,
+      "name": "MICROSOFT ACCESS",
+      "prerequisites": [],
+      "type": "Obligatoria No Curricular"
+    }
+  ]
+}

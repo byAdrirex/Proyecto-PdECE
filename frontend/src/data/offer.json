@@ -1,0 +1,8111 @@
+{
+  "groups": [
+    {
+      "auxiliaries": [
+        {
+          "name": "LIMA LEON YOHANA ARACELY",
+          "schedule": [
+            {
+              "day": "LU",
+              "end": "12:45",
+              "room": "E 102",
+              "start": "11:15"
+            }
+          ]
+        }
+      ],
+      "code": "1304001",
+      "group": "01",
+      "instructor": "AVILES ROCHA MARTHA ELIZABETH",
+      "level": "A",
+      "name": "ECONOMIA GENERAL",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "11:15",
+          "room": "E 105",
+          "start": "09:45"
+        },
+        {
+          "day": "MI",
+          "end": "11:15",
+          "room": "E 107",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "LIMA LEON YOHANA ARACELY",
+          "schedule": [
+            {
+              "day": "MI",
+              "end": "09:45",
+              "room": "E 309",
+              "start": "08:15"
+            }
+          ]
+        }
+      ],
+      "code": "1304001",
+      "group": "02",
+      "instructor": "UBERHUAGA CANDIA PATRICIA DEL CARMEN",
+      "level": "A",
+      "name": "ECONOMIA GENERAL",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "11:15",
+          "room": "E530",
+          "start": "09:45"
+        },
+        {
+          "day": "VI",
+          "end": "11:15",
+          "room": "E530",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "LIMA LEON YOHANA ARACELY",
+          "schedule": [
+            {
+              "day": "JU",
+              "end": "18:45",
+              "room": "E 303",
+              "start": "17:15"
+            }
+          ]
+        }
+      ],
+      "code": "1304001",
+      "group": "21",
+      "instructor": "SANCHEZ CASTELLON JUAN FELIX",
+      "level": "A",
+      "name": "ECONOMIA GENERAL",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "14:15",
+          "room": "E 106",
+          "start": "12:45"
+        },
+        {
+          "day": "MI",
+          "end": "14:15",
+          "room": "E530",
+          "start": "12:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304002",
+      "group": "01",
+      "instructor": "RIVERA MIRANDA RENE",
+      "level": "A",
+      "name": "TALLER DE LENGUAJE Y REDACCION",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "12:45",
+          "room": "E 104",
+          "start": "11:15"
+        },
+        {
+          "day": "MI",
+          "end": "12:45",
+          "room": "E526",
+          "start": "11:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304002",
+      "group": "02",
+      "instructor": "SEVILLA CESPEDES VIVIAN CLAUDIA",
+      "level": "A",
+      "name": "TALLER DE LENGUAJE Y REDACCION",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "11:15",
+          "room": "E 101",
+          "start": "09:45"
+        },
+        {
+          "day": "JU",
+          "end": "11:15",
+          "room": "E503",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304002",
+      "group": "21",
+      "instructor": "TRIGO ROCHA RUTH MERY",
+      "level": "A",
+      "name": "TALLER DE LENGUAJE Y REDACCION",
+      "schedule": [
+        {
+          "day": "MI",
+          "end": "08:15",
+          "room": "E PB-1",
+          "start": "06:45"
+        },
+        {
+          "day": "VI",
+          "end": "20:15",
+          "room": "E PB-1",
+          "start": "18:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "PEREZ SANCHEZ CAMILA YESENIA",
+          "schedule": [
+            {
+              "day": "VI",
+              "end": "09:45",
+              "room": "E 108",
+              "start": "08:15"
+            }
+          ]
+        }
+      ],
+      "code": "1304003",
+      "group": "01",
+      "instructor": "JALDIN QUIROZ RENE",
+      "level": "A",
+      "name": "ALGEBRA",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "09:45",
+          "room": "E530",
+          "start": "08:15"
+        },
+        {
+          "day": "JU",
+          "end": "09:45",
+          "room": "E530",
+          "start": "08:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "CHOQUE PORCO ANDRES",
+          "schedule": [
+            {
+              "day": "SA",
+              "end": "09:45",
+              "room": "E 103",
+              "start": "08:15"
+            }
+          ]
+        }
+      ],
+      "code": "1304003",
+      "group": "02",
+      "instructor": "POR DESIGNAR DOCENTE",
+      "level": "A",
+      "name": "ALGEBRA",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "12:45",
+          "room": "E 303",
+          "start": "11:15"
+        },
+        {
+          "day": "VI",
+          "end": "09:45",
+          "room": "E 303",
+          "start": "08:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "CHOQUE PORCO ANDRES",
+          "schedule": [
+            {
+              "day": "JU",
+              "end": "17:15",
+              "room": "E530",
+              "start": "15:45"
+            }
+          ]
+        }
+      ],
+      "code": "1304003",
+      "group": "03",
+      "instructor": "MOYA ALBARRACIN MARTIN",
+      "level": "A",
+      "name": "ALGEBRA",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "09:45",
+          "room": "E 102",
+          "start": "08:15"
+        },
+        {
+          "day": "VI",
+          "end": "09:45",
+          "room": "E 104",
+          "start": "08:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "UGARTE COCA HELEN ARACELY",
+          "schedule": [
+            {
+              "day": "MI",
+              "end": "18:45",
+              "room": "E 103",
+              "start": "17:15"
+            }
+          ]
+        }
+      ],
+      "code": "1304003",
+      "group": "21",
+      "instructor": "IRIARTE MERCADO EDGAR ALBERTO",
+      "level": "A",
+      "name": "ALGEBRA",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "20:15",
+          "room": "E546",
+          "start": "18:45"
+        },
+        {
+          "day": "JU",
+          "end": "20:15",
+          "room": "E527",
+          "start": "18:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "PINTO PURO ALVARO",
+          "schedule": [
+            {
+              "day": "JU",
+              "end": "11:15",
+              "room": "E526",
+              "start": "09:45"
+            }
+          ]
+        }
+      ],
+      "code": "1304004",
+      "group": "01",
+      "instructor": "DUERI MENDEZ MARIA ELENA",
+      "level": "A",
+      "name": "CALCULO",
+      "schedule": [
+        {
+          "day": "VI",
+          "end": "12:45",
+          "room": "E 107",
+          "start": "11:15"
+        },
+        {
+          "day": "SA",
+          "end": "11:15",
+          "room": "E542",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "FERNANDEZ FULGUERA RAUL RODRIGO",
+          "schedule": [
+            {
+              "day": "JU",
+              "end": "12:45",
+              "room": "E 101",
+              "start": "11:15"
+            }
+          ]
+        }
+      ],
+      "code": "1304004",
+      "group": "02",
+      "instructor": "POR DESIGNAR DOCENTE",
+      "level": "A",
+      "name": "CALCULO",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "09:45",
+          "room": "E543",
+          "start": "08:15"
+        },
+        {
+          "day": "MI",
+          "end": "12:45",
+          "room": "E506",
+          "start": "11:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "HEREDIA TORREZ NESTOR ADALID",
+          "schedule": [
+            {
+              "day": "SA",
+              "end": "11:15",
+              "room": "E526",
+              "start": "09:45"
+            }
+          ]
+        }
+      ],
+      "code": "1304004",
+      "group": "03",
+      "instructor": "COVARRUBIAS VARGAS CAUJMAN",
+      "level": "A",
+      "name": "CALCULO",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "11:15",
+          "room": "E 201",
+          "start": "09:45"
+        },
+        {
+          "day": "MI",
+          "end": "11:15",
+          "room": "E524",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "CHAVEZ ANTEQUERA ROBERTO CARLOS",
+          "schedule": [
+            {
+              "day": "SA",
+              "end": "09:45",
+              "room": "E 105",
+              "start": "08:15"
+            }
+          ]
+        }
+      ],
+      "code": "1304004",
+      "group": "21",
+      "instructor": "CONDORI ARIAS HERMOGENES",
+      "level": "A",
+      "name": "CALCULO",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "08:15",
+          "room": "E530",
+          "start": "06:45"
+        },
+        {
+          "day": "JU",
+          "end": "08:15",
+          "room": "E530",
+          "start": "06:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304005",
+      "group": "01",
+      "instructor": "ANTEZANA LA FUENTE JORGE CARLOS",
+      "level": "A",
+      "name": "SOCIOLOGIA ECONOMICA",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "11:15",
+          "room": "E 103",
+          "start": "09:45"
+        },
+        {
+          "day": "JU",
+          "end": "12:45",
+          "room": "E530",
+          "start": "11:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304005",
+      "group": "02",
+      "instructor": "ANTEZANA LA FUENTE JORGE CARLOS",
+      "level": "A",
+      "name": "SOCIOLOGIA ECONOMICA",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "09:45",
+          "room": "E529",
+          "start": "08:15"
+        },
+        {
+          "day": "JU",
+          "end": "09:45",
+          "room": "E501",
+          "start": "08:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304005",
+      "group": "21",
+      "instructor": "AILLON GOMEZ TANIA LEDA",
+      "level": "A",
+      "name": "SOCIOLOGIA ECONOMICA",
+      "schedule": [
+        {
+          "day": "JU",
+          "end": "14:15",
+          "room": "E 110",
+          "start": "12:45"
+        },
+        {
+          "day": "VI",
+          "end": "14:15",
+          "room": "E 103",
+          "start": "12:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304006",
+      "group": "01",
+      "instructor": "ORELLANA AYLLON LORGIO EVERTH",
+      "level": "A",
+      "name": "HISTORIA ECONOMICA DE AMERICA LATINA",
+      "schedule": [
+        {
+          "day": "VI",
+          "end": "11:15",
+          "room": "E 103",
+          "start": "09:45"
+        },
+        {
+          "day": "SA",
+          "end": "12:45",
+          "room": "E 103",
+          "start": "11:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304006",
+      "group": "02",
+      "instructor": "ORELLANA AYLLON LORGIO EVERTH",
+      "level": "A",
+      "name": "HISTORIA ECONOMICA DE AMERICA LATINA",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "12:45",
+          "room": "E 207",
+          "start": "11:15"
+        },
+        {
+          "day": "VI",
+          "end": "12:45",
+          "room": "E 207",
+          "start": "11:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304006",
+      "group": "21",
+      "instructor": "QUISPE CABRERA RENE",
+      "level": "A",
+      "name": "HISTORIA ECONOMICA DE AMERICA LATINA",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "14:15",
+          "room": "E 102",
+          "start": "12:45"
+        },
+        {
+          "day": "MI",
+          "end": "20:15",
+          "room": "E521",
+          "start": "18:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "HEREDIA TORREZ NESTOR ADALID",
+          "schedule": [
+            {
+              "day": "JU",
+              "end": "09:45",
+              "room": "E 209",
+              "start": "08:15"
+            }
+          ]
+        }
+      ],
+      "code": "1304007",
+      "group": "01",
+      "instructor": "CABERO CALATAYUD CARLOS F.",
+      "level": "B",
+      "name": "MICROECONOMIA I",
+      "schedule": [
+        {
+          "day": "MI",
+          "end": "15:45",
+          "room": "E529",
+          "start": "14:15"
+        },
+        {
+          "day": "VI",
+          "end": "17:15",
+          "room": "E529",
+          "start": "15:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "POR DESIGNAR AUXILIAR",
+          "schedule": [
+            {
+              "day": "VI",
+              "end": "17:15",
+              "room": "E 301",
+              "start": "15:45"
+            }
+          ]
+        }
+      ],
+      "code": "1304007",
+      "group": "02",
+      "instructor": "MERCADO SORIA JESUS BERNARDO",
+      "level": "B",
+      "name": "MICROECONOMIA I",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "17:15",
+          "room": "E527",
+          "start": "15:45"
+        },
+        {
+          "day": "MI",
+          "end": "17:15",
+          "room": "E527",
+          "start": "15:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "ARAUJO ARNEZ YASMIRA",
+          "schedule": [
+            {
+              "day": "VI",
+              "end": "20:15",
+              "room": "E526",
+              "start": "18:45"
+            }
+          ]
+        }
+      ],
+      "code": "1304007",
+      "group": "21",
+      "instructor": "ARAUJO COSSIO ALDO ROMEL",
+      "level": "B",
+      "name": "MICROECONOMIA I",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "20:15",
+          "room": "E 310",
+          "start": "18:45"
+        },
+        {
+          "day": "MA",
+          "end": "20:15",
+          "room": "E 310",
+          "start": "18:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "ARAUJO ARNEZ YASMIRA",
+          "schedule": [
+            {
+              "day": "LU",
+              "end": "20:15",
+              "room": "E 208",
+              "start": "18:45"
+            }
+          ]
+        }
+      ],
+      "code": "1304007",
+      "group": "22",
+      "instructor": "LAZCANO ALANDIA RUBEN",
+      "level": "B",
+      "name": "MICROECONOMIA I",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "18:45",
+          "room": "E 102",
+          "start": "17:15"
+        },
+        {
+          "day": "MA",
+          "end": "18:45",
+          "room": "E PB-1",
+          "start": "17:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304012",
+      "group": "01",
+      "instructor": "TORREZ GALARZA ANDRES REYNALDO",
+      "level": "B",
+      "name": "HISTORIA ECONOMICA DE BOLIVIA",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "17:15",
+          "room": "E527",
+          "start": "15:45"
+        },
+        {
+          "day": "JU",
+          "end": "17:15",
+          "room": "E527",
+          "start": "15:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304012",
+      "group": "21",
+      "instructor": "ORELLANA AYLLON LORGIO EVERTH",
+      "level": "B",
+      "name": "HISTORIA ECONOMICA DE BOLIVIA",
+      "schedule": [
+        {
+          "day": "MI",
+          "end": "20:15",
+          "room": "E529",
+          "start": "18:45"
+        },
+        {
+          "day": "JU",
+          "end": "20:15",
+          "room": "E526",
+          "start": "18:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304017",
+      "group": "01",
+      "instructor": "PANTOJA ROCHA YURI NEWTON",
+      "level": "B",
+      "name": "ADMINISTRACION",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "21:45",
+          "room": "E 104",
+          "start": "20:15"
+        },
+        {
+          "day": "SA",
+          "end": "11:15",
+          "room": "E 104",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304017",
+      "group": "02",
+      "instructor": "VILLARROEL DAZA MARIA HELEN",
+      "level": "B",
+      "name": "ADMINISTRACION",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "09:45",
+          "room": "E 103",
+          "start": "08:15"
+        },
+        {
+          "day": "JU",
+          "end": "11:15",
+          "room": "E 103",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "LIMACHI ARCANI ANDER BRIAN",
+          "schedule": [
+            {
+              "day": "VI",
+              "end": "12:45",
+              "room": "E526",
+              "start": "11:15"
+            }
+          ]
+        }
+      ],
+      "code": "1304018",
+      "group": "01",
+      "instructor": "LEDEZMA SANDOVAL FEDERICO",
+      "level": "B",
+      "name": "CONTABILIDAD BASICA",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "11:15",
+          "room": "E529",
+          "start": "09:45"
+        },
+        {
+          "day": "MI",
+          "end": "11:15",
+          "room": "E 102",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "VARGAS ESCALERA NILDA",
+          "schedule": [
+            {
+              "day": "VI",
+              "end": "14:15",
+              "room": "E526",
+              "start": "12:45"
+            }
+          ]
+        }
+      ],
+      "code": "1304018",
+      "group": "02",
+      "instructor": "LEDEZMA SANDOVAL FEDERICO",
+      "level": "B",
+      "name": "CONTABILIDAD BASICA",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "17:15",
+          "room": "E526",
+          "start": "15:45"
+        },
+        {
+          "day": "JU",
+          "end": "17:15",
+          "room": "E526",
+          "start": "15:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "LOZA SEJAS CINTIA NADYA",
+          "schedule": [
+            {
+              "day": "JU",
+              "end": "14:15",
+              "room": "E 109",
+              "start": "12:45"
+            }
+          ]
+        }
+      ],
+      "code": "1304018",
+      "group": "21",
+      "instructor": "PEREZ AMADOR MARIO",
+      "level": "B",
+      "name": "CONTABILIDAD BASICA",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "14:15",
+          "room": "E529",
+          "start": "12:45"
+        },
+        {
+          "day": "MI",
+          "end": "18:45",
+          "room": "E529",
+          "start": "17:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "BARBOLIN RODRIGO NICOLAS",
+          "schedule": [
+            {
+              "day": "SA",
+              "end": "12:45",
+              "room": "E 101",
+              "start": "11:15"
+            }
+          ]
+        }
+      ],
+      "code": "1304157",
+      "group": "01",
+      "instructor": "TABORGA ACHA FIDEL",
+      "level": "B",
+      "name": "ALGEBRA APLICADA",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "12:45",
+          "room": "E 109",
+          "start": "11:15"
+        },
+        {
+          "day": "JU",
+          "end": "12:45",
+          "room": "E503",
+          "start": "11:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "RIOS FERNANDEZ ISRAEL",
+          "schedule": [
+            {
+              "day": "SA",
+              "end": "11:15",
+              "room": "E529",
+              "start": "09:45"
+            }
+          ]
+        }
+      ],
+      "code": "1304157",
+      "group": "02",
+      "instructor": "MOYA ALBARRACIN MARTIN",
+      "level": "B",
+      "name": "ALGEBRA APLICADA",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "17:15",
+          "room": "E526",
+          "start": "15:45"
+        },
+        {
+          "day": "JU",
+          "end": "12:45",
+          "room": "E525",
+          "start": "11:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "LEDEZMA HIDALGO ESTEFANIA GRACIELA",
+          "schedule": [
+            {
+              "day": "VI",
+              "end": "08:15",
+              "room": "E527",
+              "start": "06:45"
+            }
+          ]
+        }
+      ],
+      "code": "1304157",
+      "group": "21",
+      "instructor": "MOYA ALBARRACIN MARTIN",
+      "level": "B",
+      "name": "ALGEBRA APLICADA",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "08:15",
+          "room": "E529",
+          "start": "06:45"
+        },
+        {
+          "day": "JU",
+          "end": "18:45",
+          "room": "E525",
+          "start": "17:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "FERNANDEZ ZACA PAUL HERLAN",
+          "schedule": [
+            {
+              "day": "LU",
+              "end": "12:45",
+              "room": "E 205",
+              "start": "11:15"
+            }
+          ]
+        }
+      ],
+      "code": "1304158",
+      "group": "01",
+      "instructor": "MONTAÑO ROMERO JOSE",
+      "level": "B",
+      "name": "CALCULO APLICADO",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "11:15",
+          "room": "E529",
+          "start": "09:45"
+        },
+        {
+          "day": "VI",
+          "end": "09:45",
+          "room": "E525",
+          "start": "08:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "FERNANDEZ ZACA PAUL HERLAN",
+          "schedule": [
+            {
+              "day": "VI",
+              "end": "11:15",
+              "room": "E 105",
+              "start": "09:45"
+            }
+          ]
+        }
+      ],
+      "code": "1304158",
+      "group": "02",
+      "instructor": "MONTAÑO ROMERO JOSE",
+      "level": "B",
+      "name": "CALCULO APLICADO",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "12:45",
+          "room": "E529",
+          "start": "11:15"
+        },
+        {
+          "day": "JU",
+          "end": "12:45",
+          "room": "E529",
+          "start": "11:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "POR DESIGNAR AUXILIAR",
+          "schedule": [
+            {
+              "day": "JU",
+              "end": "08:15",
+              "room": "E527",
+              "start": "06:45"
+            }
+          ]
+        }
+      ],
+      "code": "1304158",
+      "group": "21",
+      "instructor": "CONDORI ARIAS HERMOGENES",
+      "level": "B",
+      "name": "CALCULO APLICADO",
+      "schedule": [
+        {
+          "day": "MI",
+          "end": "08:15",
+          "room": "E529",
+          "start": "06:45"
+        },
+        {
+          "day": "VI",
+          "end": "08:15",
+          "room": "E529",
+          "start": "06:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "BARBOLIN RODRIGO NICOLAS",
+          "schedule": [
+            {
+              "day": "VI",
+              "end": "09:45",
+              "room": "E 207",
+              "start": "08:15"
+            }
+          ]
+        }
+      ],
+      "code": "1304008",
+      "group": "01",
+      "instructor": "GRIGORIU MONROY FRANCISCO PABLO",
+      "level": "C",
+      "name": "MACROECONOMIA I",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "11:15",
+          "room": "E526",
+          "start": "09:45"
+        },
+        {
+          "day": "JU",
+          "end": "12:45",
+          "room": "E527",
+          "start": "11:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "BARBOLIN RODRIGO NICOLAS",
+          "schedule": [
+            {
+              "day": "MA",
+              "end": "14:15",
+              "room": "E 103",
+              "start": "12:45"
+            }
+          ]
+        }
+      ],
+      "code": "1304008",
+      "group": "02",
+      "instructor": "AZOGUE CRESPO RICARDO",
+      "level": "C",
+      "name": "MACROECONOMIA I",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "17:15",
+          "room": "E 103",
+          "start": "15:45"
+        },
+        {
+          "day": "JU",
+          "end": "17:15",
+          "room": "E525",
+          "start": "15:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "BARBOLIN RODRIGO NICOLAS",
+          "schedule": [
+            {
+              "day": "SA",
+              "end": "11:15",
+              "room": "E 105",
+              "start": "09:45"
+            }
+          ]
+        }
+      ],
+      "code": "1304008",
+      "group": "21",
+      "instructor": "AZOGUE CRESPO RICARDO",
+      "level": "C",
+      "name": "MACROECONOMIA I",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "18:45",
+          "room": "E 103",
+          "start": "17:15"
+        },
+        {
+          "day": "JU",
+          "end": "18:45",
+          "room": "E 103",
+          "start": "17:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "POR DESIGNAR AUXILIAR",
+          "schedule": [
+            {
+              "day": "MA",
+              "end": "15:45",
+              "room": "E529",
+              "start": "14:15"
+            }
+          ]
+        }
+      ],
+      "code": "1304013",
+      "group": "01",
+      "instructor": "CABERO CALATAYUD CARLOS F.",
+      "level": "C",
+      "name": "MICROECONOMIA II",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "15:45",
+          "room": "E529",
+          "start": "14:15"
+        },
+        {
+          "day": "JU",
+          "end": "15:45",
+          "room": "E529",
+          "start": "14:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "POR DESIGNAR AUXILIAR",
+          "schedule": [
+            {
+              "day": "MI",
+              "end": "14:15",
+              "room": "E 102",
+              "start": "12:45"
+            }
+          ]
+        }
+      ],
+      "code": "1304013",
+      "group": "21",
+      "instructor": "POR DESIGNAR DOCENTE",
+      "level": "C",
+      "name": "MICROECONOMIA II",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "14:15",
+          "room": "E526",
+          "start": "12:45"
+        },
+        {
+          "day": "MA",
+          "end": "20:15",
+          "room": "E529",
+          "start": "18:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "REJAS CHUMACERO MACHZAEL EDWIN",
+          "schedule": [
+            {
+              "day": "LU",
+              "end": "12:45",
+              "room": "E 304",
+              "start": "11:15"
+            }
+          ]
+        }
+      ],
+      "code": "1304016",
+      "group": "01",
+      "instructor": "SUAZNABAR CLAROS FERNANDO ALBERTO",
+      "level": "C",
+      "name": "ESTADISTICA I",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "09:45",
+          "room": "E501",
+          "start": "08:15"
+        },
+        {
+          "day": "VI",
+          "end": "11:15",
+          "room": "E 101",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "REJAS CHUMACERO MACHZAEL EDWIN",
+          "schedule": [
+            {
+              "day": "MI",
+              "end": "18:45",
+              "room": "E526",
+              "start": "17:15"
+            }
+          ]
+        }
+      ],
+      "code": "1304016",
+      "group": "21",
+      "instructor": "ALVAREZ QUIROZ RICHARD MILTON",
+      "level": "C",
+      "name": "ESTADISTICA I",
+      "schedule": [
+        {
+          "day": "JU",
+          "end": "18:45",
+          "room": "E 101",
+          "start": "17:15"
+        },
+        {
+          "day": "VI",
+          "end": "08:15",
+          "room": "E525",
+          "start": "06:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304021",
+      "group": "01",
+      "instructor": "CLAURE FUENTES SHIRLEY CONSUELO",
+      "level": "C",
+      "name": "ECONOMIA FINANCIERA I",
+      "schedule": [
+        {
+          "day": "MI",
+          "end": "09:45",
+          "room": "E 102",
+          "start": "08:15"
+        },
+        {
+          "day": "JU",
+          "end": "11:15",
+          "room": "E 102",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304021",
+      "group": "21",
+      "instructor": "CUBA ROJAS PABLO LUIS",
+      "level": "C",
+      "name": "ECONOMIA FINANCIERA I",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "08:15",
+          "room": "E 102",
+          "start": "06:45"
+        },
+        {
+          "day": "MA",
+          "end": "08:15",
+          "room": "E 102",
+          "start": "06:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304024",
+      "group": "02",
+      "instructor": "MARTINEZ ALPIRI ANAHI MONICA",
+      "level": "C",
+      "name": "CONTABILIDAD DE GESTION",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "09:45",
+          "room": "E 101",
+          "start": "08:15"
+        },
+        {
+          "day": "MA",
+          "end": "12:45",
+          "room": "E 110",
+          "start": "11:15"
+        },
+        {
+          "day": "MI",
+          "end": "09:45",
+          "room": "E 101",
+          "start": "08:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304024",
+      "group": "21",
+      "instructor": "GUEVARA ESPINOZA JORGE",
+      "level": "C",
+      "name": "CONTABILIDAD DE GESTION",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "20:15",
+          "room": "E 406",
+          "start": "18:45"
+        },
+        {
+          "day": "MA",
+          "end": "20:15",
+          "room": "E 401",
+          "start": "18:45"
+        },
+        {
+          "day": "MI",
+          "end": "20:15",
+          "room": "E 402",
+          "start": "18:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1803021",
+      "group": "05",
+      "instructor": "POR DESIGNAR DOCENTE",
+      "level": "C",
+      "name": "INGLES I",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "08:15",
+          "room": "E 202",
+          "start": "06:45"
+        },
+        {
+          "day": "MA",
+          "end": "08:15",
+          "room": "E 110",
+          "start": "06:45"
+        },
+        {
+          "day": "MI",
+          "end": "08:15",
+          "room": "E 202",
+          "start": "06:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1302080",
+      "group": "01",
+      "instructor": "VALDEZ ESCOBAR JORGE",
+      "level": "D",
+      "name": "GESTION DE RIESGOS",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "12:45",
+          "room": "E508",
+          "start": "11:15"
+        },
+        {
+          "day": "JU",
+          "end": "12:45",
+          "room": "E510",
+          "start": "11:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1302080",
+      "group": "21",
+      "instructor": "ALIENDRE LAFUENTE ROMER SIMON",
+      "level": "D",
+      "name": "GESTION DE RIESGOS",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "08:15",
+          "room": "E507",
+          "start": "06:45"
+        },
+        {
+          "day": "SA",
+          "end": "08:15",
+          "room": "E512",
+          "start": "06:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "PINEDO CABRERA EMILY GABRIEL",
+          "schedule": [
+            {
+              "day": "LU",
+              "end": "11:15",
+              "room": "E527",
+              "start": "09:45"
+            }
+          ]
+        }
+      ],
+      "code": "1304014",
+      "group": "01",
+      "instructor": "POR DESIGNAR DOCENTE",
+      "level": "D",
+      "name": "MACROECONOMIA II",
+      "schedule": [
+        {
+          "day": "JU",
+          "end": "12:45",
+          "room": "E 104",
+          "start": "11:15"
+        },
+        {
+          "day": "VI",
+          "end": "12:45",
+          "room": "E 108",
+          "start": "11:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "PINEDO CABRERA EMILY GABRIEL",
+          "schedule": [
+            {
+              "day": "VI",
+              "end": "20:15",
+              "room": "E527",
+              "start": "18:45"
+            }
+          ]
+        }
+      ],
+      "code": "1304014",
+      "group": "21",
+      "instructor": "POR DESIGNAR DOCENTE",
+      "level": "D",
+      "name": "MACROECONOMIA II",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "18:45",
+          "room": "E527",
+          "start": "17:15"
+        },
+        {
+          "day": "MI",
+          "end": "21:45",
+          "room": "E525",
+          "start": "20:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304019",
+      "group": "01",
+      "instructor": "REYNAGA ARCE HENRY RUKNER",
+      "level": "D",
+      "name": "TEORIA FISCAL",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "12:45",
+          "room": "E525",
+          "start": "11:15"
+        },
+        {
+          "day": "MA",
+          "end": "09:45",
+          "room": "E525",
+          "start": "08:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304019",
+      "group": "21",
+      "instructor": "ASCARRAGA SEJAS WILMAR HENRY",
+      "level": "D",
+      "name": "TEORIA FISCAL",
+      "schedule": [
+        {
+          "day": "JU",
+          "end": "08:15",
+          "room": "E524",
+          "start": "06:45"
+        },
+        {
+          "day": "SA",
+          "end": "08:15",
+          "room": "E524",
+          "start": "06:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304022",
+      "group": "01",
+      "instructor": "AZOGUE CRESPO RICARDO",
+      "level": "D",
+      "name": "ECONOMIA POLITICA I",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "17:15",
+          "room": "E525",
+          "start": "15:45"
+        },
+        {
+          "day": "MI",
+          "end": "17:15",
+          "room": "E525",
+          "start": "15:45"
+        },
+        {
+          "day": "VI",
+          "end": "17:15",
+          "room": "E525",
+          "start": "15:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304022",
+      "group": "21",
+      "instructor": "AZOGUE CRESPO RICARDO",
+      "level": "D",
+      "name": "ECONOMIA POLITICA I",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "18:45",
+          "room": "E 104",
+          "start": "17:15"
+        },
+        {
+          "day": "MI",
+          "end": "20:15",
+          "room": "E 103",
+          "start": "18:45"
+        },
+        {
+          "day": "VI",
+          "end": "18:45",
+          "room": "E 104",
+          "start": "17:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "DOMÍNGUEZ VÁSQUEZ LUCIANA CAROLINA",
+          "schedule": [
+            {
+              "day": "JU",
+              "end": "09:45",
+              "room": "E PB-2",
+              "start": "08:15"
+            }
+          ]
+        }
+      ],
+      "code": "1304023",
+      "group": "01",
+      "instructor": "URQUIDI BELLIDO SONIA",
+      "level": "D",
+      "name": "ESTADISTICA II",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "11:15",
+          "room": "E528",
+          "start": "09:45"
+        },
+        {
+          "day": "VI",
+          "end": "11:15",
+          "room": "E 401",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "LEDEZMA HIDALGO ESTEFANIA GRACIELA",
+          "schedule": [
+            {
+              "day": "SA",
+              "end": "12:45",
+              "room": "E527",
+              "start": "11:15"
+            }
+          ]
+        }
+      ],
+      "code": "1304023",
+      "group": "22",
+      "instructor": "APAZA COLQUE FELIX JUAN",
+      "level": "D",
+      "name": "ESTADISTICA II",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "08:15",
+          "room": "E525",
+          "start": "06:45"
+        },
+        {
+          "day": "JU",
+          "end": "08:15",
+          "room": "E529",
+          "start": "06:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304027",
+      "group": "01",
+      "instructor": "CUBA ROJAS PABLO LUIS",
+      "level": "D",
+      "name": "ECONOMIA FINANCIERA II",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "09:45",
+          "room": "E 110",
+          "start": "08:15"
+        },
+        {
+          "day": "MI",
+          "end": "11:15",
+          "room": "E 308",
+          "start": "09:45"
+        },
+        {
+          "day": "VI",
+          "end": "09:45",
+          "room": "E 103",
+          "start": "08:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304027",
+      "group": "21",
+      "instructor": "BARRIENTOS BALDERRAMA CLAUDIA NINOZKA",
+      "level": "D",
+      "name": "ECONOMIA FINANCIERA II",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "08:15",
+          "room": "E 205",
+          "start": "06:45"
+        },
+        {
+          "day": "MI",
+          "end": "08:15",
+          "room": "E 208",
+          "start": "06:45"
+        },
+        {
+          "day": "SA",
+          "end": "08:15",
+          "room": "E 208",
+          "start": "06:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304160",
+      "group": "01",
+      "instructor": "ALVAREZ QUIROZ RICHARD MILTON",
+      "level": "D",
+      "name": "ECONOMIA INDUSTRIAL",
+      "schedule": [
+        {
+          "day": "MI",
+          "end": "09:45",
+          "room": "E 308",
+          "start": "08:15"
+        },
+        {
+          "day": "JU",
+          "end": "17:15",
+          "room": "E 303",
+          "start": "15:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1803024",
+      "group": "05",
+      "instructor": "POR DESIGNAR DOCENTE",
+      "level": "D",
+      "name": "INGLES II",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "12:45",
+          "room": "E513",
+          "start": "11:15"
+        },
+        {
+          "day": "JU",
+          "end": "09:45",
+          "room": "E 104",
+          "start": "08:15"
+        },
+        {
+          "day": "VI",
+          "end": "12:45",
+          "room": "E 105",
+          "start": "11:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1301031",
+      "group": "01",
+      "instructor": "CALLA VILLEGAS EDWIN",
+      "level": "E",
+      "name": "MERCADOTECNIA I",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "17:15",
+          "room": "E 109",
+          "start": "15:45"
+        },
+        {
+          "day": "MI",
+          "end": "17:15",
+          "room": "E 109",
+          "start": "15:45"
+        },
+        {
+          "day": "VI",
+          "end": "17:15",
+          "room": "E 201",
+          "start": "15:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1301031",
+      "group": "20",
+      "instructor": "ZEGARRA SALDANA PABLO",
+      "level": "E",
+      "name": "MERCADOTECNIA I",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "21:45",
+          "room": "E 205",
+          "start": "20:15"
+        },
+        {
+          "day": "MA",
+          "end": "20:15",
+          "room": "E 103",
+          "start": "18:45"
+        },
+        {
+          "day": "MI",
+          "end": "09:45",
+          "room": "E526",
+          "start": "08:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1301031",
+      "group": "21",
+      "instructor": "NAVIA QUIROGA GUSTAVO",
+      "level": "E",
+      "name": "MERCADOTECNIA I",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "21:45",
+          "room": "E PB-4",
+          "start": "20:15"
+        },
+        {
+          "day": "VI",
+          "end": "18:45",
+          "room": "E502",
+          "start": "17:15"
+        },
+        {
+          "day": "SA",
+          "end": "11:15",
+          "room": "E503",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304011",
+      "group": "01",
+      "instructor": "MANZANO ANZALDO NELSON TITO",
+      "level": "E",
+      "name": "ECONOMIA DE LOS RR.NN. Y M.A.",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "09:45",
+          "room": "E 108",
+          "start": "08:15"
+        },
+        {
+          "day": "JU",
+          "end": "09:45",
+          "room": "E 103",
+          "start": "08:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304011",
+      "group": "21",
+      "instructor": "UBERHUAGA CANDIA PATRICIA DEL CARMEN",
+      "level": "E",
+      "name": "ECONOMIA DE LOS RR.NN. Y M.A.",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "14:15",
+          "room": "E530",
+          "start": "12:45"
+        },
+        {
+          "day": "VI",
+          "end": "14:15",
+          "room": "E530",
+          "start": "12:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304015",
+      "group": "01",
+      "instructor": "JIMENEZ VALDIVIA WALDO FERNANDO",
+      "level": "E",
+      "name": "HISTORIA DEL PENSAMIENTO ECONOMICO",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "11:15",
+          "room": "E527",
+          "start": "09:45"
+        },
+        {
+          "day": "MI",
+          "end": "11:15",
+          "room": "E527",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304015",
+      "group": "21",
+      "instructor": "JIMENEZ VALDIVIA WALDO FERNANDO",
+      "level": "E",
+      "name": "HISTORIA DEL PENSAMIENTO ECONOMICO",
+      "schedule": [
+        {
+          "day": "MI",
+          "end": "08:15",
+          "room": "E526",
+          "start": "06:45"
+        },
+        {
+          "day": "VI",
+          "end": "08:15",
+          "room": "E526",
+          "start": "06:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304020",
+      "group": "01",
+      "instructor": "ROMERO PADILLA CESAR",
+      "level": "E",
+      "name": "TEORIA MONETARIA",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "12:45",
+          "room": "E526",
+          "start": "11:15"
+        },
+        {
+          "day": "JU",
+          "end": "12:45",
+          "room": "E526",
+          "start": "11:15"
+        },
+        {
+          "day": "VI",
+          "end": "12:45",
+          "room": "E527",
+          "start": "11:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304025",
+      "group": "01",
+      "instructor": "AZOGUE CRESPO RICARDO",
+      "level": "E",
+      "name": "EPISTEMOLOGIA DE LA ECONOMIA",
+      "schedule": [
+        {
+          "day": "MI",
+          "end": "11:15",
+          "room": "E 101",
+          "start": "09:45"
+        },
+        {
+          "day": "VI",
+          "end": "11:15",
+          "room": "E525",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304025",
+      "group": "21",
+      "instructor": "CABERO CALATAYUD CARLOS F.",
+      "level": "E",
+      "name": "EPISTEMOLOGIA DE LA ECONOMIA",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "20:15",
+          "room": "E529",
+          "start": "18:45"
+        },
+        {
+          "day": "JU",
+          "end": "20:15",
+          "room": "E529",
+          "start": "18:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304028",
+      "group": "01",
+      "instructor": "POR DESIGNAR DOCENTE",
+      "level": "E",
+      "name": "ECONOMIA POLITICA II",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "17:15",
+          "room": "E530",
+          "start": "15:45"
+        },
+        {
+          "day": "MI",
+          "end": "17:15",
+          "room": "E530",
+          "start": "15:45"
+        },
+        {
+          "day": "VI",
+          "end": "17:15",
+          "room": "E530",
+          "start": "15:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304028",
+      "group": "21",
+      "instructor": "REYNAGA ARCE HENRY RUKNER",
+      "level": "E",
+      "name": "ECONOMIA POLITICA II",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "14:15",
+          "room": "E525",
+          "start": "12:45"
+        },
+        {
+          "day": "MI",
+          "end": "21:45",
+          "room": "E 302",
+          "start": "20:15"
+        },
+        {
+          "day": "JU",
+          "end": "14:15",
+          "room": "E526",
+          "start": "12:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "MONZON ENCINAS MARIO ABAD",
+          "schedule": [
+            {
+              "day": "VI",
+              "end": "15:45",
+              "room": "E 105",
+              "start": "14:15"
+            }
+          ]
+        }
+      ],
+      "code": "1304030",
+      "group": "01",
+      "instructor": "POR DESIGNAR DOCENTE",
+      "level": "E",
+      "name": "ECONOMETRIA I",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "12:45",
+          "room": "E548",
+          "start": "11:15"
+        },
+        {
+          "day": "MI",
+          "end": "12:45",
+          "room": "E550",
+          "start": "11:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "LEDEZMA HIDALGO ESTEFANIA GRACIELA",
+          "schedule": [
+            {
+              "day": "VI",
+              "end": "11:15",
+              "room": "E548",
+              "start": "09:45"
+            }
+          ]
+        }
+      ],
+      "code": "1304030",
+      "group": "02",
+      "instructor": "SARAVIA LOPEZ VICKY ALEJANDRA",
+      "level": "E",
+      "name": "ECONOMETRIA I",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "11:15",
+          "room": "E528",
+          "start": "09:45"
+        },
+        {
+          "day": "MI",
+          "end": "11:15",
+          "room": "E528",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304063",
+      "group": "01",
+      "instructor": "POR DESIGNAR DOCENTE",
+      "level": "E",
+      "name": "MUESTREO",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "08:15",
+          "room": "E548",
+          "start": "06:45"
+        },
+        {
+          "day": "MI",
+          "end": "08:15",
+          "room": "E 401",
+          "start": "06:45"
+        },
+        {
+          "day": "JU",
+          "end": "18:45",
+          "room": "E 401",
+          "start": "17:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304129",
+      "group": "21",
+      "instructor": "LEDO GARCIA CARMEN",
+      "level": "E",
+      "name": "DEMOGRAFIA",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "08:15",
+          "room": "CEPLAC",
+          "start": "06:45"
+        },
+        {
+          "day": "MI",
+          "end": "08:15",
+          "room": "CEPLAC",
+          "start": "06:45"
+        },
+        {
+          "day": "VI",
+          "end": "08:15",
+          "room": "CEPLAC",
+          "start": "06:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304132",
+      "group": "21",
+      "instructor": "GONZALES FERNANDEZ FERNANDO",
+      "level": "E",
+      "name": "ESTADISTICA APLICADA",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "09:45",
+          "room": "E548",
+          "start": "08:15"
+        },
+        {
+          "day": "JU",
+          "end": "09:45",
+          "room": "E548",
+          "start": "08:15"
+        },
+        {
+          "day": "VI",
+          "end": "09:45",
+          "room": "E548",
+          "start": "08:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304134",
+      "group": "21",
+      "instructor": "LEDEZMA SANDOVAL FEDERICO",
+      "level": "E",
+      "name": "FINANZAS DE EMPRESAS",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "18:45",
+          "room": "E526",
+          "start": "17:15"
+        },
+        {
+          "day": "MI",
+          "end": "18:45",
+          "room": "E501",
+          "start": "17:15"
+        },
+        {
+          "day": "VI",
+          "end": "18:45",
+          "room": "E 102",
+          "start": "17:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304139",
+      "group": "01",
+      "instructor": "VARGAS OROSCO FREDDY",
+      "level": "E",
+      "name": "PRESUPUESTOS EMPRESARIALES",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "09:45",
+          "room": "E527",
+          "start": "08:15"
+        },
+        {
+          "day": "JU",
+          "end": "11:15",
+          "room": "E527",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304139",
+      "group": "21",
+      "instructor": "MARTINEZ ALPIRI ANAHI MONICA",
+      "level": "E",
+      "name": "PRESUPUESTOS EMPRESARIALES",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "08:15",
+          "room": "E501",
+          "start": "06:45"
+        },
+        {
+          "day": "MA",
+          "end": "08:15",
+          "room": "E501",
+          "start": "06:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304142",
+      "group": "21",
+      "instructor": "SEMPERTEGUI ZEBALLOS MARIA SANDRA",
+      "level": "E",
+      "name": "SEMINARIO DE ESTADISTICA",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "09:45",
+          "room": "E528",
+          "start": "08:15"
+        },
+        {
+          "day": "MI",
+          "end": "09:45",
+          "room": "E528",
+          "start": "08:15"
+        },
+        {
+          "day": "JU",
+          "end": "11:15",
+          "room": "E528",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304144",
+      "group": "21",
+      "instructor": "TORREZ AGUILAR JOSE",
+      "level": "E",
+      "name": "TRIBUTACION",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "18:45",
+          "room": "E522",
+          "start": "17:15"
+        },
+        {
+          "day": "JU",
+          "end": "08:15",
+          "room": "E511",
+          "start": "06:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304155",
+      "group": "21",
+      "instructor": "POR DESIGNAR DOCENTE",
+      "level": "E",
+      "name": "GESTION DE RECURSOS HUMANOS",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "20:15",
+          "room": "E525",
+          "start": "18:45"
+        },
+        {
+          "day": "MI",
+          "end": "20:15",
+          "room": "E526",
+          "start": "18:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304210",
+      "group": "21",
+      "instructor": "ALIENDRE LAFUENTE ROMER SIMON",
+      "level": "E",
+      "name": "INVESTIGACION OPERATIVA",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "08:15",
+          "room": "E526",
+          "start": "06:45"
+        },
+        {
+          "day": "MI",
+          "end": "08:15",
+          "room": "E501",
+          "start": "06:45"
+        },
+        {
+          "day": "JU",
+          "end": "08:15",
+          "room": "E526",
+          "start": "06:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1803027",
+      "group": "05",
+      "instructor": "POR DESIGNAR DOCENTE",
+      "level": "E",
+      "name": "INGLES III",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "09:45",
+          "room": "E 105",
+          "start": "08:15"
+        },
+        {
+          "day": "MI",
+          "end": "09:45",
+          "room": "E PB-1",
+          "start": "08:15"
+        },
+        {
+          "day": "VI",
+          "end": "09:45",
+          "room": "E 101",
+          "start": "08:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "PINEDO CABRERA EMILY GABRIEL",
+          "schedule": [
+            {
+              "day": "VI",
+              "end": "17:15",
+              "room": "E 106",
+              "start": "15:45"
+            }
+          ]
+        }
+      ],
+      "code": "1304026",
+      "group": "01",
+      "instructor": "ESCALERA MELGAR ALBERTO",
+      "level": "F",
+      "name": "POLITICAS MACROECONOMICAS",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "17:15",
+          "room": "E 102",
+          "start": "15:45"
+        },
+        {
+          "day": "MI",
+          "end": "17:15",
+          "room": "E 103",
+          "start": "15:45"
+        },
+        {
+          "day": "JU",
+          "end": "17:15",
+          "room": "E 101",
+          "start": "15:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "PINEDO CABRERA EMILY GABRIEL",
+          "schedule": [
+            {
+              "day": "SA",
+              "end": "09:45",
+              "room": "E527",
+              "start": "08:15"
+            }
+          ]
+        }
+      ],
+      "code": "1304026",
+      "group": "21",
+      "instructor": "ZEGADA CLAURE OSCAR",
+      "level": "F",
+      "name": "POLITICAS MACROECONOMICAS",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "20:15",
+          "room": "E530",
+          "start": "18:45"
+        },
+        {
+          "day": "MA",
+          "end": "18:45",
+          "room": "E530",
+          "start": "17:15"
+        },
+        {
+          "day": "MI",
+          "end": "20:15",
+          "room": "E527",
+          "start": "18:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304033",
+      "group": "01",
+      "instructor": "POR DESIGNAR DOCENTE",
+      "level": "F",
+      "name": "TEORIAS ECONOMICAS ACTUALES",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "11:15",
+          "room": "E525",
+          "start": "09:45"
+        },
+        {
+          "day": "JU",
+          "end": "11:15",
+          "room": "E525",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304033",
+      "group": "21",
+      "instructor": "SARAVIA LOPEZ VICKY ALEJANDRA",
+      "level": "F",
+      "name": "TEORIAS ECONOMICAS ACTUALES",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "20:15",
+          "room": "E528",
+          "start": "18:45"
+        },
+        {
+          "day": "JU",
+          "end": "20:15",
+          "room": "E528",
+          "start": "18:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304034",
+      "group": "01",
+      "instructor": "MORALES GUZMAN CESAR",
+      "level": "F",
+      "name": "FORMULACION DE PROYECTOS",
+      "schedule": [
+        {
+          "day": "MI",
+          "end": "12:45",
+          "room": "E 208",
+          "start": "11:15"
+        },
+        {
+          "day": "JU",
+          "end": "12:45",
+          "room": "E 207",
+          "start": "11:15"
+        },
+        {
+          "day": "VI",
+          "end": "12:45",
+          "room": "E 104",
+          "start": "11:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304034",
+      "group": "21",
+      "instructor": "BALDERRAMA MAMANI JOSE ANTONIO",
+      "level": "F",
+      "name": "FORMULACION DE PROYECTOS",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "08:15",
+          "room": "E528",
+          "start": "06:45"
+        },
+        {
+          "day": "MI",
+          "end": "08:15",
+          "room": "E528",
+          "start": "06:45"
+        },
+        {
+          "day": "VI",
+          "end": "08:15",
+          "room": "E528",
+          "start": "06:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304035",
+      "group": "01",
+      "instructor": "VILLAZON DEL CARPIO OSMAN ERICK",
+      "level": "F",
+      "name": "TEORIA DE LAS INSTITUCIONES ECONOMICAS",
+      "schedule": [
+        {
+          "day": "JU",
+          "end": "11:15",
+          "room": "E 101",
+          "start": "09:45"
+        },
+        {
+          "day": "VI",
+          "end": "11:15",
+          "room": "E 302",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304035",
+      "group": "21",
+      "instructor": "ZEGADA CLAURE OSCAR",
+      "level": "F",
+      "name": "TEORIA DE LAS INSTITUCIONES ECONOMICAS",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "21:45",
+          "room": "E530",
+          "start": "20:15"
+        },
+        {
+          "day": "MI",
+          "end": "18:45",
+          "room": "E530",
+          "start": "17:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "MONZON ENCINAS MARIO ABAD",
+          "schedule": [
+            {
+              "day": "VI",
+              "end": "14:15",
+              "room": "E 401",
+              "start": "12:45"
+            }
+          ]
+        }
+      ],
+      "code": "1304036",
+      "group": "01",
+      "instructor": "POR DESIGNAR DOCENTE",
+      "level": "F",
+      "name": "ECONOMETRIA II",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "08:15",
+          "room": "E528",
+          "start": "06:45"
+        },
+        {
+          "day": "JU",
+          "end": "08:15",
+          "room": "E528",
+          "start": "06:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "MONZON ENCINAS MARIO ABAD",
+          "schedule": [
+            {
+              "day": "VI",
+              "end": "18:45",
+              "room": "E 401",
+              "start": "17:15"
+            }
+          ]
+        }
+      ],
+      "code": "1304036",
+      "group": "21",
+      "instructor": "POR DESIGNAR DOCENTE",
+      "level": "F",
+      "name": "ECONOMETRIA II",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "18:45",
+          "room": "E528",
+          "start": "17:15"
+        },
+        {
+          "day": "JU",
+          "end": "18:45",
+          "room": "E528",
+          "start": "17:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304131",
+      "group": "21",
+      "instructor": "LEDEZMA RIVERA JHONNY LIMBERT",
+      "level": "F",
+      "name": "ECONOMIA AGRARIA",
+      "schedule": [
+        {
+          "day": "JU",
+          "end": "14:15",
+          "room": "E525",
+          "start": "12:45"
+        },
+        {
+          "day": "VI",
+          "end": "14:15",
+          "room": "E525",
+          "start": "12:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304141",
+      "group": "21",
+      "instructor": "URQUIDI BELLIDO SONIA",
+      "level": "F",
+      "name": "PROYECTOS SOCIALES",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "12:45",
+          "room": "E PB-4",
+          "start": "11:15"
+        },
+        {
+          "day": "MI",
+          "end": "12:45",
+          "room": "E PB-1",
+          "start": "11:15"
+        },
+        {
+          "day": "JU",
+          "end": "12:45",
+          "room": "E PB-4",
+          "start": "11:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304159",
+      "group": "21",
+      "instructor": "SARAVIA LOPEZ VICKY ALEJANDRA",
+      "level": "F",
+      "name": "SEMINARIO COMERCIAL",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "09:45",
+          "room": "ECO5",
+          "start": "08:15"
+        },
+        {
+          "day": "MI",
+          "end": "09:45",
+          "room": "E 306",
+          "start": "08:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304161",
+      "group": "21",
+      "instructor": "HOFFMANN BARRIENTOS KARL",
+      "level": "F",
+      "name": "GESTION DE PROYECTOS DE INVERSION",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "18:45",
+          "room": "E528",
+          "start": "17:15"
+        },
+        {
+          "day": "MI",
+          "end": "18:45",
+          "room": "E528",
+          "start": "17:15"
+        },
+        {
+          "day": "JU",
+          "end": "20:15",
+          "room": "E 406",
+          "start": "18:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1301034",
+      "group": "02",
+      "instructor": "NAVIA QUIROGA GUSTAVO",
+      "level": "G",
+      "name": "MERCADOTECNIA II",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "18:45",
+          "room": "E502",
+          "start": "17:15"
+        },
+        {
+          "day": "MA",
+          "end": "18:45",
+          "room": "E504",
+          "start": "17:15"
+        },
+        {
+          "day": "JU",
+          "end": "18:45",
+          "room": "E502",
+          "start": "17:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1301034",
+      "group": "20",
+      "instructor": "AYMA SOTO FELIX MARCELO",
+      "level": "G",
+      "name": "MERCADOTECNIA II",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "11:15",
+          "room": "E 301",
+          "start": "09:45"
+        },
+        {
+          "day": "MI",
+          "end": "11:15",
+          "room": "E504",
+          "start": "09:45"
+        },
+        {
+          "day": "JU",
+          "end": "11:15",
+          "room": "E 302",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304032",
+      "group": "01",
+      "instructor": "MONTANO QUIROGA CLAUDIA CAROLA",
+      "level": "G",
+      "name": "DESARROLLO ECONOMICO I",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "09:45",
+          "room": "E522",
+          "start": "08:15"
+        },
+        {
+          "day": "MI",
+          "end": "09:45",
+          "room": "E527",
+          "start": "08:15"
+        },
+        {
+          "day": "VI",
+          "end": "09:45",
+          "room": "E523",
+          "start": "08:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304032",
+      "group": "21",
+      "instructor": "LEDEZMA RIVERA JHONNY LIMBERT",
+      "level": "G",
+      "name": "DESARROLLO ECONOMICO I",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "14:15",
+          "room": "E527",
+          "start": "12:45"
+        },
+        {
+          "day": "MI",
+          "end": "14:15",
+          "room": "E527",
+          "start": "12:45"
+        },
+        {
+          "day": "SA",
+          "end": "11:15",
+          "room": "E527",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304038",
+      "group": "21",
+      "instructor": "IRIARTE DE LA FUENTE MARCELA",
+      "level": "G",
+      "name": "ECONOMIA INTERNACIONAL I",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "09:45",
+          "room": "E 406",
+          "start": "08:15"
+        },
+        {
+          "day": "MI",
+          "end": "09:45",
+          "room": "E548",
+          "start": "08:15"
+        },
+        {
+          "day": "JU",
+          "end": "11:15",
+          "room": "E 406",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304039",
+      "group": "01",
+      "instructor": "ZEGADA CLAURE OSCAR",
+      "level": "G",
+      "name": "POLITICA ECONOMICA",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "11:15",
+          "room": "E526",
+          "start": "09:45"
+        },
+        {
+          "day": "MA",
+          "end": "17:15",
+          "room": "E530",
+          "start": "15:45"
+        },
+        {
+          "day": "MI",
+          "end": "11:15",
+          "room": "E530",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304039",
+      "group": "21",
+      "instructor": "ZEGADA CLAURE OSCAR",
+      "level": "G",
+      "name": "POLITICA ECONOMICA",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "18:45",
+          "room": "E501",
+          "start": "17:15"
+        },
+        {
+          "day": "MA",
+          "end": "20:15",
+          "room": "E527",
+          "start": "18:45"
+        },
+        {
+          "day": "MI",
+          "end": "21:45",
+          "room": "E530",
+          "start": "20:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304040",
+      "group": "21",
+      "instructor": "SEJAS CHOQUE JUAN CARLOS",
+      "level": "G",
+      "name": "EVALUACION DE PROYECTOS",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "12:45",
+          "room": "E 209",
+          "start": "11:15"
+        },
+        {
+          "day": "MA",
+          "end": "12:45",
+          "room": "E550",
+          "start": "11:15"
+        },
+        {
+          "day": "MI",
+          "end": "12:45",
+          "room": "E 205",
+          "start": "11:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304113",
+      "group": "21",
+      "instructor": "DECKER MARQUEZ JOSE",
+      "level": "G",
+      "name": "CONTABILIDAD NACIONAL E INSUMO-PRODUCTO",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "20:15",
+          "room": "E525",
+          "start": "18:45"
+        },
+        {
+          "day": "JU",
+          "end": "18:45",
+          "room": "E 107",
+          "start": "17:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304133",
+      "group": "21",
+      "instructor": "ALVAREZ QUIROZ RICHARD MILTON",
+      "level": "G",
+      "name": "ESTRATEGIA EMPRESARIAL",
+      "schedule": [
+        {
+          "day": "MI",
+          "end": "11:15",
+          "room": "E526",
+          "start": "09:45"
+        },
+        {
+          "day": "VI",
+          "end": "09:45",
+          "room": "E526",
+          "start": "08:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1302004",
+      "group": "04",
+      "instructor": "QUIROZ GOMEZ CARMEN RITA",
+      "level": "H",
+      "name": "DERECHO COMERCIAL",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "09:45",
+          "room": "E506",
+          "start": "08:15"
+        },
+        {
+          "day": "JU",
+          "end": "11:15",
+          "room": "E512",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1302004",
+      "group": "23",
+      "instructor": "QUINTANILLA CALVIMONTES GONZALO",
+      "level": "H",
+      "name": "DERECHO COMERCIAL",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "21:45",
+          "room": "E542",
+          "start": "20:15"
+        },
+        {
+          "day": "VI",
+          "end": "21:45",
+          "room": "E510",
+          "start": "20:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "FLORES SOLIZ JEAN CARLA",
+          "schedule": [
+            {
+              "day": "JU",
+              "end": "14:15",
+              "room": "E507",
+              "start": "12:45"
+            }
+          ]
+        }
+      ],
+      "code": "1302006",
+      "group": "21",
+      "instructor": "BALDERRAMA MAMANI JOSE ANTONIO",
+      "level": "H",
+      "name": "CONTABILIDAD II",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "20:15",
+          "room": "E510",
+          "start": "18:45"
+        },
+        {
+          "day": "MA",
+          "end": "08:15",
+          "room": "E 301",
+          "start": "06:45"
+        },
+        {
+          "day": "JU",
+          "end": "08:15",
+          "room": "E513",
+          "start": "06:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "AYSA ALVARADO DANIELA",
+          "schedule": [
+            {
+              "day": "MI",
+              "end": "14:15",
+              "room": "E 103",
+              "start": "12:45"
+            }
+          ]
+        }
+      ],
+      "code": "1302006",
+      "group": "22",
+      "instructor": "SAAVEDRA GOMEZ MILENA ELIZABETH",
+      "level": "H",
+      "name": "CONTABILIDAD II",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "20:15",
+          "room": "E543",
+          "start": "18:45"
+        },
+        {
+          "day": "MI",
+          "end": "20:15",
+          "room": "E518",
+          "start": "18:45"
+        },
+        {
+          "day": "JU",
+          "end": "20:15",
+          "room": "E506",
+          "start": "18:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [
+        {
+          "name": "FLORES SOLIZ JEAN CARLA",
+          "schedule": [
+            {
+              "day": "VI",
+              "end": "14:15",
+              "room": "E514",
+              "start": "12:45"
+            }
+          ]
+        }
+      ],
+      "code": "1302006",
+      "group": "23",
+      "instructor": "TORRICO SANCHEZ FELIPE ROBERTO",
+      "level": "H",
+      "name": "CONTABILIDAD II",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "20:15",
+          "room": "E513",
+          "start": "18:45"
+        },
+        {
+          "day": "MA",
+          "end": "08:15",
+          "room": "E517",
+          "start": "06:45"
+        },
+        {
+          "day": "JU",
+          "end": "21:45",
+          "room": "E542",
+          "start": "20:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304041",
+      "group": "01",
+      "instructor": "MANZANO ANZALDO NELSON TITO",
+      "level": "H",
+      "name": "SEMINARIO DE INVESTIGACION",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "17:15",
+          "room": "E 101",
+          "start": "15:45"
+        },
+        {
+          "day": "MI",
+          "end": "17:15",
+          "room": "E 104",
+          "start": "15:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304041",
+      "group": "02",
+      "instructor": "LEDO GARCIA CARMEN",
+      "level": "H",
+      "name": "SEMINARIO DE INVESTIGACION",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "18:45",
+          "room": "CEPLAC",
+          "start": "17:15"
+        },
+        {
+          "day": "JU",
+          "end": "18:45",
+          "room": "CEPLAC",
+          "start": "17:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304041",
+      "group": "03",
+      "instructor": "UBERHUAGA CANDIA PATRICIA DEL CARMEN",
+      "level": "H",
+      "name": "SEMINARIO DE INVESTIGACION",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "12:45",
+          "room": "E530",
+          "start": "11:15"
+        },
+        {
+          "day": "VI",
+          "end": "12:45",
+          "room": "E530",
+          "start": "11:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304041",
+      "group": "04",
+      "instructor": "CUBA ROJAS PABLO LUIS",
+      "level": "H",
+      "name": "SEMINARIO DE INVESTIGACION",
+      "schedule": [
+        {
+          "day": "MI",
+          "end": "09:45",
+          "room": "E525",
+          "start": "08:15"
+        },
+        {
+          "day": "VI",
+          "end": "11:15",
+          "room": "E528",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304041",
+      "group": "21",
+      "instructor": "AILLON GOMEZ TANIA LEDA",
+      "level": "H",
+      "name": "SEMINARIO DE INVESTIGACION",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "14:15",
+          "room": "E 104",
+          "start": "12:45"
+        },
+        {
+          "day": "MI",
+          "end": "14:15",
+          "room": "E 105",
+          "start": "12:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304041",
+      "group": "24",
+      "instructor": "BLANCO BLACUTT VICTOR HUGO",
+      "level": "H",
+      "name": "SEMINARIO DE INVESTIGACION",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "09:45",
+          "room": "E501",
+          "start": "08:15"
+        },
+        {
+          "day": "JU",
+          "end": "09:45",
+          "room": "E528",
+          "start": "08:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304045",
+      "group": "21",
+      "instructor": "AYALA LEAÑO WALTER DANIEL",
+      "level": "H",
+      "name": "ECONOMIA INTERNACIONAL II",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "20:15",
+          "room": "E526",
+          "start": "18:45"
+        },
+        {
+          "day": "MI",
+          "end": "18:45",
+          "room": "E527",
+          "start": "17:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304046",
+      "group": "21",
+      "instructor": "BARRIENTOS BALDERRAMA CLAUDIA NINOZKA",
+      "level": "H",
+      "name": "ECONOMIA MUNDIAL CONTEMPORANEA",
+      "schedule": [
+        {
+          "day": "JU",
+          "end": "08:15",
+          "room": "E 201",
+          "start": "06:45"
+        },
+        {
+          "day": "SA",
+          "end": "09:45",
+          "room": "E 108",
+          "start": "08:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304065",
+      "group": "21",
+      "instructor": "GUZMAN BROCKMANN FELIPE HANS WIGBERTO",
+      "level": "H",
+      "name": "SISTEMAS ADMINISTRATIVOS",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "21:45",
+          "room": "E 102",
+          "start": "20:15"
+        },
+        {
+          "day": "MI",
+          "end": "21:45",
+          "room": "E 102",
+          "start": "20:15"
+        },
+        {
+          "day": "JU",
+          "end": "20:15",
+          "room": "E501",
+          "start": "18:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304135",
+      "group": "21",
+      "instructor": "POR DESIGNAR DOCENTE",
+      "level": "H",
+      "name": "MERCADO DE CAPITALES",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "12:45",
+          "room": "E525",
+          "start": "11:15"
+        },
+        {
+          "day": "MI",
+          "end": "12:45",
+          "room": "E525",
+          "start": "11:15"
+        },
+        {
+          "day": "VI",
+          "end": "12:45",
+          "room": "E 103",
+          "start": "11:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304149",
+      "group": "21",
+      "instructor": "DECKER MARQUEZ JOSE",
+      "level": "H",
+      "name": "DESARROLLO ECONOMICO II",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "18:45",
+          "room": "E 105",
+          "start": "17:15"
+        },
+        {
+          "day": "MI",
+          "end": "18:45",
+          "room": "E 107",
+          "start": "17:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304154",
+      "group": "21",
+      "instructor": "HOFFMANN BARRIENTOS KARL",
+      "level": "H",
+      "name": "SEMINARIO DE MENCION",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "17:15",
+          "room": "E 102",
+          "start": "15:45"
+        },
+        {
+          "day": "MI",
+          "end": "17:15",
+          "room": "E 102",
+          "start": "15:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304156",
+      "group": "21",
+      "instructor": "DECKER MARQUEZ JOSE",
+      "level": "H",
+      "name": "PLANIFICACION",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "18:45",
+          "room": "E 101",
+          "start": "17:15"
+        },
+        {
+          "day": "VI",
+          "end": "18:45",
+          "room": "E 106",
+          "start": "17:15"
+        },
+        {
+          "day": "SA",
+          "end": "08:15",
+          "room": "E525",
+          "start": "06:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304048",
+      "group": "03",
+      "instructor": "POR DESIGNAR DOCENTE",
+      "level": "I",
+      "name": "TALLER DE TITULACION",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "14:15",
+          "room": "ECO3",
+          "start": "12:45"
+        },
+        {
+          "day": "JU",
+          "end": "14:15",
+          "room": "ECO3",
+          "start": "12:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304048",
+      "group": "06",
+      "instructor": "HOFFMANN BARRIENTOS KARL",
+      "level": "I",
+      "name": "TALLER DE TITULACION",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "17:15",
+          "room": "ECO7",
+          "start": "15:45"
+        },
+        {
+          "day": "JU",
+          "end": "17:15",
+          "room": "ECO7",
+          "start": "15:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304048",
+      "group": "10",
+      "instructor": "UBERHUAGA CANDIA PATRICIA DEL CARMEN",
+      "level": "I",
+      "name": "TALLER DE TITULACION",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "14:15",
+          "room": "ECO3",
+          "start": "12:45"
+        },
+        {
+          "day": "MA",
+          "end": "12:45",
+          "room": "ECO3",
+          "start": "11:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304048",
+      "group": "11",
+      "instructor": "POR DESIGNAR DOCENTE",
+      "level": "I",
+      "name": "TALLER DE TITULACION",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "11:15",
+          "room": "ECO5",
+          "start": "09:45"
+        },
+        {
+          "day": "VI",
+          "end": "11:15",
+          "room": "ECO5",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304048",
+      "group": "12",
+      "instructor": "NINA LAURA ALVARO JESUS",
+      "level": "I",
+      "name": "TALLER DE TITULACION",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "21:45",
+          "room": "ECO6",
+          "start": "20:15"
+        },
+        {
+          "day": "JU",
+          "end": "21:45",
+          "room": "ECO6",
+          "start": "20:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304048",
+      "group": "18",
+      "instructor": "CUBA ROJAS PABLO LUIS",
+      "level": "I",
+      "name": "TALLER DE TITULACION",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "18:45",
+          "room": "ECO2",
+          "start": "17:15"
+        },
+        {
+          "day": "MI",
+          "end": "20:15",
+          "room": "ECO6",
+          "start": "18:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304048",
+      "group": "21",
+      "instructor": "UBERHUAGA CANDIA PATRICIA DEL CARMEN",
+      "level": "I",
+      "name": "TALLER DE TITULACION",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "09:45",
+          "room": "ECO2",
+          "start": "08:15"
+        },
+        {
+          "day": "MA",
+          "end": "11:15",
+          "room": "ECO2",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304048",
+      "group": "24",
+      "instructor": "LEDEZMA RIVERA JHONNY LIMBERT",
+      "level": "I",
+      "name": "TALLER DE TITULACION",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "14:15",
+          "room": "ECO1",
+          "start": "12:45"
+        },
+        {
+          "day": "SA",
+          "end": "12:45",
+          "room": "ECO1",
+          "start": "11:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304048",
+      "group": "27",
+      "instructor": "ZEGADA CLAURE OSCAR",
+      "level": "I",
+      "name": "TALLER DE TITULACION",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "12:45",
+          "room": "ECO2",
+          "start": "11:15"
+        },
+        {
+          "day": "MI",
+          "end": "12:45",
+          "room": "ECO2",
+          "start": "11:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304048",
+      "group": "30",
+      "instructor": "COCA CARASILA ANDRES MILTON",
+      "level": "I",
+      "name": "TALLER DE TITULACION",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "18:45",
+          "room": "ECO5",
+          "start": "17:15"
+        },
+        {
+          "day": "MI",
+          "end": "18:45",
+          "room": "ECO5",
+          "start": "17:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304048",
+      "group": "32",
+      "instructor": "CUBA ROJAS PABLO LUIS",
+      "level": "I",
+      "name": "TALLER DE TITULACION",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "20:15",
+          "room": "ECO2",
+          "start": "18:45"
+        },
+        {
+          "day": "MI",
+          "end": "18:45",
+          "room": "ECO2",
+          "start": "17:15"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304048",
+      "group": "35",
+      "instructor": "LEDO GARCIA CARMEN",
+      "level": "I",
+      "name": "TALLER DE TITULACION",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "08:15",
+          "room": "CEPLAC",
+          "start": "06:45"
+        },
+        {
+          "day": "JU",
+          "end": "08:15",
+          "room": "CEPLAC",
+          "start": "06:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304048",
+      "group": "36",
+      "instructor": "POR DESIGNAR DOCENTE",
+      "level": "I",
+      "name": "TALLER DE TITULACION",
+      "schedule": [
+        {
+          "day": "MI",
+          "end": "20:15",
+          "room": "ECO8",
+          "start": "18:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304048",
+      "group": "43",
+      "instructor": "POR DESIGNAR DOCENTE",
+      "level": "I",
+      "name": "TALLER DE TITULACION",
+      "schedule": [
+        {
+          "day": "MA",
+          "end": "17:15",
+          "room": "ECO8",
+          "start": "15:45"
+        },
+        {
+          "day": "JU",
+          "end": "17:15",
+          "room": "ECO8",
+          "start": "15:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304048",
+      "group": "45",
+      "instructor": "BLANCO BLACUTT VICTOR HUGO",
+      "level": "I",
+      "name": "TALLER DE TITULACION",
+      "schedule": [
+        {
+          "day": "MI",
+          "end": "11:15",
+          "room": "ECO6",
+          "start": "09:45"
+        },
+        {
+          "day": "JU",
+          "end": "11:15",
+          "room": "ECO6",
+          "start": "09:45"
+        }
+      ]
+    },
+    {
+      "auxiliaries": [],
+      "code": "1304048",
+      "group": "46",
+      "instructor": "BLANCO BLACUTT VICTOR HUGO",
+      "level": "I",
+      "name": "TALLER DE TITULACION",
+      "schedule": [
+        {
+          "day": "LU",
+          "end": "11:15",
+          "room": "ECO6",
+          "start": "09:45"
+        },
+        {
+          "day": "MI",
+          "end": "09:45",
+          "room": "ECO6",
+          "start": "08:15"
+        }
+      ]
+    }
+  ],
+  "groupsBySubject": {
+    "1301031": [
+      {
+        "auxiliaries": [],
+        "code": "1301031",
+        "group": "01",
+        "instructor": "CALLA VILLEGAS EDWIN",
+        "level": "E",
+        "name": "MERCADOTECNIA I",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "17:15",
+            "room": "E 109",
+            "start": "15:45"
+          },
+          {
+            "day": "MI",
+            "end": "17:15",
+            "room": "E 109",
+            "start": "15:45"
+          },
+          {
+            "day": "VI",
+            "end": "17:15",
+            "room": "E 201",
+            "start": "15:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1301031",
+        "group": "20",
+        "instructor": "ZEGARRA SALDANA PABLO",
+        "level": "E",
+        "name": "MERCADOTECNIA I",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "21:45",
+            "room": "E 205",
+            "start": "20:15"
+          },
+          {
+            "day": "MA",
+            "end": "20:15",
+            "room": "E 103",
+            "start": "18:45"
+          },
+          {
+            "day": "MI",
+            "end": "09:45",
+            "room": "E526",
+            "start": "08:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1301031",
+        "group": "21",
+        "instructor": "NAVIA QUIROGA GUSTAVO",
+        "level": "E",
+        "name": "MERCADOTECNIA I",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "21:45",
+            "room": "E PB-4",
+            "start": "20:15"
+          },
+          {
+            "day": "VI",
+            "end": "18:45",
+            "room": "E502",
+            "start": "17:15"
+          },
+          {
+            "day": "SA",
+            "end": "11:15",
+            "room": "E503",
+            "start": "09:45"
+          }
+        ]
+      }
+    ],
+    "1301034": [
+      {
+        "auxiliaries": [],
+        "code": "1301034",
+        "group": "02",
+        "instructor": "NAVIA QUIROGA GUSTAVO",
+        "level": "G",
+        "name": "MERCADOTECNIA II",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "18:45",
+            "room": "E502",
+            "start": "17:15"
+          },
+          {
+            "day": "MA",
+            "end": "18:45",
+            "room": "E504",
+            "start": "17:15"
+          },
+          {
+            "day": "JU",
+            "end": "18:45",
+            "room": "E502",
+            "start": "17:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1301034",
+        "group": "20",
+        "instructor": "AYMA SOTO FELIX MARCELO",
+        "level": "G",
+        "name": "MERCADOTECNIA II",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "11:15",
+            "room": "E 301",
+            "start": "09:45"
+          },
+          {
+            "day": "MI",
+            "end": "11:15",
+            "room": "E504",
+            "start": "09:45"
+          },
+          {
+            "day": "JU",
+            "end": "11:15",
+            "room": "E 302",
+            "start": "09:45"
+          }
+        ]
+      }
+    ],
+    "1302004": [
+      {
+        "auxiliaries": [],
+        "code": "1302004",
+        "group": "04",
+        "instructor": "QUIROZ GOMEZ CARMEN RITA",
+        "level": "H",
+        "name": "DERECHO COMERCIAL",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "09:45",
+            "room": "E506",
+            "start": "08:15"
+          },
+          {
+            "day": "JU",
+            "end": "11:15",
+            "room": "E512",
+            "start": "09:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1302004",
+        "group": "23",
+        "instructor": "QUINTANILLA CALVIMONTES GONZALO",
+        "level": "H",
+        "name": "DERECHO COMERCIAL",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "21:45",
+            "room": "E542",
+            "start": "20:15"
+          },
+          {
+            "day": "VI",
+            "end": "21:45",
+            "room": "E510",
+            "start": "20:15"
+          }
+        ]
+      }
+    ],
+    "1302006": [
+      {
+        "auxiliaries": [
+          {
+            "name": "FLORES SOLIZ JEAN CARLA",
+            "schedule": [
+              {
+                "day": "JU",
+                "end": "14:15",
+                "room": "E507",
+                "start": "12:45"
+              }
+            ]
+          }
+        ],
+        "code": "1302006",
+        "group": "21",
+        "instructor": "BALDERRAMA MAMANI JOSE ANTONIO",
+        "level": "H",
+        "name": "CONTABILIDAD II",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "20:15",
+            "room": "E510",
+            "start": "18:45"
+          },
+          {
+            "day": "MA",
+            "end": "08:15",
+            "room": "E 301",
+            "start": "06:45"
+          },
+          {
+            "day": "JU",
+            "end": "08:15",
+            "room": "E513",
+            "start": "06:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "AYSA ALVARADO DANIELA",
+            "schedule": [
+              {
+                "day": "MI",
+                "end": "14:15",
+                "room": "E 103",
+                "start": "12:45"
+              }
+            ]
+          }
+        ],
+        "code": "1302006",
+        "group": "22",
+        "instructor": "SAAVEDRA GOMEZ MILENA ELIZABETH",
+        "level": "H",
+        "name": "CONTABILIDAD II",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "20:15",
+            "room": "E543",
+            "start": "18:45"
+          },
+          {
+            "day": "MI",
+            "end": "20:15",
+            "room": "E518",
+            "start": "18:45"
+          },
+          {
+            "day": "JU",
+            "end": "20:15",
+            "room": "E506",
+            "start": "18:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "FLORES SOLIZ JEAN CARLA",
+            "schedule": [
+              {
+                "day": "VI",
+                "end": "14:15",
+                "room": "E514",
+                "start": "12:45"
+              }
+            ]
+          }
+        ],
+        "code": "1302006",
+        "group": "23",
+        "instructor": "TORRICO SANCHEZ FELIPE ROBERTO",
+        "level": "H",
+        "name": "CONTABILIDAD II",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "20:15",
+            "room": "E513",
+            "start": "18:45"
+          },
+          {
+            "day": "MA",
+            "end": "08:15",
+            "room": "E517",
+            "start": "06:45"
+          },
+          {
+            "day": "JU",
+            "end": "21:45",
+            "room": "E542",
+            "start": "20:15"
+          }
+        ]
+      }
+    ],
+    "1302080": [
+      {
+        "auxiliaries": [],
+        "code": "1302080",
+        "group": "01",
+        "instructor": "VALDEZ ESCOBAR JORGE",
+        "level": "D",
+        "name": "GESTION DE RIESGOS",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "12:45",
+            "room": "E508",
+            "start": "11:15"
+          },
+          {
+            "day": "JU",
+            "end": "12:45",
+            "room": "E510",
+            "start": "11:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1302080",
+        "group": "21",
+        "instructor": "ALIENDRE LAFUENTE ROMER SIMON",
+        "level": "D",
+        "name": "GESTION DE RIESGOS",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "08:15",
+            "room": "E507",
+            "start": "06:45"
+          },
+          {
+            "day": "SA",
+            "end": "08:15",
+            "room": "E512",
+            "start": "06:45"
+          }
+        ]
+      }
+    ],
+    "1304001": [
+      {
+        "auxiliaries": [
+          {
+            "name": "LIMA LEON YOHANA ARACELY",
+            "schedule": [
+              {
+                "day": "LU",
+                "end": "12:45",
+                "room": "E 102",
+                "start": "11:15"
+              }
+            ]
+          }
+        ],
+        "code": "1304001",
+        "group": "01",
+        "instructor": "AVILES ROCHA MARTHA ELIZABETH",
+        "level": "A",
+        "name": "ECONOMIA GENERAL",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "11:15",
+            "room": "E 105",
+            "start": "09:45"
+          },
+          {
+            "day": "MI",
+            "end": "11:15",
+            "room": "E 107",
+            "start": "09:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "LIMA LEON YOHANA ARACELY",
+            "schedule": [
+              {
+                "day": "MI",
+                "end": "09:45",
+                "room": "E 309",
+                "start": "08:15"
+              }
+            ]
+          }
+        ],
+        "code": "1304001",
+        "group": "02",
+        "instructor": "UBERHUAGA CANDIA PATRICIA DEL CARMEN",
+        "level": "A",
+        "name": "ECONOMIA GENERAL",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "11:15",
+            "room": "E530",
+            "start": "09:45"
+          },
+          {
+            "day": "VI",
+            "end": "11:15",
+            "room": "E530",
+            "start": "09:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "LIMA LEON YOHANA ARACELY",
+            "schedule": [
+              {
+                "day": "JU",
+                "end": "18:45",
+                "room": "E 303",
+                "start": "17:15"
+              }
+            ]
+          }
+        ],
+        "code": "1304001",
+        "group": "21",
+        "instructor": "SANCHEZ CASTELLON JUAN FELIX",
+        "level": "A",
+        "name": "ECONOMIA GENERAL",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "14:15",
+            "room": "E 106",
+            "start": "12:45"
+          },
+          {
+            "day": "MI",
+            "end": "14:15",
+            "room": "E530",
+            "start": "12:45"
+          }
+        ]
+      }
+    ],
+    "1304002": [
+      {
+        "auxiliaries": [],
+        "code": "1304002",
+        "group": "01",
+        "instructor": "RIVERA MIRANDA RENE",
+        "level": "A",
+        "name": "TALLER DE LENGUAJE Y REDACCION",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "12:45",
+            "room": "E 104",
+            "start": "11:15"
+          },
+          {
+            "day": "MI",
+            "end": "12:45",
+            "room": "E526",
+            "start": "11:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304002",
+        "group": "02",
+        "instructor": "SEVILLA CESPEDES VIVIAN CLAUDIA",
+        "level": "A",
+        "name": "TALLER DE LENGUAJE Y REDACCION",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "11:15",
+            "room": "E 101",
+            "start": "09:45"
+          },
+          {
+            "day": "JU",
+            "end": "11:15",
+            "room": "E503",
+            "start": "09:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304002",
+        "group": "21",
+        "instructor": "TRIGO ROCHA RUTH MERY",
+        "level": "A",
+        "name": "TALLER DE LENGUAJE Y REDACCION",
+        "schedule": [
+          {
+            "day": "MI",
+            "end": "08:15",
+            "room": "E PB-1",
+            "start": "06:45"
+          },
+          {
+            "day": "VI",
+            "end": "20:15",
+            "room": "E PB-1",
+            "start": "18:45"
+          }
+        ]
+      }
+    ],
+    "1304003": [
+      {
+        "auxiliaries": [
+          {
+            "name": "PEREZ SANCHEZ CAMILA YESENIA",
+            "schedule": [
+              {
+                "day": "VI",
+                "end": "09:45",
+                "room": "E 108",
+                "start": "08:15"
+              }
+            ]
+          }
+        ],
+        "code": "1304003",
+        "group": "01",
+        "instructor": "JALDIN QUIROZ RENE",
+        "level": "A",
+        "name": "ALGEBRA",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "09:45",
+            "room": "E530",
+            "start": "08:15"
+          },
+          {
+            "day": "JU",
+            "end": "09:45",
+            "room": "E530",
+            "start": "08:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "CHOQUE PORCO ANDRES",
+            "schedule": [
+              {
+                "day": "SA",
+                "end": "09:45",
+                "room": "E 103",
+                "start": "08:15"
+              }
+            ]
+          }
+        ],
+        "code": "1304003",
+        "group": "02",
+        "instructor": "POR DESIGNAR DOCENTE",
+        "level": "A",
+        "name": "ALGEBRA",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "12:45",
+            "room": "E 303",
+            "start": "11:15"
+          },
+          {
+            "day": "VI",
+            "end": "09:45",
+            "room": "E 303",
+            "start": "08:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "CHOQUE PORCO ANDRES",
+            "schedule": [
+              {
+                "day": "JU",
+                "end": "17:15",
+                "room": "E530",
+                "start": "15:45"
+              }
+            ]
+          }
+        ],
+        "code": "1304003",
+        "group": "03",
+        "instructor": "MOYA ALBARRACIN MARTIN",
+        "level": "A",
+        "name": "ALGEBRA",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "09:45",
+            "room": "E 102",
+            "start": "08:15"
+          },
+          {
+            "day": "VI",
+            "end": "09:45",
+            "room": "E 104",
+            "start": "08:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "UGARTE COCA HELEN ARACELY",
+            "schedule": [
+              {
+                "day": "MI",
+                "end": "18:45",
+                "room": "E 103",
+                "start": "17:15"
+              }
+            ]
+          }
+        ],
+        "code": "1304003",
+        "group": "21",
+        "instructor": "IRIARTE MERCADO EDGAR ALBERTO",
+        "level": "A",
+        "name": "ALGEBRA",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "20:15",
+            "room": "E546",
+            "start": "18:45"
+          },
+          {
+            "day": "JU",
+            "end": "20:15",
+            "room": "E527",
+            "start": "18:45"
+          }
+        ]
+      }
+    ],
+    "1304004": [
+      {
+        "auxiliaries": [
+          {
+            "name": "PINTO PURO ALVARO",
+            "schedule": [
+              {
+                "day": "JU",
+                "end": "11:15",
+                "room": "E526",
+                "start": "09:45"
+              }
+            ]
+          }
+        ],
+        "code": "1304004",
+        "group": "01",
+        "instructor": "DUERI MENDEZ MARIA ELENA",
+        "level": "A",
+        "name": "CALCULO",
+        "schedule": [
+          {
+            "day": "VI",
+            "end": "12:45",
+            "room": "E 107",
+            "start": "11:15"
+          },
+          {
+            "day": "SA",
+            "end": "11:15",
+            "room": "E542",
+            "start": "09:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "FERNANDEZ FULGUERA RAUL RODRIGO",
+            "schedule": [
+              {
+                "day": "JU",
+                "end": "12:45",
+                "room": "E 101",
+                "start": "11:15"
+              }
+            ]
+          }
+        ],
+        "code": "1304004",
+        "group": "02",
+        "instructor": "POR DESIGNAR DOCENTE",
+        "level": "A",
+        "name": "CALCULO",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "09:45",
+            "room": "E543",
+            "start": "08:15"
+          },
+          {
+            "day": "MI",
+            "end": "12:45",
+            "room": "E506",
+            "start": "11:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "HEREDIA TORREZ NESTOR ADALID",
+            "schedule": [
+              {
+                "day": "SA",
+                "end": "11:15",
+                "room": "E526",
+                "start": "09:45"
+              }
+            ]
+          }
+        ],
+        "code": "1304004",
+        "group": "03",
+        "instructor": "COVARRUBIAS VARGAS CAUJMAN",
+        "level": "A",
+        "name": "CALCULO",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "11:15",
+            "room": "E 201",
+            "start": "09:45"
+          },
+          {
+            "day": "MI",
+            "end": "11:15",
+            "room": "E524",
+            "start": "09:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "CHAVEZ ANTEQUERA ROBERTO CARLOS",
+            "schedule": [
+              {
+                "day": "SA",
+                "end": "09:45",
+                "room": "E 105",
+                "start": "08:15"
+              }
+            ]
+          }
+        ],
+        "code": "1304004",
+        "group": "21",
+        "instructor": "CONDORI ARIAS HERMOGENES",
+        "level": "A",
+        "name": "CALCULO",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "08:15",
+            "room": "E530",
+            "start": "06:45"
+          },
+          {
+            "day": "JU",
+            "end": "08:15",
+            "room": "E530",
+            "start": "06:45"
+          }
+        ]
+      }
+    ],
+    "1304005": [
+      {
+        "auxiliaries": [],
+        "code": "1304005",
+        "group": "01",
+        "instructor": "ANTEZANA LA FUENTE JORGE CARLOS",
+        "level": "A",
+        "name": "SOCIOLOGIA ECONOMICA",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "11:15",
+            "room": "E 103",
+            "start": "09:45"
+          },
+          {
+            "day": "JU",
+            "end": "12:45",
+            "room": "E530",
+            "start": "11:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304005",
+        "group": "02",
+        "instructor": "ANTEZANA LA FUENTE JORGE CARLOS",
+        "level": "A",
+        "name": "SOCIOLOGIA ECONOMICA",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "09:45",
+            "room": "E529",
+            "start": "08:15"
+          },
+          {
+            "day": "JU",
+            "end": "09:45",
+            "room": "E501",
+            "start": "08:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304005",
+        "group": "21",
+        "instructor": "AILLON GOMEZ TANIA LEDA",
+        "level": "A",
+        "name": "SOCIOLOGIA ECONOMICA",
+        "schedule": [
+          {
+            "day": "JU",
+            "end": "14:15",
+            "room": "E 110",
+            "start": "12:45"
+          },
+          {
+            "day": "VI",
+            "end": "14:15",
+            "room": "E 103",
+            "start": "12:45"
+          }
+        ]
+      }
+    ],
+    "1304006": [
+      {
+        "auxiliaries": [],
+        "code": "1304006",
+        "group": "01",
+        "instructor": "ORELLANA AYLLON LORGIO EVERTH",
+        "level": "A",
+        "name": "HISTORIA ECONOMICA DE AMERICA LATINA",
+        "schedule": [
+          {
+            "day": "VI",
+            "end": "11:15",
+            "room": "E 103",
+            "start": "09:45"
+          },
+          {
+            "day": "SA",
+            "end": "12:45",
+            "room": "E 103",
+            "start": "11:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304006",
+        "group": "02",
+        "instructor": "ORELLANA AYLLON LORGIO EVERTH",
+        "level": "A",
+        "name": "HISTORIA ECONOMICA DE AMERICA LATINA",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "12:45",
+            "room": "E 207",
+            "start": "11:15"
+          },
+          {
+            "day": "VI",
+            "end": "12:45",
+            "room": "E 207",
+            "start": "11:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304006",
+        "group": "21",
+        "instructor": "QUISPE CABRERA RENE",
+        "level": "A",
+        "name": "HISTORIA ECONOMICA DE AMERICA LATINA",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "14:15",
+            "room": "E 102",
+            "start": "12:45"
+          },
+          {
+            "day": "MI",
+            "end": "20:15",
+            "room": "E521",
+            "start": "18:45"
+          }
+        ]
+      }
+    ],
+    "1304007": [
+      {
+        "auxiliaries": [
+          {
+            "name": "HEREDIA TORREZ NESTOR ADALID",
+            "schedule": [
+              {
+                "day": "JU",
+                "end": "09:45",
+                "room": "E 209",
+                "start": "08:15"
+              }
+            ]
+          }
+        ],
+        "code": "1304007",
+        "group": "01",
+        "instructor": "CABERO CALATAYUD CARLOS F.",
+        "level": "B",
+        "name": "MICROECONOMIA I",
+        "schedule": [
+          {
+            "day": "MI",
+            "end": "15:45",
+            "room": "E529",
+            "start": "14:15"
+          },
+          {
+            "day": "VI",
+            "end": "17:15",
+            "room": "E529",
+            "start": "15:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "POR DESIGNAR AUXILIAR",
+            "schedule": [
+              {
+                "day": "VI",
+                "end": "17:15",
+                "room": "E 301",
+                "start": "15:45"
+              }
+            ]
+          }
+        ],
+        "code": "1304007",
+        "group": "02",
+        "instructor": "MERCADO SORIA JESUS BERNARDO",
+        "level": "B",
+        "name": "MICROECONOMIA I",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "17:15",
+            "room": "E527",
+            "start": "15:45"
+          },
+          {
+            "day": "MI",
+            "end": "17:15",
+            "room": "E527",
+            "start": "15:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "ARAUJO ARNEZ YASMIRA",
+            "schedule": [
+              {
+                "day": "VI",
+                "end": "20:15",
+                "room": "E526",
+                "start": "18:45"
+              }
+            ]
+          }
+        ],
+        "code": "1304007",
+        "group": "21",
+        "instructor": "ARAUJO COSSIO ALDO ROMEL",
+        "level": "B",
+        "name": "MICROECONOMIA I",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "20:15",
+            "room": "E 310",
+            "start": "18:45"
+          },
+          {
+            "day": "MA",
+            "end": "20:15",
+            "room": "E 310",
+            "start": "18:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "ARAUJO ARNEZ YASMIRA",
+            "schedule": [
+              {
+                "day": "LU",
+                "end": "20:15",
+                "room": "E 208",
+                "start": "18:45"
+              }
+            ]
+          }
+        ],
+        "code": "1304007",
+        "group": "22",
+        "instructor": "LAZCANO ALANDIA RUBEN",
+        "level": "B",
+        "name": "MICROECONOMIA I",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "18:45",
+            "room": "E 102",
+            "start": "17:15"
+          },
+          {
+            "day": "MA",
+            "end": "18:45",
+            "room": "E PB-1",
+            "start": "17:15"
+          }
+        ]
+      }
+    ],
+    "1304008": [
+      {
+        "auxiliaries": [
+          {
+            "name": "BARBOLIN RODRIGO NICOLAS",
+            "schedule": [
+              {
+                "day": "VI",
+                "end": "09:45",
+                "room": "E 207",
+                "start": "08:15"
+              }
+            ]
+          }
+        ],
+        "code": "1304008",
+        "group": "01",
+        "instructor": "GRIGORIU MONROY FRANCISCO PABLO",
+        "level": "C",
+        "name": "MACROECONOMIA I",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "11:15",
+            "room": "E526",
+            "start": "09:45"
+          },
+          {
+            "day": "JU",
+            "end": "12:45",
+            "room": "E527",
+            "start": "11:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "BARBOLIN RODRIGO NICOLAS",
+            "schedule": [
+              {
+                "day": "MA",
+                "end": "14:15",
+                "room": "E 103",
+                "start": "12:45"
+              }
+            ]
+          }
+        ],
+        "code": "1304008",
+        "group": "02",
+        "instructor": "AZOGUE CRESPO RICARDO",
+        "level": "C",
+        "name": "MACROECONOMIA I",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "17:15",
+            "room": "E 103",
+            "start": "15:45"
+          },
+          {
+            "day": "JU",
+            "end": "17:15",
+            "room": "E525",
+            "start": "15:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "BARBOLIN RODRIGO NICOLAS",
+            "schedule": [
+              {
+                "day": "SA",
+                "end": "11:15",
+                "room": "E 105",
+                "start": "09:45"
+              }
+            ]
+          }
+        ],
+        "code": "1304008",
+        "group": "21",
+        "instructor": "AZOGUE CRESPO RICARDO",
+        "level": "C",
+        "name": "MACROECONOMIA I",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "18:45",
+            "room": "E 103",
+            "start": "17:15"
+          },
+          {
+            "day": "JU",
+            "end": "18:45",
+            "room": "E 103",
+            "start": "17:15"
+          }
+        ]
+      }
+    ],
+    "1304011": [
+      {
+        "auxiliaries": [],
+        "code": "1304011",
+        "group": "01",
+        "instructor": "MANZANO ANZALDO NELSON TITO",
+        "level": "E",
+        "name": "ECONOMIA DE LOS RR.NN. Y M.A.",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "09:45",
+            "room": "E 108",
+            "start": "08:15"
+          },
+          {
+            "day": "JU",
+            "end": "09:45",
+            "room": "E 103",
+            "start": "08:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304011",
+        "group": "21",
+        "instructor": "UBERHUAGA CANDIA PATRICIA DEL CARMEN",
+        "level": "E",
+        "name": "ECONOMIA DE LOS RR.NN. Y M.A.",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "14:15",
+            "room": "E530",
+            "start": "12:45"
+          },
+          {
+            "day": "VI",
+            "end": "14:15",
+            "room": "E530",
+            "start": "12:45"
+          }
+        ]
+      }
+    ],
+    "1304012": [
+      {
+        "auxiliaries": [],
+        "code": "1304012",
+        "group": "01",
+        "instructor": "TORREZ GALARZA ANDRES REYNALDO",
+        "level": "B",
+        "name": "HISTORIA ECONOMICA DE BOLIVIA",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "17:15",
+            "room": "E527",
+            "start": "15:45"
+          },
+          {
+            "day": "JU",
+            "end": "17:15",
+            "room": "E527",
+            "start": "15:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304012",
+        "group": "21",
+        "instructor": "ORELLANA AYLLON LORGIO EVERTH",
+        "level": "B",
+        "name": "HISTORIA ECONOMICA DE BOLIVIA",
+        "schedule": [
+          {
+            "day": "MI",
+            "end": "20:15",
+            "room": "E529",
+            "start": "18:45"
+          },
+          {
+            "day": "JU",
+            "end": "20:15",
+            "room": "E526",
+            "start": "18:45"
+          }
+        ]
+      }
+    ],
+    "1304013": [
+      {
+        "auxiliaries": [
+          {
+            "name": "POR DESIGNAR AUXILIAR",
+            "schedule": [
+              {
+                "day": "MA",
+                "end": "15:45",
+                "room": "E529",
+                "start": "14:15"
+              }
+            ]
+          }
+        ],
+        "code": "1304013",
+        "group": "01",
+        "instructor": "CABERO CALATAYUD CARLOS F.",
+        "level": "C",
+        "name": "MICROECONOMIA II",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "15:45",
+            "room": "E529",
+            "start": "14:15"
+          },
+          {
+            "day": "JU",
+            "end": "15:45",
+            "room": "E529",
+            "start": "14:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "POR DESIGNAR AUXILIAR",
+            "schedule": [
+              {
+                "day": "MI",
+                "end": "14:15",
+                "room": "E 102",
+                "start": "12:45"
+              }
+            ]
+          }
+        ],
+        "code": "1304013",
+        "group": "21",
+        "instructor": "POR DESIGNAR DOCENTE",
+        "level": "C",
+        "name": "MICROECONOMIA II",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "14:15",
+            "room": "E526",
+            "start": "12:45"
+          },
+          {
+            "day": "MA",
+            "end": "20:15",
+            "room": "E529",
+            "start": "18:45"
+          }
+        ]
+      }
+    ],
+    "1304014": [
+      {
+        "auxiliaries": [
+          {
+            "name": "PINEDO CABRERA EMILY GABRIEL",
+            "schedule": [
+              {
+                "day": "LU",
+                "end": "11:15",
+                "room": "E527",
+                "start": "09:45"
+              }
+            ]
+          }
+        ],
+        "code": "1304014",
+        "group": "01",
+        "instructor": "POR DESIGNAR DOCENTE",
+        "level": "D",
+        "name": "MACROECONOMIA II",
+        "schedule": [
+          {
+            "day": "JU",
+            "end": "12:45",
+            "room": "E 104",
+            "start": "11:15"
+          },
+          {
+            "day": "VI",
+            "end": "12:45",
+            "room": "E 108",
+            "start": "11:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "PINEDO CABRERA EMILY GABRIEL",
+            "schedule": [
+              {
+                "day": "VI",
+                "end": "20:15",
+                "room": "E527",
+                "start": "18:45"
+              }
+            ]
+          }
+        ],
+        "code": "1304014",
+        "group": "21",
+        "instructor": "POR DESIGNAR DOCENTE",
+        "level": "D",
+        "name": "MACROECONOMIA II",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "18:45",
+            "room": "E527",
+            "start": "17:15"
+          },
+          {
+            "day": "MI",
+            "end": "21:45",
+            "room": "E525",
+            "start": "20:15"
+          }
+        ]
+      }
+    ],
+    "1304015": [
+      {
+        "auxiliaries": [],
+        "code": "1304015",
+        "group": "01",
+        "instructor": "JIMENEZ VALDIVIA WALDO FERNANDO",
+        "level": "E",
+        "name": "HISTORIA DEL PENSAMIENTO ECONOMICO",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "11:15",
+            "room": "E527",
+            "start": "09:45"
+          },
+          {
+            "day": "MI",
+            "end": "11:15",
+            "room": "E527",
+            "start": "09:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304015",
+        "group": "21",
+        "instructor": "JIMENEZ VALDIVIA WALDO FERNANDO",
+        "level": "E",
+        "name": "HISTORIA DEL PENSAMIENTO ECONOMICO",
+        "schedule": [
+          {
+            "day": "MI",
+            "end": "08:15",
+            "room": "E526",
+            "start": "06:45"
+          },
+          {
+            "day": "VI",
+            "end": "08:15",
+            "room": "E526",
+            "start": "06:45"
+          }
+        ]
+      }
+    ],
+    "1304016": [
+      {
+        "auxiliaries": [
+          {
+            "name": "REJAS CHUMACERO MACHZAEL EDWIN",
+            "schedule": [
+              {
+                "day": "LU",
+                "end": "12:45",
+                "room": "E 304",
+                "start": "11:15"
+              }
+            ]
+          }
+        ],
+        "code": "1304016",
+        "group": "01",
+        "instructor": "SUAZNABAR CLAROS FERNANDO ALBERTO",
+        "level": "C",
+        "name": "ESTADISTICA I",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "09:45",
+            "room": "E501",
+            "start": "08:15"
+          },
+          {
+            "day": "VI",
+            "end": "11:15",
+            "room": "E 101",
+            "start": "09:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "REJAS CHUMACERO MACHZAEL EDWIN",
+            "schedule": [
+              {
+                "day": "MI",
+                "end": "18:45",
+                "room": "E526",
+                "start": "17:15"
+              }
+            ]
+          }
+        ],
+        "code": "1304016",
+        "group": "21",
+        "instructor": "ALVAREZ QUIROZ RICHARD MILTON",
+        "level": "C",
+        "name": "ESTADISTICA I",
+        "schedule": [
+          {
+            "day": "JU",
+            "end": "18:45",
+            "room": "E 101",
+            "start": "17:15"
+          },
+          {
+            "day": "VI",
+            "end": "08:15",
+            "room": "E525",
+            "start": "06:45"
+          }
+        ]
+      }
+    ],
+    "1304017": [
+      {
+        "auxiliaries": [],
+        "code": "1304017",
+        "group": "01",
+        "instructor": "PANTOJA ROCHA YURI NEWTON",
+        "level": "B",
+        "name": "ADMINISTRACION",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "21:45",
+            "room": "E 104",
+            "start": "20:15"
+          },
+          {
+            "day": "SA",
+            "end": "11:15",
+            "room": "E 104",
+            "start": "09:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304017",
+        "group": "02",
+        "instructor": "VILLARROEL DAZA MARIA HELEN",
+        "level": "B",
+        "name": "ADMINISTRACION",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "09:45",
+            "room": "E 103",
+            "start": "08:15"
+          },
+          {
+            "day": "JU",
+            "end": "11:15",
+            "room": "E 103",
+            "start": "09:45"
+          }
+        ]
+      }
+    ],
+    "1304018": [
+      {
+        "auxiliaries": [
+          {
+            "name": "LIMACHI ARCANI ANDER BRIAN",
+            "schedule": [
+              {
+                "day": "VI",
+                "end": "12:45",
+                "room": "E526",
+                "start": "11:15"
+              }
+            ]
+          }
+        ],
+        "code": "1304018",
+        "group": "01",
+        "instructor": "LEDEZMA SANDOVAL FEDERICO",
+        "level": "B",
+        "name": "CONTABILIDAD BASICA",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "11:15",
+            "room": "E529",
+            "start": "09:45"
+          },
+          {
+            "day": "MI",
+            "end": "11:15",
+            "room": "E 102",
+            "start": "09:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "VARGAS ESCALERA NILDA",
+            "schedule": [
+              {
+                "day": "VI",
+                "end": "14:15",
+                "room": "E526",
+                "start": "12:45"
+              }
+            ]
+          }
+        ],
+        "code": "1304018",
+        "group": "02",
+        "instructor": "LEDEZMA SANDOVAL FEDERICO",
+        "level": "B",
+        "name": "CONTABILIDAD BASICA",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "17:15",
+            "room": "E526",
+            "start": "15:45"
+          },
+          {
+            "day": "JU",
+            "end": "17:15",
+            "room": "E526",
+            "start": "15:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "LOZA SEJAS CINTIA NADYA",
+            "schedule": [
+              {
+                "day": "JU",
+                "end": "14:15",
+                "room": "E 109",
+                "start": "12:45"
+              }
+            ]
+          }
+        ],
+        "code": "1304018",
+        "group": "21",
+        "instructor": "PEREZ AMADOR MARIO",
+        "level": "B",
+        "name": "CONTABILIDAD BASICA",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "14:15",
+            "room": "E529",
+            "start": "12:45"
+          },
+          {
+            "day": "MI",
+            "end": "18:45",
+            "room": "E529",
+            "start": "17:15"
+          }
+        ]
+      }
+    ],
+    "1304019": [
+      {
+        "auxiliaries": [],
+        "code": "1304019",
+        "group": "01",
+        "instructor": "REYNAGA ARCE HENRY RUKNER",
+        "level": "D",
+        "name": "TEORIA FISCAL",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "12:45",
+            "room": "E525",
+            "start": "11:15"
+          },
+          {
+            "day": "MA",
+            "end": "09:45",
+            "room": "E525",
+            "start": "08:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304019",
+        "group": "21",
+        "instructor": "ASCARRAGA SEJAS WILMAR HENRY",
+        "level": "D",
+        "name": "TEORIA FISCAL",
+        "schedule": [
+          {
+            "day": "JU",
+            "end": "08:15",
+            "room": "E524",
+            "start": "06:45"
+          },
+          {
+            "day": "SA",
+            "end": "08:15",
+            "room": "E524",
+            "start": "06:45"
+          }
+        ]
+      }
+    ],
+    "1304020": [
+      {
+        "auxiliaries": [],
+        "code": "1304020",
+        "group": "01",
+        "instructor": "ROMERO PADILLA CESAR",
+        "level": "E",
+        "name": "TEORIA MONETARIA",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "12:45",
+            "room": "E526",
+            "start": "11:15"
+          },
+          {
+            "day": "JU",
+            "end": "12:45",
+            "room": "E526",
+            "start": "11:15"
+          },
+          {
+            "day": "VI",
+            "end": "12:45",
+            "room": "E527",
+            "start": "11:15"
+          }
+        ]
+      }
+    ],
+    "1304021": [
+      {
+        "auxiliaries": [],
+        "code": "1304021",
+        "group": "01",
+        "instructor": "CLAURE FUENTES SHIRLEY CONSUELO",
+        "level": "C",
+        "name": "ECONOMIA FINANCIERA I",
+        "schedule": [
+          {
+            "day": "MI",
+            "end": "09:45",
+            "room": "E 102",
+            "start": "08:15"
+          },
+          {
+            "day": "JU",
+            "end": "11:15",
+            "room": "E 102",
+            "start": "09:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304021",
+        "group": "21",
+        "instructor": "CUBA ROJAS PABLO LUIS",
+        "level": "C",
+        "name": "ECONOMIA FINANCIERA I",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "08:15",
+            "room": "E 102",
+            "start": "06:45"
+          },
+          {
+            "day": "MA",
+            "end": "08:15",
+            "room": "E 102",
+            "start": "06:45"
+          }
+        ]
+      }
+    ],
+    "1304022": [
+      {
+        "auxiliaries": [],
+        "code": "1304022",
+        "group": "01",
+        "instructor": "AZOGUE CRESPO RICARDO",
+        "level": "D",
+        "name": "ECONOMIA POLITICA I",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "17:15",
+            "room": "E525",
+            "start": "15:45"
+          },
+          {
+            "day": "MI",
+            "end": "17:15",
+            "room": "E525",
+            "start": "15:45"
+          },
+          {
+            "day": "VI",
+            "end": "17:15",
+            "room": "E525",
+            "start": "15:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304022",
+        "group": "21",
+        "instructor": "AZOGUE CRESPO RICARDO",
+        "level": "D",
+        "name": "ECONOMIA POLITICA I",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "18:45",
+            "room": "E 104",
+            "start": "17:15"
+          },
+          {
+            "day": "MI",
+            "end": "20:15",
+            "room": "E 103",
+            "start": "18:45"
+          },
+          {
+            "day": "VI",
+            "end": "18:45",
+            "room": "E 104",
+            "start": "17:15"
+          }
+        ]
+      }
+    ],
+    "1304023": [
+      {
+        "auxiliaries": [
+          {
+            "name": "DOMÍNGUEZ VÁSQUEZ LUCIANA CAROLINA",
+            "schedule": [
+              {
+                "day": "JU",
+                "end": "09:45",
+                "room": "E PB-2",
+                "start": "08:15"
+              }
+            ]
+          }
+        ],
+        "code": "1304023",
+        "group": "01",
+        "instructor": "URQUIDI BELLIDO SONIA",
+        "level": "D",
+        "name": "ESTADISTICA II",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "11:15",
+            "room": "E528",
+            "start": "09:45"
+          },
+          {
+            "day": "VI",
+            "end": "11:15",
+            "room": "E 401",
+            "start": "09:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "LEDEZMA HIDALGO ESTEFANIA GRACIELA",
+            "schedule": [
+              {
+                "day": "SA",
+                "end": "12:45",
+                "room": "E527",
+                "start": "11:15"
+              }
+            ]
+          }
+        ],
+        "code": "1304023",
+        "group": "22",
+        "instructor": "APAZA COLQUE FELIX JUAN",
+        "level": "D",
+        "name": "ESTADISTICA II",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "08:15",
+            "room": "E525",
+            "start": "06:45"
+          },
+          {
+            "day": "JU",
+            "end": "08:15",
+            "room": "E529",
+            "start": "06:45"
+          }
+        ]
+      }
+    ],
+    "1304024": [
+      {
+        "auxiliaries": [],
+        "code": "1304024",
+        "group": "02",
+        "instructor": "MARTINEZ ALPIRI ANAHI MONICA",
+        "level": "C",
+        "name": "CONTABILIDAD DE GESTION",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "09:45",
+            "room": "E 101",
+            "start": "08:15"
+          },
+          {
+            "day": "MA",
+            "end": "12:45",
+            "room": "E 110",
+            "start": "11:15"
+          },
+          {
+            "day": "MI",
+            "end": "09:45",
+            "room": "E 101",
+            "start": "08:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304024",
+        "group": "21",
+        "instructor": "GUEVARA ESPINOZA JORGE",
+        "level": "C",
+        "name": "CONTABILIDAD DE GESTION",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "20:15",
+            "room": "E 406",
+            "start": "18:45"
+          },
+          {
+            "day": "MA",
+            "end": "20:15",
+            "room": "E 401",
+            "start": "18:45"
+          },
+          {
+            "day": "MI",
+            "end": "20:15",
+            "room": "E 402",
+            "start": "18:45"
+          }
+        ]
+      }
+    ],
+    "1304025": [
+      {
+        "auxiliaries": [],
+        "code": "1304025",
+        "group": "01",
+        "instructor": "AZOGUE CRESPO RICARDO",
+        "level": "E",
+        "name": "EPISTEMOLOGIA DE LA ECONOMIA",
+        "schedule": [
+          {
+            "day": "MI",
+            "end": "11:15",
+            "room": "E 101",
+            "start": "09:45"
+          },
+          {
+            "day": "VI",
+            "end": "11:15",
+            "room": "E525",
+            "start": "09:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304025",
+        "group": "21",
+        "instructor": "CABERO CALATAYUD CARLOS F.",
+        "level": "E",
+        "name": "EPISTEMOLOGIA DE LA ECONOMIA",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "20:15",
+            "room": "E529",
+            "start": "18:45"
+          },
+          {
+            "day": "JU",
+            "end": "20:15",
+            "room": "E529",
+            "start": "18:45"
+          }
+        ]
+      }
+    ],
+    "1304026": [
+      {
+        "auxiliaries": [
+          {
+            "name": "PINEDO CABRERA EMILY GABRIEL",
+            "schedule": [
+              {
+                "day": "VI",
+                "end": "17:15",
+                "room": "E 106",
+                "start": "15:45"
+              }
+            ]
+          }
+        ],
+        "code": "1304026",
+        "group": "01",
+        "instructor": "ESCALERA MELGAR ALBERTO",
+        "level": "F",
+        "name": "POLITICAS MACROECONOMICAS",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "17:15",
+            "room": "E 102",
+            "start": "15:45"
+          },
+          {
+            "day": "MI",
+            "end": "17:15",
+            "room": "E 103",
+            "start": "15:45"
+          },
+          {
+            "day": "JU",
+            "end": "17:15",
+            "room": "E 101",
+            "start": "15:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "PINEDO CABRERA EMILY GABRIEL",
+            "schedule": [
+              {
+                "day": "SA",
+                "end": "09:45",
+                "room": "E527",
+                "start": "08:15"
+              }
+            ]
+          }
+        ],
+        "code": "1304026",
+        "group": "21",
+        "instructor": "ZEGADA CLAURE OSCAR",
+        "level": "F",
+        "name": "POLITICAS MACROECONOMICAS",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "20:15",
+            "room": "E530",
+            "start": "18:45"
+          },
+          {
+            "day": "MA",
+            "end": "18:45",
+            "room": "E530",
+            "start": "17:15"
+          },
+          {
+            "day": "MI",
+            "end": "20:15",
+            "room": "E527",
+            "start": "18:45"
+          }
+        ]
+      }
+    ],
+    "1304027": [
+      {
+        "auxiliaries": [],
+        "code": "1304027",
+        "group": "01",
+        "instructor": "CUBA ROJAS PABLO LUIS",
+        "level": "D",
+        "name": "ECONOMIA FINANCIERA II",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "09:45",
+            "room": "E 110",
+            "start": "08:15"
+          },
+          {
+            "day": "MI",
+            "end": "11:15",
+            "room": "E 308",
+            "start": "09:45"
+          },
+          {
+            "day": "VI",
+            "end": "09:45",
+            "room": "E 103",
+            "start": "08:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304027",
+        "group": "21",
+        "instructor": "BARRIENTOS BALDERRAMA CLAUDIA NINOZKA",
+        "level": "D",
+        "name": "ECONOMIA FINANCIERA II",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "08:15",
+            "room": "E 205",
+            "start": "06:45"
+          },
+          {
+            "day": "MI",
+            "end": "08:15",
+            "room": "E 208",
+            "start": "06:45"
+          },
+          {
+            "day": "SA",
+            "end": "08:15",
+            "room": "E 208",
+            "start": "06:45"
+          }
+        ]
+      }
+    ],
+    "1304028": [
+      {
+        "auxiliaries": [],
+        "code": "1304028",
+        "group": "01",
+        "instructor": "POR DESIGNAR DOCENTE",
+        "level": "E",
+        "name": "ECONOMIA POLITICA II",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "17:15",
+            "room": "E530",
+            "start": "15:45"
+          },
+          {
+            "day": "MI",
+            "end": "17:15",
+            "room": "E530",
+            "start": "15:45"
+          },
+          {
+            "day": "VI",
+            "end": "17:15",
+            "room": "E530",
+            "start": "15:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304028",
+        "group": "21",
+        "instructor": "REYNAGA ARCE HENRY RUKNER",
+        "level": "E",
+        "name": "ECONOMIA POLITICA II",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "14:15",
+            "room": "E525",
+            "start": "12:45"
+          },
+          {
+            "day": "MI",
+            "end": "21:45",
+            "room": "E 302",
+            "start": "20:15"
+          },
+          {
+            "day": "JU",
+            "end": "14:15",
+            "room": "E526",
+            "start": "12:45"
+          }
+        ]
+      }
+    ],
+    "1304030": [
+      {
+        "auxiliaries": [
+          {
+            "name": "MONZON ENCINAS MARIO ABAD",
+            "schedule": [
+              {
+                "day": "VI",
+                "end": "15:45",
+                "room": "E 105",
+                "start": "14:15"
+              }
+            ]
+          }
+        ],
+        "code": "1304030",
+        "group": "01",
+        "instructor": "POR DESIGNAR DOCENTE",
+        "level": "E",
+        "name": "ECONOMETRIA I",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "12:45",
+            "room": "E548",
+            "start": "11:15"
+          },
+          {
+            "day": "MI",
+            "end": "12:45",
+            "room": "E550",
+            "start": "11:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "LEDEZMA HIDALGO ESTEFANIA GRACIELA",
+            "schedule": [
+              {
+                "day": "VI",
+                "end": "11:15",
+                "room": "E548",
+                "start": "09:45"
+              }
+            ]
+          }
+        ],
+        "code": "1304030",
+        "group": "02",
+        "instructor": "SARAVIA LOPEZ VICKY ALEJANDRA",
+        "level": "E",
+        "name": "ECONOMETRIA I",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "11:15",
+            "room": "E528",
+            "start": "09:45"
+          },
+          {
+            "day": "MI",
+            "end": "11:15",
+            "room": "E528",
+            "start": "09:45"
+          }
+        ]
+      }
+    ],
+    "1304032": [
+      {
+        "auxiliaries": [],
+        "code": "1304032",
+        "group": "01",
+        "instructor": "MONTANO QUIROGA CLAUDIA CAROLA",
+        "level": "G",
+        "name": "DESARROLLO ECONOMICO I",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "09:45",
+            "room": "E522",
+            "start": "08:15"
+          },
+          {
+            "day": "MI",
+            "end": "09:45",
+            "room": "E527",
+            "start": "08:15"
+          },
+          {
+            "day": "VI",
+            "end": "09:45",
+            "room": "E523",
+            "start": "08:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304032",
+        "group": "21",
+        "instructor": "LEDEZMA RIVERA JHONNY LIMBERT",
+        "level": "G",
+        "name": "DESARROLLO ECONOMICO I",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "14:15",
+            "room": "E527",
+            "start": "12:45"
+          },
+          {
+            "day": "MI",
+            "end": "14:15",
+            "room": "E527",
+            "start": "12:45"
+          },
+          {
+            "day": "SA",
+            "end": "11:15",
+            "room": "E527",
+            "start": "09:45"
+          }
+        ]
+      }
+    ],
+    "1304033": [
+      {
+        "auxiliaries": [],
+        "code": "1304033",
+        "group": "01",
+        "instructor": "POR DESIGNAR DOCENTE",
+        "level": "F",
+        "name": "TEORIAS ECONOMICAS ACTUALES",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "11:15",
+            "room": "E525",
+            "start": "09:45"
+          },
+          {
+            "day": "JU",
+            "end": "11:15",
+            "room": "E525",
+            "start": "09:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304033",
+        "group": "21",
+        "instructor": "SARAVIA LOPEZ VICKY ALEJANDRA",
+        "level": "F",
+        "name": "TEORIAS ECONOMICAS ACTUALES",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "20:15",
+            "room": "E528",
+            "start": "18:45"
+          },
+          {
+            "day": "JU",
+            "end": "20:15",
+            "room": "E528",
+            "start": "18:45"
+          }
+        ]
+      }
+    ],
+    "1304034": [
+      {
+        "auxiliaries": [],
+        "code": "1304034",
+        "group": "01",
+        "instructor": "MORALES GUZMAN CESAR",
+        "level": "F",
+        "name": "FORMULACION DE PROYECTOS",
+        "schedule": [
+          {
+            "day": "MI",
+            "end": "12:45",
+            "room": "E 208",
+            "start": "11:15"
+          },
+          {
+            "day": "JU",
+            "end": "12:45",
+            "room": "E 207",
+            "start": "11:15"
+          },
+          {
+            "day": "VI",
+            "end": "12:45",
+            "room": "E 104",
+            "start": "11:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304034",
+        "group": "21",
+        "instructor": "BALDERRAMA MAMANI JOSE ANTONIO",
+        "level": "F",
+        "name": "FORMULACION DE PROYECTOS",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "08:15",
+            "room": "E528",
+            "start": "06:45"
+          },
+          {
+            "day": "MI",
+            "end": "08:15",
+            "room": "E528",
+            "start": "06:45"
+          },
+          {
+            "day": "VI",
+            "end": "08:15",
+            "room": "E528",
+            "start": "06:45"
+          }
+        ]
+      }
+    ],
+    "1304035": [
+      {
+        "auxiliaries": [],
+        "code": "1304035",
+        "group": "01",
+        "instructor": "VILLAZON DEL CARPIO OSMAN ERICK",
+        "level": "F",
+        "name": "TEORIA DE LAS INSTITUCIONES ECONOMICAS",
+        "schedule": [
+          {
+            "day": "JU",
+            "end": "11:15",
+            "room": "E 101",
+            "start": "09:45"
+          },
+          {
+            "day": "VI",
+            "end": "11:15",
+            "room": "E 302",
+            "start": "09:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304035",
+        "group": "21",
+        "instructor": "ZEGADA CLAURE OSCAR",
+        "level": "F",
+        "name": "TEORIA DE LAS INSTITUCIONES ECONOMICAS",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "21:45",
+            "room": "E530",
+            "start": "20:15"
+          },
+          {
+            "day": "MI",
+            "end": "18:45",
+            "room": "E530",
+            "start": "17:15"
+          }
+        ]
+      }
+    ],
+    "1304036": [
+      {
+        "auxiliaries": [
+          {
+            "name": "MONZON ENCINAS MARIO ABAD",
+            "schedule": [
+              {
+                "day": "VI",
+                "end": "14:15",
+                "room": "E 401",
+                "start": "12:45"
+              }
+            ]
+          }
+        ],
+        "code": "1304036",
+        "group": "01",
+        "instructor": "POR DESIGNAR DOCENTE",
+        "level": "F",
+        "name": "ECONOMETRIA II",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "08:15",
+            "room": "E528",
+            "start": "06:45"
+          },
+          {
+            "day": "JU",
+            "end": "08:15",
+            "room": "E528",
+            "start": "06:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "MONZON ENCINAS MARIO ABAD",
+            "schedule": [
+              {
+                "day": "VI",
+                "end": "18:45",
+                "room": "E 401",
+                "start": "17:15"
+              }
+            ]
+          }
+        ],
+        "code": "1304036",
+        "group": "21",
+        "instructor": "POR DESIGNAR DOCENTE",
+        "level": "F",
+        "name": "ECONOMETRIA II",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "18:45",
+            "room": "E528",
+            "start": "17:15"
+          },
+          {
+            "day": "JU",
+            "end": "18:45",
+            "room": "E528",
+            "start": "17:15"
+          }
+        ]
+      }
+    ],
+    "1304038": [
+      {
+        "auxiliaries": [],
+        "code": "1304038",
+        "group": "21",
+        "instructor": "IRIARTE DE LA FUENTE MARCELA",
+        "level": "G",
+        "name": "ECONOMIA INTERNACIONAL I",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "09:45",
+            "room": "E 406",
+            "start": "08:15"
+          },
+          {
+            "day": "MI",
+            "end": "09:45",
+            "room": "E548",
+            "start": "08:15"
+          },
+          {
+            "day": "JU",
+            "end": "11:15",
+            "room": "E 406",
+            "start": "09:45"
+          }
+        ]
+      }
+    ],
+    "1304039": [
+      {
+        "auxiliaries": [],
+        "code": "1304039",
+        "group": "01",
+        "instructor": "ZEGADA CLAURE OSCAR",
+        "level": "G",
+        "name": "POLITICA ECONOMICA",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "11:15",
+            "room": "E526",
+            "start": "09:45"
+          },
+          {
+            "day": "MA",
+            "end": "17:15",
+            "room": "E530",
+            "start": "15:45"
+          },
+          {
+            "day": "MI",
+            "end": "11:15",
+            "room": "E530",
+            "start": "09:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304039",
+        "group": "21",
+        "instructor": "ZEGADA CLAURE OSCAR",
+        "level": "G",
+        "name": "POLITICA ECONOMICA",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "18:45",
+            "room": "E501",
+            "start": "17:15"
+          },
+          {
+            "day": "MA",
+            "end": "20:15",
+            "room": "E527",
+            "start": "18:45"
+          },
+          {
+            "day": "MI",
+            "end": "21:45",
+            "room": "E530",
+            "start": "20:15"
+          }
+        ]
+      }
+    ],
+    "1304040": [
+      {
+        "auxiliaries": [],
+        "code": "1304040",
+        "group": "21",
+        "instructor": "SEJAS CHOQUE JUAN CARLOS",
+        "level": "G",
+        "name": "EVALUACION DE PROYECTOS",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "12:45",
+            "room": "E 209",
+            "start": "11:15"
+          },
+          {
+            "day": "MA",
+            "end": "12:45",
+            "room": "E550",
+            "start": "11:15"
+          },
+          {
+            "day": "MI",
+            "end": "12:45",
+            "room": "E 205",
+            "start": "11:15"
+          }
+        ]
+      }
+    ],
+    "1304041": [
+      {
+        "auxiliaries": [],
+        "code": "1304041",
+        "group": "01",
+        "instructor": "MANZANO ANZALDO NELSON TITO",
+        "level": "H",
+        "name": "SEMINARIO DE INVESTIGACION",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "17:15",
+            "room": "E 101",
+            "start": "15:45"
+          },
+          {
+            "day": "MI",
+            "end": "17:15",
+            "room": "E 104",
+            "start": "15:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304041",
+        "group": "02",
+        "instructor": "LEDO GARCIA CARMEN",
+        "level": "H",
+        "name": "SEMINARIO DE INVESTIGACION",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "18:45",
+            "room": "CEPLAC",
+            "start": "17:15"
+          },
+          {
+            "day": "JU",
+            "end": "18:45",
+            "room": "CEPLAC",
+            "start": "17:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304041",
+        "group": "03",
+        "instructor": "UBERHUAGA CANDIA PATRICIA DEL CARMEN",
+        "level": "H",
+        "name": "SEMINARIO DE INVESTIGACION",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "12:45",
+            "room": "E530",
+            "start": "11:15"
+          },
+          {
+            "day": "VI",
+            "end": "12:45",
+            "room": "E530",
+            "start": "11:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304041",
+        "group": "04",
+        "instructor": "CUBA ROJAS PABLO LUIS",
+        "level": "H",
+        "name": "SEMINARIO DE INVESTIGACION",
+        "schedule": [
+          {
+            "day": "MI",
+            "end": "09:45",
+            "room": "E525",
+            "start": "08:15"
+          },
+          {
+            "day": "VI",
+            "end": "11:15",
+            "room": "E528",
+            "start": "09:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304041",
+        "group": "21",
+        "instructor": "AILLON GOMEZ TANIA LEDA",
+        "level": "H",
+        "name": "SEMINARIO DE INVESTIGACION",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "14:15",
+            "room": "E 104",
+            "start": "12:45"
+          },
+          {
+            "day": "MI",
+            "end": "14:15",
+            "room": "E 105",
+            "start": "12:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304041",
+        "group": "24",
+        "instructor": "BLANCO BLACUTT VICTOR HUGO",
+        "level": "H",
+        "name": "SEMINARIO DE INVESTIGACION",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "09:45",
+            "room": "E501",
+            "start": "08:15"
+          },
+          {
+            "day": "JU",
+            "end": "09:45",
+            "room": "E528",
+            "start": "08:15"
+          }
+        ]
+      }
+    ],
+    "1304045": [
+      {
+        "auxiliaries": [],
+        "code": "1304045",
+        "group": "21",
+        "instructor": "AYALA LEAÑO WALTER DANIEL",
+        "level": "H",
+        "name": "ECONOMIA INTERNACIONAL II",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "20:15",
+            "room": "E526",
+            "start": "18:45"
+          },
+          {
+            "day": "MI",
+            "end": "18:45",
+            "room": "E527",
+            "start": "17:15"
+          }
+        ]
+      }
+    ],
+    "1304046": [
+      {
+        "auxiliaries": [],
+        "code": "1304046",
+        "group": "21",
+        "instructor": "BARRIENTOS BALDERRAMA CLAUDIA NINOZKA",
+        "level": "H",
+        "name": "ECONOMIA MUNDIAL CONTEMPORANEA",
+        "schedule": [
+          {
+            "day": "JU",
+            "end": "08:15",
+            "room": "E 201",
+            "start": "06:45"
+          },
+          {
+            "day": "SA",
+            "end": "09:45",
+            "room": "E 108",
+            "start": "08:15"
+          }
+        ]
+      }
+    ],
+    "1304048": [
+      {
+        "auxiliaries": [],
+        "code": "1304048",
+        "group": "03",
+        "instructor": "POR DESIGNAR DOCENTE",
+        "level": "I",
+        "name": "TALLER DE TITULACION",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "14:15",
+            "room": "ECO3",
+            "start": "12:45"
+          },
+          {
+            "day": "JU",
+            "end": "14:15",
+            "room": "ECO3",
+            "start": "12:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304048",
+        "group": "06",
+        "instructor": "HOFFMANN BARRIENTOS KARL",
+        "level": "I",
+        "name": "TALLER DE TITULACION",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "17:15",
+            "room": "ECO7",
+            "start": "15:45"
+          },
+          {
+            "day": "JU",
+            "end": "17:15",
+            "room": "ECO7",
+            "start": "15:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304048",
+        "group": "10",
+        "instructor": "UBERHUAGA CANDIA PATRICIA DEL CARMEN",
+        "level": "I",
+        "name": "TALLER DE TITULACION",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "14:15",
+            "room": "ECO3",
+            "start": "12:45"
+          },
+          {
+            "day": "MA",
+            "end": "12:45",
+            "room": "ECO3",
+            "start": "11:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304048",
+        "group": "11",
+        "instructor": "POR DESIGNAR DOCENTE",
+        "level": "I",
+        "name": "TALLER DE TITULACION",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "11:15",
+            "room": "ECO5",
+            "start": "09:45"
+          },
+          {
+            "day": "VI",
+            "end": "11:15",
+            "room": "ECO5",
+            "start": "09:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304048",
+        "group": "12",
+        "instructor": "NINA LAURA ALVARO JESUS",
+        "level": "I",
+        "name": "TALLER DE TITULACION",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "21:45",
+            "room": "ECO6",
+            "start": "20:15"
+          },
+          {
+            "day": "JU",
+            "end": "21:45",
+            "room": "ECO6",
+            "start": "20:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304048",
+        "group": "18",
+        "instructor": "CUBA ROJAS PABLO LUIS",
+        "level": "I",
+        "name": "TALLER DE TITULACION",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "18:45",
+            "room": "ECO2",
+            "start": "17:15"
+          },
+          {
+            "day": "MI",
+            "end": "20:15",
+            "room": "ECO6",
+            "start": "18:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304048",
+        "group": "21",
+        "instructor": "UBERHUAGA CANDIA PATRICIA DEL CARMEN",
+        "level": "I",
+        "name": "TALLER DE TITULACION",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "09:45",
+            "room": "ECO2",
+            "start": "08:15"
+          },
+          {
+            "day": "MA",
+            "end": "11:15",
+            "room": "ECO2",
+            "start": "09:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304048",
+        "group": "24",
+        "instructor": "LEDEZMA RIVERA JHONNY LIMBERT",
+        "level": "I",
+        "name": "TALLER DE TITULACION",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "14:15",
+            "room": "ECO1",
+            "start": "12:45"
+          },
+          {
+            "day": "SA",
+            "end": "12:45",
+            "room": "ECO1",
+            "start": "11:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304048",
+        "group": "27",
+        "instructor": "ZEGADA CLAURE OSCAR",
+        "level": "I",
+        "name": "TALLER DE TITULACION",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "12:45",
+            "room": "ECO2",
+            "start": "11:15"
+          },
+          {
+            "day": "MI",
+            "end": "12:45",
+            "room": "ECO2",
+            "start": "11:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304048",
+        "group": "30",
+        "instructor": "COCA CARASILA ANDRES MILTON",
+        "level": "I",
+        "name": "TALLER DE TITULACION",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "18:45",
+            "room": "ECO5",
+            "start": "17:15"
+          },
+          {
+            "day": "MI",
+            "end": "18:45",
+            "room": "ECO5",
+            "start": "17:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304048",
+        "group": "32",
+        "instructor": "CUBA ROJAS PABLO LUIS",
+        "level": "I",
+        "name": "TALLER DE TITULACION",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "20:15",
+            "room": "ECO2",
+            "start": "18:45"
+          },
+          {
+            "day": "MI",
+            "end": "18:45",
+            "room": "ECO2",
+            "start": "17:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304048",
+        "group": "35",
+        "instructor": "LEDO GARCIA CARMEN",
+        "level": "I",
+        "name": "TALLER DE TITULACION",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "08:15",
+            "room": "CEPLAC",
+            "start": "06:45"
+          },
+          {
+            "day": "JU",
+            "end": "08:15",
+            "room": "CEPLAC",
+            "start": "06:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304048",
+        "group": "36",
+        "instructor": "POR DESIGNAR DOCENTE",
+        "level": "I",
+        "name": "TALLER DE TITULACION",
+        "schedule": [
+          {
+            "day": "MI",
+            "end": "20:15",
+            "room": "ECO8",
+            "start": "18:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304048",
+        "group": "43",
+        "instructor": "POR DESIGNAR DOCENTE",
+        "level": "I",
+        "name": "TALLER DE TITULACION",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "17:15",
+            "room": "ECO8",
+            "start": "15:45"
+          },
+          {
+            "day": "JU",
+            "end": "17:15",
+            "room": "ECO8",
+            "start": "15:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304048",
+        "group": "45",
+        "instructor": "BLANCO BLACUTT VICTOR HUGO",
+        "level": "I",
+        "name": "TALLER DE TITULACION",
+        "schedule": [
+          {
+            "day": "MI",
+            "end": "11:15",
+            "room": "ECO6",
+            "start": "09:45"
+          },
+          {
+            "day": "JU",
+            "end": "11:15",
+            "room": "ECO6",
+            "start": "09:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304048",
+        "group": "46",
+        "instructor": "BLANCO BLACUTT VICTOR HUGO",
+        "level": "I",
+        "name": "TALLER DE TITULACION",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "11:15",
+            "room": "ECO6",
+            "start": "09:45"
+          },
+          {
+            "day": "MI",
+            "end": "09:45",
+            "room": "ECO6",
+            "start": "08:15"
+          }
+        ]
+      }
+    ],
+    "1304063": [
+      {
+        "auxiliaries": [],
+        "code": "1304063",
+        "group": "01",
+        "instructor": "POR DESIGNAR DOCENTE",
+        "level": "E",
+        "name": "MUESTREO",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "08:15",
+            "room": "E548",
+            "start": "06:45"
+          },
+          {
+            "day": "MI",
+            "end": "08:15",
+            "room": "E 401",
+            "start": "06:45"
+          },
+          {
+            "day": "JU",
+            "end": "18:45",
+            "room": "E 401",
+            "start": "17:15"
+          }
+        ]
+      }
+    ],
+    "1304065": [
+      {
+        "auxiliaries": [],
+        "code": "1304065",
+        "group": "21",
+        "instructor": "GUZMAN BROCKMANN FELIPE HANS WIGBERTO",
+        "level": "H",
+        "name": "SISTEMAS ADMINISTRATIVOS",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "21:45",
+            "room": "E 102",
+            "start": "20:15"
+          },
+          {
+            "day": "MI",
+            "end": "21:45",
+            "room": "E 102",
+            "start": "20:15"
+          },
+          {
+            "day": "JU",
+            "end": "20:15",
+            "room": "E501",
+            "start": "18:45"
+          }
+        ]
+      }
+    ],
+    "1304113": [
+      {
+        "auxiliaries": [],
+        "code": "1304113",
+        "group": "21",
+        "instructor": "DECKER MARQUEZ JOSE",
+        "level": "G",
+        "name": "CONTABILIDAD NACIONAL E INSUMO-PRODUCTO",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "20:15",
+            "room": "E525",
+            "start": "18:45"
+          },
+          {
+            "day": "JU",
+            "end": "18:45",
+            "room": "E 107",
+            "start": "17:15"
+          }
+        ]
+      }
+    ],
+    "1304129": [
+      {
+        "auxiliaries": [],
+        "code": "1304129",
+        "group": "21",
+        "instructor": "LEDO GARCIA CARMEN",
+        "level": "E",
+        "name": "DEMOGRAFIA",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "08:15",
+            "room": "CEPLAC",
+            "start": "06:45"
+          },
+          {
+            "day": "MI",
+            "end": "08:15",
+            "room": "CEPLAC",
+            "start": "06:45"
+          },
+          {
+            "day": "VI",
+            "end": "08:15",
+            "room": "CEPLAC",
+            "start": "06:45"
+          }
+        ]
+      }
+    ],
+    "1304131": [
+      {
+        "auxiliaries": [],
+        "code": "1304131",
+        "group": "21",
+        "instructor": "LEDEZMA RIVERA JHONNY LIMBERT",
+        "level": "F",
+        "name": "ECONOMIA AGRARIA",
+        "schedule": [
+          {
+            "day": "JU",
+            "end": "14:15",
+            "room": "E525",
+            "start": "12:45"
+          },
+          {
+            "day": "VI",
+            "end": "14:15",
+            "room": "E525",
+            "start": "12:45"
+          }
+        ]
+      }
+    ],
+    "1304132": [
+      {
+        "auxiliaries": [],
+        "code": "1304132",
+        "group": "21",
+        "instructor": "GONZALES FERNANDEZ FERNANDO",
+        "level": "E",
+        "name": "ESTADISTICA APLICADA",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "09:45",
+            "room": "E548",
+            "start": "08:15"
+          },
+          {
+            "day": "JU",
+            "end": "09:45",
+            "room": "E548",
+            "start": "08:15"
+          },
+          {
+            "day": "VI",
+            "end": "09:45",
+            "room": "E548",
+            "start": "08:15"
+          }
+        ]
+      }
+    ],
+    "1304133": [
+      {
+        "auxiliaries": [],
+        "code": "1304133",
+        "group": "21",
+        "instructor": "ALVAREZ QUIROZ RICHARD MILTON",
+        "level": "G",
+        "name": "ESTRATEGIA EMPRESARIAL",
+        "schedule": [
+          {
+            "day": "MI",
+            "end": "11:15",
+            "room": "E526",
+            "start": "09:45"
+          },
+          {
+            "day": "VI",
+            "end": "09:45",
+            "room": "E526",
+            "start": "08:15"
+          }
+        ]
+      }
+    ],
+    "1304134": [
+      {
+        "auxiliaries": [],
+        "code": "1304134",
+        "group": "21",
+        "instructor": "LEDEZMA SANDOVAL FEDERICO",
+        "level": "E",
+        "name": "FINANZAS DE EMPRESAS",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "18:45",
+            "room": "E526",
+            "start": "17:15"
+          },
+          {
+            "day": "MI",
+            "end": "18:45",
+            "room": "E501",
+            "start": "17:15"
+          },
+          {
+            "day": "VI",
+            "end": "18:45",
+            "room": "E 102",
+            "start": "17:15"
+          }
+        ]
+      }
+    ],
+    "1304135": [
+      {
+        "auxiliaries": [],
+        "code": "1304135",
+        "group": "21",
+        "instructor": "POR DESIGNAR DOCENTE",
+        "level": "H",
+        "name": "MERCADO DE CAPITALES",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "12:45",
+            "room": "E525",
+            "start": "11:15"
+          },
+          {
+            "day": "MI",
+            "end": "12:45",
+            "room": "E525",
+            "start": "11:15"
+          },
+          {
+            "day": "VI",
+            "end": "12:45",
+            "room": "E 103",
+            "start": "11:15"
+          }
+        ]
+      }
+    ],
+    "1304139": [
+      {
+        "auxiliaries": [],
+        "code": "1304139",
+        "group": "01",
+        "instructor": "VARGAS OROSCO FREDDY",
+        "level": "E",
+        "name": "PRESUPUESTOS EMPRESARIALES",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "09:45",
+            "room": "E527",
+            "start": "08:15"
+          },
+          {
+            "day": "JU",
+            "end": "11:15",
+            "room": "E527",
+            "start": "09:45"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [],
+        "code": "1304139",
+        "group": "21",
+        "instructor": "MARTINEZ ALPIRI ANAHI MONICA",
+        "level": "E",
+        "name": "PRESUPUESTOS EMPRESARIALES",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "08:15",
+            "room": "E501",
+            "start": "06:45"
+          },
+          {
+            "day": "MA",
+            "end": "08:15",
+            "room": "E501",
+            "start": "06:45"
+          }
+        ]
+      }
+    ],
+    "1304141": [
+      {
+        "auxiliaries": [],
+        "code": "1304141",
+        "group": "21",
+        "instructor": "URQUIDI BELLIDO SONIA",
+        "level": "F",
+        "name": "PROYECTOS SOCIALES",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "12:45",
+            "room": "E PB-4",
+            "start": "11:15"
+          },
+          {
+            "day": "MI",
+            "end": "12:45",
+            "room": "E PB-1",
+            "start": "11:15"
+          },
+          {
+            "day": "JU",
+            "end": "12:45",
+            "room": "E PB-4",
+            "start": "11:15"
+          }
+        ]
+      }
+    ],
+    "1304142": [
+      {
+        "auxiliaries": [],
+        "code": "1304142",
+        "group": "21",
+        "instructor": "SEMPERTEGUI ZEBALLOS MARIA SANDRA",
+        "level": "E",
+        "name": "SEMINARIO DE ESTADISTICA",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "09:45",
+            "room": "E528",
+            "start": "08:15"
+          },
+          {
+            "day": "MI",
+            "end": "09:45",
+            "room": "E528",
+            "start": "08:15"
+          },
+          {
+            "day": "JU",
+            "end": "11:15",
+            "room": "E528",
+            "start": "09:45"
+          }
+        ]
+      }
+    ],
+    "1304144": [
+      {
+        "auxiliaries": [],
+        "code": "1304144",
+        "group": "21",
+        "instructor": "TORREZ AGUILAR JOSE",
+        "level": "E",
+        "name": "TRIBUTACION",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "18:45",
+            "room": "E522",
+            "start": "17:15"
+          },
+          {
+            "day": "JU",
+            "end": "08:15",
+            "room": "E511",
+            "start": "06:45"
+          }
+        ]
+      }
+    ],
+    "1304149": [
+      {
+        "auxiliaries": [],
+        "code": "1304149",
+        "group": "21",
+        "instructor": "DECKER MARQUEZ JOSE",
+        "level": "H",
+        "name": "DESARROLLO ECONOMICO II",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "18:45",
+            "room": "E 105",
+            "start": "17:15"
+          },
+          {
+            "day": "MI",
+            "end": "18:45",
+            "room": "E 107",
+            "start": "17:15"
+          }
+        ]
+      }
+    ],
+    "1304154": [
+      {
+        "auxiliaries": [],
+        "code": "1304154",
+        "group": "21",
+        "instructor": "HOFFMANN BARRIENTOS KARL",
+        "level": "H",
+        "name": "SEMINARIO DE MENCION",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "17:15",
+            "room": "E 102",
+            "start": "15:45"
+          },
+          {
+            "day": "MI",
+            "end": "17:15",
+            "room": "E 102",
+            "start": "15:45"
+          }
+        ]
+      }
+    ],
+    "1304155": [
+      {
+        "auxiliaries": [],
+        "code": "1304155",
+        "group": "21",
+        "instructor": "POR DESIGNAR DOCENTE",
+        "level": "E",
+        "name": "GESTION DE RECURSOS HUMANOS",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "20:15",
+            "room": "E525",
+            "start": "18:45"
+          },
+          {
+            "day": "MI",
+            "end": "20:15",
+            "room": "E526",
+            "start": "18:45"
+          }
+        ]
+      }
+    ],
+    "1304156": [
+      {
+        "auxiliaries": [],
+        "code": "1304156",
+        "group": "21",
+        "instructor": "DECKER MARQUEZ JOSE",
+        "level": "H",
+        "name": "PLANIFICACION",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "18:45",
+            "room": "E 101",
+            "start": "17:15"
+          },
+          {
+            "day": "VI",
+            "end": "18:45",
+            "room": "E 106",
+            "start": "17:15"
+          },
+          {
+            "day": "SA",
+            "end": "08:15",
+            "room": "E525",
+            "start": "06:45"
+          }
+        ]
+      }
+    ],
+    "1304157": [
+      {
+        "auxiliaries": [
+          {
+            "name": "BARBOLIN RODRIGO NICOLAS",
+            "schedule": [
+              {
+                "day": "SA",
+                "end": "12:45",
+                "room": "E 101",
+                "start": "11:15"
+              }
+            ]
+          }
+        ],
+        "code": "1304157",
+        "group": "01",
+        "instructor": "TABORGA ACHA FIDEL",
+        "level": "B",
+        "name": "ALGEBRA APLICADA",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "12:45",
+            "room": "E 109",
+            "start": "11:15"
+          },
+          {
+            "day": "JU",
+            "end": "12:45",
+            "room": "E503",
+            "start": "11:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "RIOS FERNANDEZ ISRAEL",
+            "schedule": [
+              {
+                "day": "SA",
+                "end": "11:15",
+                "room": "E529",
+                "start": "09:45"
+              }
+            ]
+          }
+        ],
+        "code": "1304157",
+        "group": "02",
+        "instructor": "MOYA ALBARRACIN MARTIN",
+        "level": "B",
+        "name": "ALGEBRA APLICADA",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "17:15",
+            "room": "E526",
+            "start": "15:45"
+          },
+          {
+            "day": "JU",
+            "end": "12:45",
+            "room": "E525",
+            "start": "11:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "LEDEZMA HIDALGO ESTEFANIA GRACIELA",
+            "schedule": [
+              {
+                "day": "VI",
+                "end": "08:15",
+                "room": "E527",
+                "start": "06:45"
+              }
+            ]
+          }
+        ],
+        "code": "1304157",
+        "group": "21",
+        "instructor": "MOYA ALBARRACIN MARTIN",
+        "level": "B",
+        "name": "ALGEBRA APLICADA",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "08:15",
+            "room": "E529",
+            "start": "06:45"
+          },
+          {
+            "day": "JU",
+            "end": "18:45",
+            "room": "E525",
+            "start": "17:15"
+          }
+        ]
+      }
+    ],
+    "1304158": [
+      {
+        "auxiliaries": [
+          {
+            "name": "FERNANDEZ ZACA PAUL HERLAN",
+            "schedule": [
+              {
+                "day": "LU",
+                "end": "12:45",
+                "room": "E 205",
+                "start": "11:15"
+              }
+            ]
+          }
+        ],
+        "code": "1304158",
+        "group": "01",
+        "instructor": "MONTAÑO ROMERO JOSE",
+        "level": "B",
+        "name": "CALCULO APLICADO",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "11:15",
+            "room": "E529",
+            "start": "09:45"
+          },
+          {
+            "day": "VI",
+            "end": "09:45",
+            "room": "E525",
+            "start": "08:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "FERNANDEZ ZACA PAUL HERLAN",
+            "schedule": [
+              {
+                "day": "VI",
+                "end": "11:15",
+                "room": "E 105",
+                "start": "09:45"
+              }
+            ]
+          }
+        ],
+        "code": "1304158",
+        "group": "02",
+        "instructor": "MONTAÑO ROMERO JOSE",
+        "level": "B",
+        "name": "CALCULO APLICADO",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "12:45",
+            "room": "E529",
+            "start": "11:15"
+          },
+          {
+            "day": "JU",
+            "end": "12:45",
+            "room": "E529",
+            "start": "11:15"
+          }
+        ]
+      },
+      {
+        "auxiliaries": [
+          {
+            "name": "POR DESIGNAR AUXILIAR",
+            "schedule": [
+              {
+                "day": "JU",
+                "end": "08:15",
+                "room": "E527",
+                "start": "06:45"
+              }
+            ]
+          }
+        ],
+        "code": "1304158",
+        "group": "21",
+        "instructor": "CONDORI ARIAS HERMOGENES",
+        "level": "B",
+        "name": "CALCULO APLICADO",
+        "schedule": [
+          {
+            "day": "MI",
+            "end": "08:15",
+            "room": "E529",
+            "start": "06:45"
+          },
+          {
+            "day": "VI",
+            "end": "08:15",
+            "room": "E529",
+            "start": "06:45"
+          }
+        ]
+      }
+    ],
+    "1304159": [
+      {
+        "auxiliaries": [],
+        "code": "1304159",
+        "group": "21",
+        "instructor": "SARAVIA LOPEZ VICKY ALEJANDRA",
+        "level": "F",
+        "name": "SEMINARIO COMERCIAL",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "09:45",
+            "room": "ECO5",
+            "start": "08:15"
+          },
+          {
+            "day": "MI",
+            "end": "09:45",
+            "room": "E 306",
+            "start": "08:15"
+          }
+        ]
+      }
+    ],
+    "1304160": [
+      {
+        "auxiliaries": [],
+        "code": "1304160",
+        "group": "01",
+        "instructor": "ALVAREZ QUIROZ RICHARD MILTON",
+        "level": "D",
+        "name": "ECONOMIA INDUSTRIAL",
+        "schedule": [
+          {
+            "day": "MI",
+            "end": "09:45",
+            "room": "E 308",
+            "start": "08:15"
+          },
+          {
+            "day": "JU",
+            "end": "17:15",
+            "room": "E 303",
+            "start": "15:45"
+          }
+        ]
+      }
+    ],
+    "1304161": [
+      {
+        "auxiliaries": [],
+        "code": "1304161",
+        "group": "21",
+        "instructor": "HOFFMANN BARRIENTOS KARL",
+        "level": "F",
+        "name": "GESTION DE PROYECTOS DE INVERSION",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "18:45",
+            "room": "E528",
+            "start": "17:15"
+          },
+          {
+            "day": "MI",
+            "end": "18:45",
+            "room": "E528",
+            "start": "17:15"
+          },
+          {
+            "day": "JU",
+            "end": "20:15",
+            "room": "E 406",
+            "start": "18:45"
+          }
+        ]
+      }
+    ],
+    "1304210": [
+      {
+        "auxiliaries": [],
+        "code": "1304210",
+        "group": "21",
+        "instructor": "ALIENDRE LAFUENTE ROMER SIMON",
+        "level": "E",
+        "name": "INVESTIGACION OPERATIVA",
+        "schedule": [
+          {
+            "day": "MA",
+            "end": "08:15",
+            "room": "E526",
+            "start": "06:45"
+          },
+          {
+            "day": "MI",
+            "end": "08:15",
+            "room": "E501",
+            "start": "06:45"
+          },
+          {
+            "day": "JU",
+            "end": "08:15",
+            "room": "E526",
+            "start": "06:45"
+          }
+        ]
+      }
+    ],
+    "1803021": [
+      {
+        "auxiliaries": [],
+        "code": "1803021",
+        "group": "05",
+        "instructor": "POR DESIGNAR DOCENTE",
+        "level": "C",
+        "name": "INGLES I",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "08:15",
+            "room": "E 202",
+            "start": "06:45"
+          },
+          {
+            "day": "MA",
+            "end": "08:15",
+            "room": "E 110",
+            "start": "06:45"
+          },
+          {
+            "day": "MI",
+            "end": "08:15",
+            "room": "E 202",
+            "start": "06:45"
+          }
+        ]
+      }
+    ],
+    "1803024": [
+      {
+        "auxiliaries": [],
+        "code": "1803024",
+        "group": "05",
+        "instructor": "POR DESIGNAR DOCENTE",
+        "level": "D",
+        "name": "INGLES II",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "12:45",
+            "room": "E513",
+            "start": "11:15"
+          },
+          {
+            "day": "JU",
+            "end": "09:45",
+            "room": "E 104",
+            "start": "08:15"
+          },
+          {
+            "day": "VI",
+            "end": "12:45",
+            "room": "E 105",
+            "start": "11:15"
+          }
+        ]
+      }
+    ],
+    "1803027": [
+      {
+        "auxiliaries": [],
+        "code": "1803027",
+        "group": "05",
+        "instructor": "POR DESIGNAR DOCENTE",
+        "level": "E",
+        "name": "INGLES III",
+        "schedule": [
+          {
+            "day": "LU",
+            "end": "09:45",
+            "room": "E 105",
+            "start": "08:15"
+          },
+          {
+            "day": "MI",
+            "end": "09:45",
+            "room": "E PB-1",
+            "start": "08:15"
+          },
+          {
+            "day": "VI",
+            "end": "09:45",
+            "room": "E 101",
+            "start": "08:15"
+          }
+        ]
+      }
+    ]
+  },
+  "term": 2,
+  "termType": "semestre regular",
+  "totalGroups": 146,
+  "totalSubjects": 70,
+  "year": 2026
+}

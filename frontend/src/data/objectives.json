@@ -1,0 +1,211 @@
+{
+  "licenciaturaElectiveRequirement": 8,
+  "mentions": [
+    {
+      "id": "M01",
+      "kind": "mention",
+      "name": "ECONOMIA DEL DESARROLLO",
+      "subjectCodes": [
+        "1304129",
+        "1304131",
+        "1304141",
+        "1304113",
+        "1304156",
+        "1304045",
+        "1304046",
+        "1304149",
+        "1304154"
+      ]
+    },
+    {
+      "id": "M02",
+      "kind": "mention",
+      "name": "ECONOMIA DE EMPRESAS",
+      "subjectCodes": [
+        "1304210",
+        "1304063",
+        "1304134",
+        "1304139",
+        "1304144",
+        "1304155",
+        "1304133",
+        "1304045",
+        "1304135"
+      ]
+    },
+    {
+      "id": "M03",
+      "kind": "mention",
+      "name": "ECONOMIA COMERCIAL",
+      "subjectCodes": [
+        "1304160",
+        "1304210",
+        "1301031",
+        "1304144",
+        "1301034",
+        "1304159",
+        "1304133",
+        "1304065",
+        "1302004",
+        "1302006",
+        "1304045",
+        "1304135"
+      ]
+    }
+  ],
+  "substitutions": [
+    {
+      "mentionId": "M03",
+      "original": "1304022",
+      "replacement": "1304160"
+    },
+    {
+      "mentionId": "M03",
+      "original": "1304028",
+      "replacement": "1301031"
+    },
+    {
+      "mentionId": "M03",
+      "original": "1304035",
+      "replacement": "1301034"
+    },
+    {
+      "mentionId": "M03",
+      "original": "1304033",
+      "replacement": "1304159"
+    }
+  ],
+  "technicians": [
+    {
+      "id": "T01",
+      "kind": "technician",
+      "name": "TECNICO SUPERIOR EN PROYECTOS DE INVERSION",
+      "subjectCodes": [
+        "1304063",
+        "1304134",
+        "1304139",
+        "1304144",
+        "1304155",
+        "1304161"
+      ]
+    },
+    {
+      "id": "T02",
+      "kind": "technician",
+      "name": "TECNICO SUPERIOR EN ESTADISTICA APLICADA",
+      "subjectCodes": [
+        "1302080",
+        "1304063",
+        "1304132",
+        "1304140",
+        "1304142",
+        "1304129"
+      ]
+    },
+    {
+      "id": "T03",
+      "kind": "technician",
+      "name": "TECNICO SUPERIOR EN PROYECTOS SOCIALES",
+      "subjectCodes": [
+        "1304063",
+        "1304129",
+        "1304141",
+        "1304156",
+        "1304154",
+        "1304162"
+      ]
+    }
+  ],
+  "trajectories": [
+    {
+      "id": "M01",
+      "kind": "mention",
+      "name": "ECONOMIA DEL DESARROLLO",
+      "subjectCodes": [
+        "1304129",
+        "1304131",
+        "1304141",
+        "1304113",
+        "1304156",
+        "1304045",
+        "1304046",
+        "1304149",
+        "1304154"
+      ]
+    },
+    {
+      "id": "M02",
+      "kind": "mention",
+      "name": "ECONOMIA DE EMPRESAS",
+      "subjectCodes": [
+        "1304210",
+        "1304063",
+        "1304134",
+        "1304139",
+        "1304144",
+        "1304155",
+        "1304133",
+        "1304045",
+        "1304135"
+      ]
+    },
+    {
+      "id": "M03",
+      "kind": "mention",
+      "name": "ECONOMIA COMERCIAL",
+      "subjectCodes": [
+        "1304160",
+        "1304210",
+        "1301031",
+        "1304144",
+        "1301034",
+        "1304159",
+        "1304133",
+        "1304065",
+        "1302004",
+        "1302006",
+        "1304045",
+        "1304135"
+      ]
+    },
+    {
+      "id": "T01",
+      "kind": "technician",
+      "name": "TECNICO SUPERIOR EN PROYECTOS DE INVERSION",
+      "subjectCodes": [
+        "1304063",
+        "1304134",
+        "1304139",
+        "1304144",
+        "1304155",
+        "1304161"
+      ]
+    },
+    {
+      "id": "T02",
+      "kind": "technician",
+      "name": "TECNICO SUPERIOR EN ESTADISTICA APLICADA",
+      "subjectCodes": [
+        "1302080",
+        "1304063",
+        "1304132",
+        "1304140",
+        "1304142",
+        "1304129"
+      ]
+    },
+    {
+      "id": "T03",
+      "kind": "technician",
+      "name": "TECNICO SUPERIOR EN PROYECTOS SOCIALES",
+      "subjectCodes": [
+        "1304063",
+        "1304129",
+        "1304141",
+        "1304156",
+        "1304154",
+        "1304162"
+      ]
+    }
+  ]
+}
