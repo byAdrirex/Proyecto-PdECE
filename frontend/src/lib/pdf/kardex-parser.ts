@@ -17,6 +17,16 @@ export type ParseResult =
   | { ok: true; kardex: KardexState; rowCount: number }
   | { ok: false; code: ParseErrorCode; error: string };
 
+export interface KardexParseContext {
+  currentYear: number;
+  currentTerm: number;
+}
+
+export const defaultKardexParseContext: Readonly<KardexParseContext> = {
+  currentYear: 2026,
+  currentTerm: 2,
+};
+
 type KardexColumn =
   | 'number'
   | 'year'
@@ -111,7 +121,10 @@ const unrecognized = (): ParseResult => failure(
   'No se pudo reconocer el kardex en el PDF. Verifica que sea el reporte academico de SISS.',
 );
 
-export function parseKardexText(text: string): ParseResult {
+export function parseKardexText(
+  text: string,
+  context: KardexParseContext = defaultKardexParseContext,
+): ParseResult {
   if (!text.trim()) return unrecognized();
 
   let columns: Array<KardexColumn | null> | null = null;
@@ -139,9 +152,14 @@ export function parseKardexText(text: string): ParseResult {
 
   if (rows.length === 0) return unrecognized();
 
+  const kardex = normalizeAttempts(rows);
   return {
     ok: true,
-    kardex: normalizeAttempts(rows),
+    kardex: {
+      ...kardex,
+      currentYear: context.currentYear,
+      currentTerm: context.currentTerm,
+    },
     rowCount: rows.length,
   };
 }
@@ -253,7 +271,10 @@ const hasPdfSignature = (bytes: ArrayBuffer): boolean => {
   return String.fromCharCode(...prefix) === pdfSignature;
 };
 
-export async function parseKardexPdf(file: File): Promise<ParseResult> {
+export async function parseKardexPdf(
+  file: File,
+  context: KardexParseContext = defaultKardexParseContext,
+): Promise<ParseResult> {
   if (file.size === 0) return failure('empty', 'El archivo esta vacio.');
   if (file.size > maximumPdfBytes) {
     return failure('too_large', 'El archivo supera el tamano maximo de 10 MB.');
@@ -277,7 +298,7 @@ export async function parseKardexPdf(file: File): Promise<ParseResult> {
   }
 
   try {
-    const loadingTask = getDocument({ data: new Uint8Array(bytes) });
+    const loadingTask = await getDocument({ data: new Uint8Array(bytes) });
     try {
       const pdf = await loadingTask.promise;
       const pages: string[] = [];
@@ -289,7 +310,7 @@ export async function parseKardexPdf(file: File): Promise<ParseResult> {
         );
         pages.push(positionedText(items) ?? sequentialText(items));
       }
-      return parseKardexText(pages.join('\n'));
+      return parseKardexText(pages.join('\n'), context);
     } finally {
       await loadingTask.destroy().catch(() => undefined);
     }

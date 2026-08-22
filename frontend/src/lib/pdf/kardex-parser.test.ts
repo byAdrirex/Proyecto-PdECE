@@ -1,6 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import goldenKardex from '../../data/golden-kardex.json';
+import { determineAttemptState } from '../domain/kardex';
 import { createPlan } from '../domain/planner';
 import {
   clearWorkspace,
@@ -109,9 +110,47 @@ describe('workspace storage', () => {
     expect(loadWorkspace()).toEqual(emptyWorkspace);
     expect(localStorage.getItem(workspaceStorageKey)).toBeNull();
   });
+
+  it('rejects and removes an unsupported workspace version', () => {
+    localStorage.setItem(workspaceStorageKey, JSON.stringify({
+      ...emptyWorkspace,
+      version: 2,
+    }));
+
+    expect(loadWorkspace()).toEqual(emptyWorkspace);
+    expect(localStorage.getItem(workspaceStorageKey)).toBeNull();
+  });
+
+  it('rejects and removes valid JSON containing an incomplete planner plan', () => {
+    localStorage.setItem(workspaceStorageKey, JSON.stringify({
+      ...emptyWorkspace,
+      mode: 'academic',
+      plan: { mode: 'academic' },
+    }));
+
+    expect(loadWorkspace()).toEqual(emptyWorkspace);
+    expect(localStorage.getItem(workspaceStorageKey)).toBeNull();
+  });
 });
 
 describe('Kardex text parsing', () => {
+  it('marks an ungraded attempt in the current 2026/2 offer as in progress', () => {
+    const currentRow = [
+      1, 2026, 2, '1304099', 'MATERIA EN CURSO', 'I', '', 'N', '', '', '',
+      70, 75, '', '', '', '', '', '', '', '', '',
+    ].join('\t');
+
+    const parsed = parseKardexText([headers.join('\t'), currentRow].join('\n'));
+
+    expect(parsed.ok).toBe(true);
+    if (!parsed.ok) return;
+    expect(parsed.kardex).toMatchObject({ currentYear: 2026, currentTerm: 2 });
+    expect(determineAttemptState(parsed.kardex.attempts['1304099'], {
+      year: parsed.kardex.currentYear,
+      term: parsed.kardex.currentTerm,
+    })).toMatchObject({ status: 'EN_CURSO', provisional: true });
+  });
+
   it('normalizes the sanitized SISS rows and preserves golden aggregate parity', () => {
     const result = parseKardexText(sanitizedKardexText);
 
@@ -209,6 +248,32 @@ describe('PDF file validation and extraction', () => {
       code: 'malformed',
       error: 'No se pudo leer el PDF. Verifica que el archivo no este danado e intenta nuevamente.',
     });
+  });
+
+  it('forwards a caller-supplied active period through PDF extraction', async () => {
+    pdfJs.getDocument.mockReturnValue({
+      promise: Promise.resolve({
+        numPages: 1,
+        getPage: vi.fn().mockResolvedValue({
+          getTextContent: vi.fn().mockResolvedValue({
+            items: sanitizedKardexText.split('\n').map(textItem),
+            styles: {},
+            lang: null,
+          }),
+        }),
+      }),
+      destroy: vi.fn().mockResolvedValue(undefined),
+    });
+
+    const result = await parseKardexPdf(
+      pdfFile('%PDF-1.7'),
+      { currentYear: 2027, currentTerm: 1 },
+    );
+
+    expect(result.ok).toBe(true);
+    if (result.ok) {
+      expect(result.kardex).toMatchObject({ currentYear: 2027, currentTerm: 1 });
+    }
   });
 
   it('extracts text locally with PDF.js and never sends the File over the network', async () => {

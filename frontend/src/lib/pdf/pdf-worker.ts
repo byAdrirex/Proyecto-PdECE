@@ -1,6 +1,13 @@
-import { getDocument, GlobalWorkerOptions } from 'pdfjs-dist';
-import pdfWorkerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
+type PdfJs = typeof import('pdfjs-dist');
+type DocumentSource = Parameters<PdfJs['getDocument']>[0];
+type LoadingTask = ReturnType<PdfJs['getDocument']>;
 
-GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
+export async function getDocument(source: DocumentSource): Promise<LoadingTask> {
+  const [pdfjs, workerAsset] = await Promise.all([
+    import('pdfjs-dist'),
+    import('pdfjs-dist/build/pdf.worker.min.mjs?url'),
+  ]);
 
-export { getDocument };
+  pdfjs.GlobalWorkerOptions.workerSrc = workerAsset.default;
+  return pdfjs.getDocument(source);
+}
