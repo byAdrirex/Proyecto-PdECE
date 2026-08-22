@@ -1,21 +1,86 @@
 ---
 interface Props {
   title?: string;
+  description?: string;
 }
 
 import '../styles/global.css';
 
-const { title = 'Planificador Académico UMSS' } = Astro.props;
+const {
+  title = 'Planificador Académico UMSS',
+  description = 'Malla, progreso y planificador académico de Economía UMSS.',
+} = Astro.props;
+const path = Astro.url.pathname;
+const navItems = [
+  { href: '/malla', label: 'Malla' },
+  { href: '/guia', label: 'Guía' },
+  { href: '/calendario-academico', label: 'Calendario Académico' },
+  { href: '/progreso', label: 'Mi progreso' },
+  { href: '/horario', label: 'Armar mi horario' },
+];
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#123b68" />
     <title>{title}</title>
   </head>
   <body>
-    <slot />
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a class="brand" href="/"><span aria-hidden="true">Σ</span><span>Planificador <small>Economía UMSS</small></span></a>
+        <div class="site-links">
+          {navItems.map((item) => <a href={item.href} aria-current={path === item.href || (item.href === '/horario' && path.startsWith('/horario/')) ? 'page' : undefined}>{item.label}</a>)}
+        </div>
+      </nav>
+    </header>
+    <main id="contenido" class="site-main"><slot /></main>
+    <footer class="site-footer">
+      <p><strong>Planificador Académico</strong> · UMSS Carrera de Economía</p>
+      <p>Tu información académica se guarda únicamente en este navegador.</p>
+    </footer>
+    <div class="floating-actions" data-no-capture>
+      <button type="button" id="capture-page" title="Hacer fotografía de la página" aria-label="Hacer fotografía de la página">📷</button>
+      <a href="https://wa.link/fq4ozm" target="_blank" rel="noopener noreferrer" title="Necesito ayuda">💬 <span>Necesito ayuda</span></a>
+    </div>
+    <script>
+      import html2canvas from 'html2canvas';
+
+      const button = document.querySelector<HTMLButtonElement>('#capture-page');
+      button?.addEventListener('click', async () => {
+        const area = document.querySelector<HTMLElement>('#contenido');
+        if (!area || !button) return;
+        button.disabled = true;
+        try {
+          const canvas = await html2canvas(area, {
+            backgroundColor: '#f3f6fa',
+            scale: Math.min(window.devicePixelRatio || 1, 2),
+            useCORS: true,
+            logging: false,
+            windowWidth: area.scrollWidth,
+            windowHeight: area.scrollHeight,
+            scrollX: 0,
+            scrollY: -window.scrollY,
+          });
+          canvas.toBlob((blob) => {
+            if (!blob) return;
+            const link = document.createElement('a');
+            link.download = 'planificador-academico.png';
+            link.href = URL.createObjectURL(blob);
+            link.click();
+            window.setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+          }, 'image/png');
+        } catch {
+          window.alert('No se pudo generar la imagen. Intenta nuevamente.');
+        } finally {
+          button.disabled = false;
+        }
+      });
+    </script>
   </body>
 </html>

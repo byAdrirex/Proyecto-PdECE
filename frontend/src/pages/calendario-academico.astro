@@ -1,0 +1,16 @@
+---
+import { PdfViewer } from '../components/PdfViewer';
+import AppLayout from '../layouts/AppLayout.astro';
+---
+
+<AppLayout title="Calendario Académico · Planificador Académico UMSS">
+  <section class="content-page">
+    <a class="back-link" href="/">← Volver a la malla</a>
+    <header class="page-heading">
+      <p class="eyebrow">Información institucional</p>
+      <h1>Calendario Académico</h1>
+      <p>Consulta las fechas académicas en el documento oficial.</p>
+    </header>
+    <PdfViewer src="/calendario-academico.pdf" client:load />
+  </section>
+</AppLayout>
