@@ -1,0 +1,57 @@
+{% if error %}
+<div class="bg-red-50 border border-red-200 rounded-lg px-4 py-3 mb-6 text-sm text-red-700">
+    {{ error }}
+</div>
+{% endif %}
+
+{% if exito %}
+<div class="bg-emerald-50 border border-emerald-200 rounded-lg px-4 py-3 mb-6 text-sm text-emerald-700">
+    Materia agregada correctamente.
+</div>
+{% endif %}
+
+{% if exito_quitar %}
+<div class="bg-emerald-50 border border-emerald-200 rounded-lg px-4 py-3 mb-6 text-sm text-emerald-700">
+    Materia quitada del kardex manual.
+</div>
+{% endif %}
+
+{% if agregadas %}
+<div class="mb-6">
+    <h3 class="text-sm font-semibold text-gray-700 mb-2">
+        Materias agregadas ({{ agregadas|length }})
+    </h3>
+    <div class="space-y-1.5 max-h-56 overflow-y-auto pr-1">
+        {% for m in agregadas %}
+        <div class="flex items-center justify-between gap-2 bg-gray-50 rounded-lg px-3 py-2 text-sm">
+            <div class="flex-1 min-w-0">
+                <p class="font-medium text-gray-800 text-[13px] leading-tight">{{ m.nombre }}</p>
+                <p class="text-gray-500 text-xs">SIS: {{ m.codigo }}</p>
+            </div>
+            <span class="shrink-0 text-xs font-bold {{ 'text-emerald-600' if (m.nota or 0) >= 51 else 'text-red-600' }}">
+                {{ "%.1f"|format(m.nota) if m.nota is not none else "-" }}
+            </span>
+            {% if m.origen_manual or m.origen_pdf %}
+            <form hx-post="{{ '/horario/kardex/manual/quitar' if m.origen_manual and not m.origen_pdf else '/horario/kardex/quitar' }}"
+                  hx-target="#lista-manual"
+                  hx-swap="innerHTML"
+                  class="shrink-0">
+                <input type="hidden" name="codigo_sis" value="{{ m.codigo }}">
+                <button type="submit"
+                        class="text-red-400 hover:text-red-600 text-base font-bold leading-none rounded px-1.5 py-1"
+                        title="Eliminar materia"
+                        onclick="return confirm('¿Eliminar esta materia del Kardex?')">
+                    &times;
+                </button>
+            </form>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% else %}
+<p class="text-sm text-gray-400 mb-6">
+    A&uacute;n no agregaste materias. Si no tienes historial acad&eacute;mico,
+    puedes continuar igualmente.
+</p>
+{% endif %}

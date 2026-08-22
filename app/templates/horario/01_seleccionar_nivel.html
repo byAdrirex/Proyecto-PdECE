@@ -1,0 +1,29 @@
+{% if plan and plan.get("modo") == "manual" %}
+<div class="bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2 mb-3 text-xs text-emerald-700 flex items-center gap-2">
+    <span class="font-semibold">Modo manual</span>
+    <span>&mdash; No se verifican prerrequisitos</span>
+</div>
+{% elif plan and plan.get("modo") == "academico" %}
+<div class="bg-brand-50 border border-brand-200 rounded-lg px-3 py-2 mb-3 text-xs text-brand-700 flex items-center gap-2">
+    <span class="font-semibold">Modo acad&eacute;mico</span>
+    <span>&mdash; Kardex cargado, se verifican prerrequisitos</span>
+</div>
+{% endif %}
+
+<div class="mb-3">
+    <h2 class="text-sm font-bold text-gray-800 uppercase tracking-wide">Niveles</h2>
+    <p class="text-xs text-gray-500">Gesti&oacute;n 2-2026 &mdash; elige un nivel:</p>
+    <div class="flex flex-wrap gap-1.5 mt-2" id="botones-nivel">
+        {% for nivel in niveles %}
+        <button
+            hx-get="/horario/parcial/nivel/{{ nivel }}"
+            hx-target="#zona-materias"
+            hx-swap="innerHTML"
+            class="px-3 py-1.5 rounded-lg font-bold text-sm border border-gray-300 text-gray-700
+                   hover:bg-brand-600 hover:text-white hover:border-brand-400 transition
+                   focus:ring-2 focus:ring-brand-400 focus:outline-none">
+            {{ nivel }}
+        </button>
+        {% endfor %}
+    </div>
+</div>

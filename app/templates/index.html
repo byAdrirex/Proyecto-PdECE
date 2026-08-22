@@ -1,0 +1,723 @@
+{% extends "base.html" %}
+{% block title %}Malla Curricular - Economia UMSS{% endblock %}
+
+{% block content %}
+{% if desde_malla %}
+<div class="mb-4">
+    <a href="/" class="text-sm text-brand-600 hover:text-brand-800 font-medium">
+        &larr; Volver
+    </a>
+</div>
+{% endif %}
+<div class="mb-8">
+    <p class="text-sm font-semibold tracking-widest text-brand-600 uppercase mb-1">
+        Planificador Academico
+    </p>
+    <h1 class="text-2xl md:text-4xl font-bold text-brand-800 mb-2">
+        Economia &mdash; UMSS
+    </h1>
+    <p class="text-gray-500 text-lg">Malla curricular</p>
+</div>
+
+<style>
+    /* La malla se achica cuando se abre el drawer lateral de una materia,
+       igual que el calendario se expande al colapsar el menu del planificador. */
+    #malla-desktop { transition: margin-right .25s ease; }
+    @media (min-width: 1024px) {
+        body.pde-drawer-abierto #malla-desktop { margin-right: 23rem; }
+    }
+    @media (max-width: 1023px) {
+        #malla-mobile { overscroll-behavior-x: contain; }
+        #malla-mobile-grid { min-width: max-content; }
+        .malla-mobile-semestre { width: var(--malla-mobile-column, 190px); flex: 0 0 var(--malla-mobile-column, 190px); }
+        #malla-modal > div:last-child { max-width: min(300px, 78vw); }
+    }
+    @media (prefers-color-scheme: dark) and (max-width: 1023px) {
+        #malla-cuadro, #objetivos { background: #ffffff; }
+        #malla-mobile .malla-card, #malla-banda .malla-card,
+        #objetivos > div > div { filter: saturate(.62) brightness(.78); }
+        #malla-mobile .malla-card, #malla-banda .malla-card { color: #e5e7eb; }
+    }
+    @media (max-width: 1023px) {
+        #malla-cuadro { background: #ffffff !important; }
+        #malla-mobile .malla-card .font-semibold { color: #111827 !important; text-shadow: 0 1px 1px rgba(255,255,255,.45); }
+        #malla-mobile .malla-card .text-gray-500, #malla-banda .malla-card .text-gray-500 { color: #374151 !important; }
+    }
+</style>
+
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
+    <a href="/progreso"
+       class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition p-4 border border-gray-100 hover:border-brand-300">
+        <div class="text-2xl mb-1">&#128202;</div>
+        <h3 class="text-sm font-semibold text-brand-700">Mi progreso</h3>
+        <p class="text-xs text-gray-400 mt-1">Historial y avance</p>
+    </a>
+    <a href="/horario"
+       class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition p-4 border border-gray-100 hover:border-brand-300">
+        <div class="text-2xl mb-1">&#128197;</div>
+        <h3 class="text-sm font-semibold text-brand-700">Quiero armar mi horario</h3>
+        <p class="text-xs text-gray-400 mt-1">Tu plan de la gestion</p>
+    </a>
+    <a href="/guia"
+       class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition p-4 border border-gray-100 hover:border-brand-300">
+        <div class="text-2xl mb-1">&#128218;</div>
+        <h3 class="text-sm font-semibold text-brand-700">Gu&iacute;a</h3>
+        <p class="text-xs text-gray-400 mt-1">Informaci&oacute;n de la carrera</p>
+    </a>
+    <a href="/calendario-academico"
+       class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition p-4 border border-gray-100 hover:border-brand-300">
+        <div class="text-2xl mb-1">&#128197;</div>
+        <h3 class="text-sm font-semibold text-brand-700">Calendario Acad&eacute;mico</h3>
+        <p class="text-xs text-gray-400 mt-1">Fechas institucionales</p>
+    </a>
+</div>
+
+<div class="flex flex-wrap gap-2 items-center mb-6 text-xs">
+    <span class="font-semibold text-gray-500 mr-1">Areas:</span>
+    {% for area in malla.areas %}
+    <span class="px-2 py-1 rounded-full border bg-white text-gray-600 border-gray-300">{{ area }}</span>
+    {% endfor %}
+    {% for id_mencion in menciones_activas %}
+        {% set obj = (objetivos.menciones | selectattr('id', 'equalto', id_mencion) | list | first) %}
+        {% if obj %}<span class="px-2 py-1 rounded-full border bg-violet-100 text-violet-800 border-violet-300">&#9733; Mencion activa: {{ obj.nombre }}</span>{% endif %}
+    {% endfor %}
+    {% for id_tecnico in tecnicos_activos %}
+        {% set obj = (objetivos.tecnicos | selectattr('id', 'equalto', id_tecnico) | list | first) %}
+        {% if obj %}<span class="px-2 py-1 rounded-full border bg-teal-100 text-teal-800 border-teal-300">&#9873; Tecnico activo: {{ obj.nombre }}</span>{% endif %}
+    {% endfor %}
+    {% if con_estados %}
+    <span class="font-semibold text-gray-500 ml-2 mr-1">Estado:</span>
+    <span class="px-2 py-1 rounded-full border bg-emerald-100 text-emerald-800 border-emerald-300">&#x1F7E2; Disponible</span>
+    <span class="px-2 py-1 rounded-full border bg-blue-100 text-blue-800 border-blue-300">&#x1F535; Aprobada</span>
+    <span class="px-2 py-1 rounded-full border bg-amber-100 text-amber-800 border-amber-300">&#x1F7E1; En curso</span>
+    <span class="px-2 py-1 rounded-full border bg-red-100 text-red-800 border-red-300">&#x1F534; Reprobada</span>
+    <span class="px-2 py-1 rounded-full border bg-gray-200 text-gray-800 border-gray-400">&#x26AB; Bloqueada</span>
+    {% endif %}
+</div>
+
+<div id="malla-cuadro" class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+    <div id="malla-desktop" class="hidden lg:block overflow-x-auto">
+    <div id="malla-canvas" class="relative p-4">
+        <svg id="malla-lines" class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true"></svg>
+        <div class="text-center text-sm font-bold text-brand-800 mb-3">
+            Plan de Estudios &mdash; Licenciatura en Economia
+        </div>
+        <div class="grid grid-cols-9 gap-2 min-w-max">
+            {% for nivel in malla.niveles %}
+            <div class="w-[170px]">
+                <div class="text-center text-xs font-bold text-brand-700 bg-brand-50 rounded py-1 mb-2 border border-brand-100">
+                    {{ malla.nivel_label[nivel] }} Semestre
+                </div>
+                <div class="space-y-3">
+                    {% for area in malla.areas %}
+                        {% set lista = malla.celdas.get((area, nivel), []) %}
+                        {% if lista %}
+                        <div>
+                            <div class="text-[11px] font-bold uppercase tracking-wider text-gray-400 mb-1">{{ area }}</div>
+                            <div class="space-y-1.5">
+                                {% for m in lista %}
+                                <button type="button"
+                                        data-codigo="{{ m.codigo }}"
+                                        data-prereqs="{{ m.prerequisitos|join(',') }}"
+                                        data-deps="{{ m.dependientes|join(',') }}"
+                                        data-area="{{ m.area }}"
+                                        class="malla-card w-full text-left border-2 rounded-lg px-2 py-1.5 {{ m.area_clases }} hover:ring-2 hover:ring-brand-400 cursor-pointer transition">
+                                    <div class="text-[12px] font-bold text-gray-500">{{ m.sigla }} &middot; {{ m.codigo }}</div>
+                                    <div class="text-[13px] font-semibold leading-tight line-clamp-2">{{ m.nombre }}</div>
+                                    {% if con_estados and m.estado %}
+                                    <span class="inline-block mt-1 text-[11px] px-1.5 py-0.5 rounded border {{ m.estado_visual.clases }}">
+                                        {{ m.estado_visual.emoji }} {{ m.estado_visual.etiqueta }}
+                                    </span>
+                                    {% endif %}
+                                </button>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+
+                    {% set integradas_nivel = malla.integradas_por_nivel.get(nivel, []) %}
+                    {% if integradas_nivel %}
+                        <div>
+                            <div class="text-[11px] font-bold uppercase tracking-wider text-emerald-600 mb-1">Trayectorias activas</div>
+                            <div class="space-y-1.5">
+                                {% for m in integradas_nivel %}
+                                <button type="button"
+                                        data-codigo="{{ m.codigo }}"
+                                        data-prereqs="{{ m.prerequisitos|join(',') }}"
+                                        data-deps="{{ m.dependientes|join(',') }}"
+                                        data-area="{{ m.area }}"
+                                        style="background-image: {{ m.color_gradient }}"
+                                        class="malla-card w-full text-left border-2 {{ m.area_clases }} rounded-lg px-2 py-1.5 hover:ring-2 cursor-pointer transition">
+                                    <div class="text-[12px] font-bold text-gray-500">{{ m.sigla }} &middot; {{ m.codigo }}</div>
+                                    <div class="text-[13px] font-semibold leading-tight line-clamp-2">{{ m.nombre }}</div>
+                                    <div class="flex flex-wrap gap-1 mt-1">{% for p in m.pertenencias %}<span class="text-[10px] px-1.5 py-0.5 rounded-full bg-white border border-gray-300">{{ p.id }}</span>{% endfor %}</div>
+                                    {% if m.reemplaza %}<div class="text-[10px] font-semibold text-amber-700 mt-1">Sustituye: {% for r in m.reemplaza %}{{ r.nombre }}{% if not loop.last %}, {% endif %}{% endfor %}</div>{% endif %}
+                                    {% if con_estados and m.estado %}
+                                    <span class="inline-block mt-1 text-[11px] px-1.5 py-0.5 rounded border {{ m.estado_visual.clases }}">
+                                        {{ m.estado_visual.emoji }} {{ m.estado_visual.etiqueta }}
+                                    </span>
+                                    {% endif %}
+                                </button>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div id="malla-mobile" class="lg:hidden overflow-x-auto p-4" tabindex="0" aria-label="Malla curricular desplazable horizontalmente">
+    <div class="flex items-center justify-between gap-2 mb-3">
+        <p class="text-xs text-gray-500">Desliza horizontalmente. Toca una materia para ver su detalle.</p>
+        <div class="flex items-center gap-1 shrink-0" aria-label="Tama&ntilde;o de la malla">
+            <button type="button" id="malla-zoom-menos" class="w-7 h-7 rounded border border-gray-300 bg-white text-gray-700 font-bold" title="Ver m&aacute;s semestres">&minus;</button>
+            <button type="button" id="malla-zoom-mas" class="w-7 h-7 rounded border border-gray-300 bg-white text-gray-700 font-bold" title="Ver menos semestres">+</button>
+        </div>
+    </div>
+    <div id="malla-mobile-grid" class="flex items-start gap-3 pb-3">
+    {% for nivel in malla.niveles %}
+    <div class="malla-mobile-semestre">
+        <h3 class="text-sm font-bold text-brand-700 bg-brand-50 border border-brand-100 rounded-lg px-3 py-2 mb-3 text-center sticky top-0 z-10">{{ malla.nivel_label[nivel] }} Semestre</h3>
+        <div class="space-y-3">
+            {% for area in malla.areas %}
+                {% set lista = malla.celdas.get((area, nivel), []) %}
+                {% if lista %}
+                <div>
+                    <div class="text-[10px] font-bold uppercase tracking-wider text-gray-400 mb-1">{{ area }}</div>
+                    <div class="space-y-1.5">
+                        {% for m in lista %}
+                        <button type="button"
+                                data-codigo="{{ m.codigo }}"
+                                data-prereqs="{{ m.prerequisitos|join(',') }}"
+                                data-deps="{{ m.dependientes|join(',') }}"
+                                data-area="{{ m.area }}"
+                                class="malla-card w-full text-left border-2 rounded-xl px-3 py-2 {{ m.area_clases }} cursor-pointer transition hover:ring-2 hover:ring-brand-400">
+                            <div>
+                                <span class="block text-xs font-bold text-gray-500">{{ m.sigla }} &middot; {{ m.codigo }}</span>
+                                {% if con_estados and m.estado %}
+                                <span class="text-xs px-2 py-0.5 rounded-full border {{ m.estado_visual.clases }}">
+                                    {{ m.estado_visual.emoji }} {{ m.estado_visual.etiqueta }}
+                                </span>
+                                {% endif %}
+                            </div>
+                            <div class="text-sm font-semibold leading-snug">{{ m.nombre }}</div>
+                        </button>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+
+            {% set integradas_nivel = malla.integradas_por_nivel.get(nivel, []) %}
+            {% if integradas_nivel %}
+                <div>
+                    <div class="text-[10px] font-bold uppercase tracking-wider text-emerald-600 mb-1">Trayectorias activas</div>
+                    <div class="space-y-1.5">
+                        {% for m in integradas_nivel %}
+                        <button type="button"
+                                data-codigo="{{ m.codigo }}"
+                                data-prereqs="{{ m.prerequisitos|join(',') }}"
+                                data-deps="{{ m.dependientes|join(',') }}"
+                                data-area="{{ m.area }}"
+                                style="background-image: {{ m.color_gradient }}"
+                                class="malla-card w-full text-left border-2 {{ m.area_clases }} rounded-xl px-3 py-2 cursor-pointer transition hover:ring-2 hover:ring-brand-400">
+                            <div>
+                                <span class="block text-xs font-bold text-gray-500">{{ m.sigla }} &middot; {{ m.codigo }}</span>
+                                {% if con_estados and m.estado %}
+                                <span class="text-xs px-2 py-0.5 rounded-full border {{ m.estado_visual.clases }}">
+                                    {{ m.estado_visual.emoji }} {{ m.estado_visual.etiqueta }}
+                                </span>
+                                {% endif %}
+                            </div>
+                            <div class="flex flex-wrap gap-1 mt-1">{% for p in m.pertenencias %}<span class="text-[10px] px-1.5 py-0.5 rounded-full bg-white border border-gray-300">{{ p.id }}</span>{% endfor %}</div>
+                            {% if m.reemplaza %}<div class="text-[10px] font-semibold text-amber-700 mt-1">Sustituye: {% for r in m.reemplaza %}{{ r.nombre }}{% if not loop.last %}, {% endif %}{% endfor %}</div>{% endif %}
+                            <div class="text-sm font-semibold leading-snug">{{ m.nombre }}</div>
+                        </button>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+</div>
+
+<div id="malla-banda" class="border-t border-gray-100 p-4">
+    <h3 class="text-sm font-bold text-brand-700 mb-1">Talleres Complementarios e Ingles</h3>
+    <p class="text-xs text-gray-400 mb-3">Formacion complementaria obligatoria (no curricular).</p>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-2">
+        {% for m in (malla.talleres + malla.ingles) %}
+        <button type="button"
+                data-codigo="{{ m.codigo }}"
+                data-prereqs="{{ m.prerequisitos|join(',') }}"
+                data-deps="{{ m.dependientes|join(',') }}"
+                data-area="{{ m.area }}"
+                class="malla-card text-left border-2 rounded-lg px-2.5 py-2 {{ m.area_clases }} cursor-pointer transition hover:ring-2 hover:ring-brand-400">
+            <div class="text-[10px] font-bold text-gray-500">{{ m.sigla }} &middot; {{ m.codigo }}{% if m.nivel %} &middot; {{ malla.nivel_label[m.nivel] }}{% endif %}</div>
+            <div class="text-[12px] font-semibold leading-tight">{{ m.nombre }}</div>
+            {% if con_estados and m.estado %}
+            <span class="inline-block mt-1 text-[11px] px-1.5 py-0.5 rounded border {{ m.estado_visual.clases }}">
+                {{ m.estado_visual.emoji }} {{ m.estado_visual.etiqueta }}
+            </span>
+            {% endif %}
+        </button>
+        {% endfor %}
+    </div>
+</div>
+
+<section id="noticias" class="border-t border-gray-100 p-4 md:p-6">
+    <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-5 flex flex-col sm:flex-row items-center gap-5">
+        <svg class="w-32 h-28 shrink-0" viewBox="0 0 160 120" role="img" aria-label="Ilustraci&oacute;n de personas trabajando en construcci&oacute;n">
+            <rect x="8" y="88" width="144" height="8" rx="4" fill="#bfdbfe"/>
+            <path d="M20 88 L48 48 L78 88 M82 88 L110 38 L145 88" fill="none" stroke="#2563eb" stroke-width="7" stroke-linecap="round"/>
+            <path d="M45 48h68" stroke="#f59e0b" stroke-width="5"/>
+            <circle cx="63" cy="32" r="8" fill="#fbbf24"/><path d="M63 41v22m-12 12 12-12 12 12m-12-12-12-8m12 8 12-8" stroke="#1d4ed8" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="108" cy="28" r="8" fill="#fb923c"/><path d="M108 37v23m-12 14 12-14 12 14m-12-14-14-7m14 7 13-8" stroke="#0f766e" stroke-width="5" stroke-linecap="round"/>
+            <path d="M40 72h18M101 66h18" stroke="#f59e0b" stroke-width="5" stroke-linecap="round"/>
+        </svg>
+        <div>
+            <h2 class="text-xl font-bold text-brand-800">Noticias</h2>
+            <p class="text-gray-500 mt-1">Estamos trabajando en ello</p>
+        </div>
+    </div>
+</section>
+
+<div id="objetivos" class="border-t border-gray-100 p-4 md:p-6">
+    <h2 class="text-xl font-bold text-brand-800 mb-1">T&eacute;cnicos y Menciones</h2>
+    <p class="text-xs text-gray-400 mb-4">
+        T&eacute;cnico Superior en: &middot; &Aacute;reas de Especializaci&oacute;n &ndash; Materias Electivas
+    </p>
+    <div class="grid grid-cols-2 lg:grid-cols-6 gap-3">
+        {% for t in objetivos.tecnicos %}
+        <div role="button" tabindex="0"
+             onclick="window.{{ '__desactivarTecnico(\'' ~ t.id ~ '\')' if t.id in tecnicos_activos else "__confirmarTecnico('" ~ t.id ~ "', '" ~ t.nombre ~ "')" }}"
+             class="bg-white rounded-xl shadow-sm border p-3 flex flex-col gap-2 cursor-pointer transition hover:shadow-md
+                     {{ t.color.activo if t.id in tecnicos_activos else 'border-gray-100 ' ~ t.color.hover }}">
+            <div class="flex items-start justify-between gap-1">
+                <h4 class="font-semibold text-gray-800 text-sm leading-snug">{{ t.nombre }}</h4>
+                {% if t.id in tecnicos_activos %}
+                <span class="text-[10px] font-bold {{ t.color.badge }} px-1.5 py-0.5 rounded-full shrink-0">Activo</span>
+                {% endif %}
+            </div>
+            <span class="text-[10px] font-bold uppercase tracking-wider {{ t.color.label }}">T&eacute;cnico</span>
+            <ul class="text-[11px] text-gray-500 space-y-1 border-t border-gray-100 pt-2 flex-1">
+                {% for m in t.materias %}
+                <li class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full {{ t.color.punto }} shrink-0"></span>{{ m.nombre }}
+                </li>
+                {% endfor %}
+            </ul>
+            {% if t.id in tecnicos_activos %}
+            <a href="/malla/tecnico/desactivar/enlace?id={{ t.id }}"
+               onclick="event.stopPropagation()"
+               class="block text-xs font-semibold text-red-500 hover:text-red-700 border border-red-200 rounded-lg py-1.5 text-center">
+                Quitar t&eacute;cnico
+            </a>
+            {% else %}
+            <a href="/malla/tecnico/activar/{{ t.id }}"
+               onclick="event.stopPropagation()"
+               class="block text-xs font-semibold border {{ t.color.enlace }} rounded-lg py-1.5 text-center">
+                Elegir t&eacute;cnico
+            </a>
+            {% endif %}
+        </div>
+        {% endfor %}
+
+        {% for o in objetivos.menciones %}
+        <div role="button" tabindex="0"
+              onclick="window.{{ '__desactivarMencion(\'' ~ o.id ~ '\')' if o.id in menciones_activas else "__confirmarMencion('" ~ o.id ~ "', '" ~ o.nombre ~ "')" }}"
+             class="bg-white rounded-xl shadow-sm border p-3 flex flex-col gap-2 cursor-pointer transition hover:shadow-md
+                     {{ o.color.activo if o.id in menciones_activas else 'border-gray-100 ' ~ o.color.hover }}">
+            <div class="flex items-start justify-between gap-1">
+                <h4 class="font-semibold text-gray-800 text-sm leading-snug">{{ o.nombre }}</h4>
+                {% if o.id in menciones_activas %}
+                <span class="text-[10px] font-bold {{ o.color.badge }} px-1.5 py-0.5 rounded-full shrink-0">Activa</span>
+                {% endif %}
+            </div>
+            <span class="text-[10px] font-bold uppercase tracking-wider {{ o.color.label }}">Menci&oacute;n</span>
+            <ul class="text-[11px] text-gray-500 space-y-1 border-t border-gray-100 pt-2 flex-1">
+                {% for m in o.materias %}
+                <li class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full {{ o.color.punto }} shrink-0"></span>{{ m.nombre }}
+                </li>
+                {% endfor %}
+            </ul>
+            {% if o.id in menciones_activas %}
+            <a href="/malla/mencion/desactivar/enlace?id={{ o.id }}"
+               onclick="event.stopPropagation()"
+               class="block text-xs font-semibold text-red-500 hover:text-red-700 border border-red-200 rounded-lg py-1.5 text-center">
+                Quitar menci&oacute;n
+            </a>
+            {% else %}
+            <a href="/malla/mencion/activar/{{ o.id }}"
+               onclick="event.stopPropagation()"
+               class="block text-xs font-semibold border {{ o.color.enlace }} rounded-lg py-1.5 text-center">
+                Elegir menci&oacute;n
+            </a>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+</div>
+
+<div id="malla-modal" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true">
+    <div class="absolute inset-0 bg-black/30 backdrop-blur-[1px]" data-cerrar-modal></div>
+    <div class="absolute top-0 right-0 h-full w-full max-w-[360px] bg-white shadow-2xl overflow-y-auto">
+        <div id="malla-modal-contenido" class="p-6"></div>
+    </div>
+</div>
+
+<div id="objetivo-modal" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true">
+    <div class="absolute inset-0 bg-black/40" data-cerrar-objetivo></div>
+    <div class="relative max-w-md mx-auto mt-8 md:mt-24 px-4">
+        <div id="objetivo-modal-contenido" class="bg-white rounded-2xl shadow-2xl p-6"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+(function () {
+    var CON_ESTADOS = {{ 'true' if con_estados else 'false' }};
+    var svg = document.getElementById('malla-lines');
+    var canvas = document.getElementById('malla-canvas');
+
+    function tarjetas() {
+        return document.querySelectorAll('#malla-desktop .malla-card, #malla-mobile .malla-card, #malla-banda .malla-card');
+    }
+
+    function abrirModal(codigo) {
+        fetch('/malla/materia/' + codigo)
+            .then(function (r) { return r.json(); })
+            .then(function (d) {
+                if (d.error) { return; }
+                var modal = document.getElementById('malla-modal');
+                document.getElementById('malla-modal-contenido').innerHTML =
+                    renderModal(d);
+                modal.classList.remove('hidden');
+                document.body.classList.add('pde-drawer-abierto');
+                resaltar(codigo);
+                var card = document.querySelector('#malla-desktop .malla-card[data-codigo="' + codigo + '"]');
+                if (card) {
+                    setTimeout(function () {
+                        card.scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'});
+                    }, 120);
+                }
+            });
+    }
+
+    function accionesMateria(d) {
+        var accionGrupos = '<a href="/horario?materia=' + d.codigo +
+            '" class="inline-block px-4 py-2 rounded-lg bg-brand-600 text-white text-sm font-semibold hover:bg-brand-700">Ver grupos</a>';
+        if (CON_ESTADOS && d.estado === 'APROBADA') {
+            accionGrupos = '<span class="inline-block px-4 py-2 rounded-lg bg-gray-200 text-gray-500 text-sm font-semibold">Ya aprobada</span>';
+        }
+        if (CON_ESTADOS && d.estado === 'BLOQUEADA') {
+            accionGrupos = '<span class="inline-block px-4 py-2 rounded-lg bg-gray-200 text-gray-500 text-sm font-semibold" title="Faltan prerrequisitos">Bloqueada</span>';
+        }
+        return '<div class="flex gap-3">' + accionGrupos + '</div>';
+    }
+
+    function renderModal(d) {
+        var estado = '';
+        if (CON_ESTADOS && d.estado) {
+            estado = '<span class="inline-block mt-1 px-2 py-1 rounded-full border ' +
+                d.estado_visual.clases + '">' + d.estado_visual.emoji + ' ' +
+                d.estado_visual.etiqueta + '</span>';
+        }
+        var listaPrereqs = d.prerequisitos.map(function (p) {
+            return '<li><button type="button" onclick="window.__abrir(' + p.codigo +
+                ')" class="text-left hover:text-brand-700 hover:underline">' +
+                p.nombre + ' (' + p.nivel + ')</button></li>';
+        }).join('');
+        var listaDeps = d.dependientes.map(function (dp) {
+            return '<li><button type="button" onclick="window.__abrir(' + dp.codigo +
+                ')" class="text-left hover:text-brand-700 hover:underline">' +
+                dp.nombre + ' (' + dp.nivel + ')</button></li>';
+        }).join('');
+        var pertenencias = (d.pertenencias || []).map(function (p) {
+            return '<li>' + p.nombre + '</li>';
+        }).join('');
+        return '<div class="flex items-start justify-between mb-2">' +
+            '<div><p class="text-xs text-gray-400">' + d.codigo + ' &middot; ' + d.sigla + ' &middot; Nivel ' + d.nivel + '</p>' +
+            '<h3 class="text-xl font-bold text-brand-800">' + d.nombre + '</h3></div>' +
+            '<button type="button" data-cerrar-modal class="text-2xl leading-none text-gray-400 hover:text-gray-600">&times;</button></div>' +
+            '<div class="flex flex-wrap gap-1.5 mb-4">' +
+            '<span class="px-2 py-1 rounded-full border bg-white text-gray-600 border-gray-300">' + d.area + '</span>' +
+            '<span class="px-2 py-1 rounded-full border bg-white text-gray-600 border-gray-300">' + d.creditos + ' créditos</span>' +
+            '<span class="px-2 py-1 rounded-full border bg-white text-gray-600 border-gray-300">' + d.horas + ' h</span>' +
+            '<span class="px-2 py-1 rounded-full border bg-white text-gray-600 border-gray-300">' + d.tipo + '</span>' +
+            estado + '</div>' +
+            (pertenencias ? '<div class="mb-5 text-sm"><h4 class="font-semibold text-gray-500 mb-1">Pertenece a:</h4><ul class="list-disc list-inside space-y-1">' + pertenencias + '</ul></div>' : '') +
+            '<div class="mb-5 text-sm">' +
+            '<h4 class="font-semibold text-gray-500 mb-1">Esta materia requiere:</h4>' +
+            (listaPrereqs ? '<ul class="list-disc list-inside space-y-1">' + listaPrereqs + '</ul>' : '<p class="text-gray-400">Sin prerrequisitos.</p>') + '</div>' +
+            '<div class="mb-5 text-sm">' +
+            '<h4 class="font-semibold text-gray-500 mb-1">Esta materia puede habilitar:</h4>' +
+            (listaDeps ? '<ul class="list-disc list-inside space-y-1">' + listaDeps + '</ul>' : '<p class="text-gray-400">Esta materia no habilita otras materias.</p>') + '</div>' +
+            accionesMateria(d);
+    }
+
+    window.__abrir = function (codigo) { abrirModal(String(codigo)); };
+
+    document.querySelectorAll('#malla-desktop .malla-card').forEach(function (card) {
+        card.addEventListener('click', function () {
+            abrirModal(card.dataset.codigo);
+        });
+    });
+
+    document.addEventListener('click', function (e) {
+        if (e.target.closest('[data-cerrar-modal]')) {
+            document.getElementById('malla-modal').classList.add('hidden');
+            document.body.classList.remove('pde-drawer-abierto');
+            limpiarResaltado();
+        }
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+            document.getElementById('malla-modal').classList.add('hidden');
+            document.getElementById('objetivo-modal').classList.add('hidden');
+            document.body.classList.remove('pde-drawer-abierto');
+            limpiarResaltado();
+        }
+    });
+
+    function resaltar(codigo) {
+        var cards = tarjetas();
+        cards.forEach(function (c) {
+            var relacionados = esRelacionado(c.dataset, codigo);
+            c.classList.toggle('ring-2', relacionados);
+            c.classList.toggle('ring-brand-500', relacionados);
+            c.classList.toggle('opacity-30', !relacionados && modalVisible());
+        });
+        dibujarLineasActivas(codigo);
+    }
+
+    function modalVisible() {
+        return !document.getElementById('malla-modal').classList.contains('hidden');
+    }
+
+    function esRelacionado(ds, codigo) {
+        if (ds.codigo === codigo) { return true; }
+        var prereqs = (ds.prereqs || '').split(',').filter(Boolean);
+        var deps = (ds.deps || '').split(',').filter(Boolean);
+        return prereqs.indexOf(codigo) !== -1 || deps.indexOf(codigo) !== -1;
+    }
+
+    function limpiarResaltado() {
+        var cards = tarjetas();
+        cards.forEach(function (c) {
+            c.classList.remove('ring-2', 'ring-brand-500', 'opacity-30');
+        });
+        document.querySelectorAll('#malla-mobile .malla-card').forEach(function (c) {
+            c.classList.remove('ring-2', 'ring-brand-500', 'opacity-30');
+        });
+        if (svg) { svg.innerHTML = ''; }
+    }
+
+    function dibujarLineasActivas(codigo) {
+        if (!svg || !canvas) { return; }
+        svg.innerHTML = '';
+        var canvasRect = canvas.getBoundingClientRect();
+        var cardsMap = {};
+        document.querySelectorAll('#malla-desktop .malla-card').forEach(function (c) {
+            cardsMap[c.dataset.codigo] = c;
+        });
+
+        var activos = {};
+        var card = cardsMap[codigo];
+        if (!card) { return; }
+        (card.dataset.prereqs || '').split(',').filter(Boolean).forEach(function (c) {
+            activos[c] = true;
+        });
+        (card.dataset.deps || '').split(',').filter(Boolean).forEach(function (c) {
+            activos[c] = true;
+        });
+
+        var paths = [];
+        Object.keys(activos).forEach(function (cod) {
+            var otro = cardsMap[cod];
+            if (!otro) { return; }
+            var r1, r2;
+            if (card.dataset.prereqs.indexOf(cod) !== -1) {
+                r1 = otro.getBoundingClientRect();
+                r2 = card.getBoundingClientRect();
+            } else {
+                r1 = card.getBoundingClientRect();
+                r2 = otro.getBoundingClientRect();
+            }
+            var x1 = r1.right - canvasRect.left + 2;
+            var y1 = (r1.top + r1.bottom) / 2 - canvasRect.top;
+            var x2 = r2.left - canvasRect.left - 2;
+            var y2 = (r2.top + r2.bottom) / 2 - canvasRect.top;
+            var mx = (x1 + x2) / 2;
+            var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('d', 'M ' + x1 + ' ' + y1 + ' C ' + mx + ' ' + y1 + ', ' + mx + ' ' + y2 + ', ' + x2 + ' ' + y2);
+            path.setAttribute('fill', 'none');
+            path.setAttribute('stroke', '#7c3aed');
+            path.setAttribute('stroke-width', '2');
+            path.setAttribute('marker-end', 'url(#malla-flecha)');
+            path.setAttribute('data-desde', r1 === card.getBoundingClientRect() ? codigo : cod);
+            svg.appendChild(path);
+        });
+
+        var defs = svg.querySelector('defs');
+        if (!defs) {
+            defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+            svg.appendChild(defs);
+        }
+        defs.innerHTML = '<marker id="malla-flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7c3aed"/></marker>';
+
+        var w = canvas.scrollWidth;
+        var h = canvas.scrollHeight;
+        svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+        svg.setAttribute('width', w);
+        svg.setAttribute('height', h);
+        svg.style.width = w + 'px';
+        svg.style.height = h + 'px';
+    }
+
+    function mostrarConexionesMovil(card) {
+        seleccionarMovil(card);
+        abrirModal(card.dataset.codigo);
+    }
+
+    document.querySelectorAll('#malla-mobile .malla-card').forEach(function (card) {
+        card.addEventListener('click', function () {
+            mostrarConexionesMovil(card);
+        });
+    });
+
+    function abrirBanda(card) {
+        if (window.matchMedia('(min-width: 1024px)').matches) {
+            abrirModal(card.dataset.codigo);
+        } else {
+            mostrarConexionesMovil(card);
+        }
+    }
+
+    document.getElementById('malla-banda').addEventListener('click', function (event) {
+        var card = event.target.closest('.malla-card');
+        if (card) {
+            abrirBanda(card);
+        }
+    });
+
+    var mallaMobile = document.getElementById('malla-mobile');
+    var columnaMalla = 190;
+    function ajustarEscalaMalla(delta) {
+        if (!mallaMobile) { return; }
+        columnaMalla = Math.max(120, Math.min(340, columnaMalla + delta));
+        mallaMobile.style.setProperty('--malla-mobile-column', columnaMalla + 'px');
+    }
+    var zoomMenos = document.getElementById('malla-zoom-menos');
+    var zoomMas = document.getElementById('malla-zoom-mas');
+    if (zoomMenos) { zoomMenos.addEventListener('click', function () { ajustarEscalaMalla(-20); }); }
+    if (zoomMas) { zoomMas.addEventListener('click', function () { ajustarEscalaMalla(20); }); }
+
+    function seleccionarMovil(card) {
+        var codigo = card.dataset.codigo;
+        var todas = document.querySelectorAll('#malla-mobile .malla-card, #malla-banda .malla-card');
+        todas.forEach(function (c) {
+            var relacionado = esRelacionado(c.dataset, codigo);
+            c.classList.toggle('ring-2', relacionado);
+            c.classList.toggle('ring-brand-500', relacionado);
+            c.classList.toggle('opacity-30', !relacionado);
+        });
+    }
+
+    function limpiarSeleccionMovil() {
+        document.querySelectorAll('#malla-mobile .malla-card, #malla-banda .malla-card').forEach(function (c) {
+            c.classList.remove('ring-2', 'ring-brand-500', 'opacity-30');
+        });
+    }
+
+    window.__confirmarMencion = function (id, nombre) {
+        var modal = document.getElementById('objetivo-modal');
+        document.getElementById('objetivo-modal-contenido').innerHTML =
+            '<div class="flex items-start justify-between mb-3">' +
+            '<h3 class="text-lg font-bold text-brand-800">Elegir mencion</h3>' +
+            '<button type="button" data-cerrar-objetivo class="text-2xl leading-none text-gray-400 hover:text-gray-600">&times;</button></div>' +
+            '<p class="text-sm text-gray-600 mb-2">' + nombre + '</p>' +
+            '<p class="font-semibold text-gray-800 mb-5">&#191;Quieres seguir esta menci&#243;n?</p>' +
+            '<div class="flex gap-3">' +
+            '<button type="button" data-cerrar-objetivo class="flex-1 py-2 rounded-lg border border-gray-300 text-gray-600 font-semibold text-sm hover:bg-gray-50">Cancelar</button>' +
+            '<button type="button" onclick="window.__activarMencion(\'' + id + '\')" class="flex-1 py-2 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm">S&#237;, ver esta menci&#243;n</button>' +
+            '</div>';
+        modal.classList.remove('hidden');
+    };
+
+    window.__activarMencion = function (id) {
+        fetch('/malla/mencion/activar', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: 'id=' + encodeURIComponent(id)
+        }).then(function () { window.location.reload(); });
+    };
+
+    window.__desactivarMencion = function (id) {
+        fetch('/malla/mencion/desactivar', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: 'id=' + encodeURIComponent(id || '')
+        })
+            .then(function () { window.location.reload(); });
+    };
+
+    window.__confirmarTecnico = function (id, nombre) {
+        var modal = document.getElementById('objetivo-modal');
+        document.getElementById('objetivo-modal-contenido').innerHTML =
+            '<div class="flex items-start justify-between mb-3">' +
+            '<h3 class="text-lg font-bold text-brand-800">Elegir tecnico</h3>' +
+            '<button type="button" data-cerrar-objetivo class="text-2xl leading-none text-gray-400 hover:text-gray-600">&times;</button></div>' +
+            '<p class="text-sm text-gray-600 mb-2">' + nombre + '</p>' +
+            '<p class="font-semibold text-gray-800 mb-5">&#191;Quieres seguir este t&#233;cnico?</p>' +
+            '<div class="flex gap-3">' +
+            '<button type="button" data-cerrar-objetivo class="flex-1 py-2 rounded-lg border border-gray-300 text-gray-600 font-semibold text-sm hover:bg-gray-50">Cancelar</button>' +
+            '<button type="button" onclick="window.__activarTecnico(\'' + id + '\')" class="flex-1 py-2 rounded-lg bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm">S&#237;, ver este t&#233;cnico</button>' +
+            '</div>';
+        modal.classList.remove('hidden');
+    };
+
+    window.__activarTecnico = function (id) {
+        fetch('/malla/tecnico/activar', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: 'id=' + encodeURIComponent(id)
+        }).then(function () { window.location.reload(); });
+    };
+
+    window.__desactivarTecnico = function (id) {
+        fetch('/malla/tecnico/desactivar', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: 'id=' + encodeURIComponent(id || '')
+        })
+            .then(function () { window.location.reload(); });
+    };
+
+    document.addEventListener('click', function (e) {
+        if (e.target.closest('[data-cerrar-objetivo]')) {
+            document.getElementById('objetivo-modal').classList.add('hidden');
+        }
+    });
+
+    tarjetas().forEach(function (card) {
+        card.addEventListener('mouseenter', function () {
+            if (!modalVisible()) { resaltar(card.dataset.codigo); }
+        });
+    });
+
+    document.getElementById('malla-desktop').addEventListener('mouseleave', function () {
+        if (!modalVisible()) { limpiarResaltado(); }
+    });
+})();
+</script>
+{% endblock %}

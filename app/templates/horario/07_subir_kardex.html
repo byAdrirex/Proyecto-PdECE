@@ -1,0 +1,49 @@
+<div class="bg-white rounded-xl shadow-md p-8 border border-gray-100 text-center max-w-lg mx-auto">
+    <h2 class="text-xl font-semibold text-gray-700 mb-2">
+        Tengo mi kardex
+    </h2>
+    <p class="text-sm text-gray-500 mb-6">
+        Sube tu kardex en formato PDF (reporte academico del SISS).
+        Se procesara para conocer tu historial y prerrequisitos.
+    </p>
+
+    {% if error %}
+    <div class="bg-red-50 border border-red-200 rounded-lg px-4 py-3 mb-4 text-sm text-red-700"
+         role="alert">
+        {{ error }}
+    </div>
+    <div class="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 mb-4 text-sm text-amber-700">
+        <p class="mb-1"><strong>No se reconoci&oacute; tu kardex?</strong></p>
+        <p>
+            Puedes agregar tus materias manualmente con sus notas.
+            <button hx-get="/horario/kardex/manual"
+                    hx-target="#zona-modo"
+                    hx-swap="innerHTML"
+                    class="underline font-semibold text-amber-800">
+                Seleccionar manualmente
+            </button>
+        </p>
+    </div>
+    {% endif %}
+
+    <form hx-post="/horario/kardex/subir"
+          hx-target="#zona-modo"
+          hx-swap="innerHTML"
+          hx-encoding="multipart/form-data"
+          class="space-y-4">
+        <input type="file" name="kardex" accept="application/pdf, .pdf" required
+               class="block w-full text-sm text-gray-600 file:mr-4 file:py-2 file:px-4
+                      file:rounded-lg file:border-0 file:bg-brand-50 file:text-brand-700
+                      file:font-semibold file:text-sm hover:file:bg-brand-100 transition">
+        <button type="submit"
+                class="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold
+                       py-3 px-4 rounded-lg transition">
+            Procesar kardex
+        </button>
+    </form>
+
+    <a href="/horario"
+       class="inline-block mt-6 text-sm text-gray-400 hover:text-brand-600 font-medium">
+        &larr; Volver a elegir modo
+    </a>
+</div>

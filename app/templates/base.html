@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Planificador Academico{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50:  '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    {% block head %}{% endblock %}
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <nav class="bg-brand-700 text-white shadow-lg">
+        <div class="max-w-[1700px] mx-auto px-2 sm:px-4 py-4 md:py-5 flex items-center justify-between gap-3 flex-wrap">
+            <a href="/" class="text-xl md:text-2xl font-bold tracking-tight">
+                Planificador Academico
+            </a>
+            <div class="flex items-center justify-end flex-wrap gap-2 sm:gap-4 md:gap-6 text-xs sm:text-base md:text-lg">
+                <a href="/guia" class="hover:text-brand-200 transition">Gu&iacute;a</a>
+                <a href="/calendario-academico" class="hover:text-brand-200 transition">Calendario Acad&eacute;mico</a>
+                <a href="/progreso" class="hover:text-brand-200 transition">Mi progreso</a>
+                {% if request.args.get("origen") != "progreso" %}
+                <a href="/horario" class="hover:text-brand-200 transition font-semibold">
+                    Quiero armar mi horario
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-1 max-w-[1700px] mx-auto w-full px-1 sm:px-2 py-4 md:py-6">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="bg-gray-200 text-gray-600 text-center text-sm py-3">
+        Planificador Acad&eacute;mico &mdash; UMSS Carrera de Econom&iacute;a
+    </footer>
+
+    <a id="btn-reportar-error"
+       href="https://wa.link/fq4ozm"
+       target="_blank" rel="noopener noreferrer"
+       class="fixed bottom-4 right-4 z-40 bg-brand-600 hover:bg-brand-700 text-white text-xs md:text-sm
+               font-semibold px-4 py-2 rounded-full shadow-lg transition"
+       title="Necesito ayuda">
+        &#128172; Necesito ayuda
+    </a>
+
+    <button type="button"
+            id="btn-fotografia"
+            class="fixed bottom-20 right-4 z-40 bg-brand-600 hover:bg-brand-700 text-white
+                   w-14 h-14 rounded-full shadow-lg transition flex items-center justify-center"
+            title="Hacer fotografía de la página">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+        </svg>
+    </button>
+
+    <style>
+        @media print {
+            nav, footer, #btn-fotografia, #btn-reportar-error { display: none !important; }
+            main { max-width: none !important; }
+        }
+    </style>
+
+    {% block scripts %}{% endblock %}
+    <script>
+        (function () {
+            var boton = document.getElementById('btn-fotografia');
+            if (!boton) { return; }
+            function capturar() {
+                var area = document.querySelector('main');
+                if (!area || typeof html2canvas === 'undefined') {
+                    window.alert('No se pudo cargar el capturador. Intenta nuevamente.');
+                    return;
+                }
+                boton.disabled = true;
+                html2canvas(area, {
+                    backgroundColor: '#f9fafb',
+                    scale: Math.min(window.devicePixelRatio || 1, 2),
+                    useCORS: true,
+                    logging: false,
+                    windowWidth: area.scrollWidth,
+                    windowHeight: area.scrollHeight,
+                    scrollX: 0,
+                    scrollY: -window.scrollY
+                }).then(function (canvas) {
+                    canvas.toBlob(function (blob) {
+                        if (!blob) { throw new Error('No se genero la imagen'); }
+                        var enlace = document.createElement('a');
+                        enlace.download = 'planificador-academico.png';
+                        enlace.href = URL.createObjectURL(blob);
+                        enlace.click();
+                        setTimeout(function () { URL.revokeObjectURL(enlace.href); }, 1000);
+                    }, 'image/png');
+                }).catch(function () {
+                    window.alert('No se pudo generar la imagen. Intenta nuevamente.');
+                }).finally(function () {
+                    boton.disabled = false;
+                });
+            }
+            boton.addEventListener('click', function () {
+                if (typeof html2canvas !== 'undefined') {
+                    capturar();
+                    return;
+                }
+                var script = document.createElement('script');
+                script.src = 'https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js';
+                script.onload = capturar;
+                script.onerror = function () { window.alert('No se pudo cargar el capturador.'); };
+                document.head.appendChild(script);
+            });
+        })();
+    </script>
+</body>
+</html>

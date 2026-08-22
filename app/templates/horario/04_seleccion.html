@@ -1,0 +1,76 @@
+<div class="bg-white rounded-xl shadow-md p-4 border border-gray-100">
+    <div class="flex items-center justify-between mb-3">
+        <h2 class="text-lg font-semibold text-gray-700">Mi selecci&oacute;n</h2>
+        <button type="button"
+                onclick="window.__ocultarSeleccion()"
+                class="text-xs font-semibold text-brand-600 hover:text-brand-800 border border-brand-200 rounded-lg px-3 py-1.5">
+            Ocultar selecci&oacute;n
+        </button>
+    </div>
+
+    <div class="grid grid-cols-3 gap-2 mb-4 text-center text-sm">
+        <div class="bg-gray-50 rounded-lg py-2">
+            <div class="text-lg font-bold text-brand-700">{{ plan.grupos_seleccionados|length }}</div>
+            <div class="text-[10px] text-gray-400 uppercase">Materias</div>
+        </div>
+        <div class="bg-gray-50 rounded-lg py-2">
+            <div class="text-lg font-bold text-brand-700">{{ "%.1f"|format(resumen.horas_semanales) if resumen else "0" }}</div>
+            <div class="text-[10px] text-gray-400 uppercase">Horas semanales</div>
+        </div>
+        <div class="bg-gray-50 rounded-lg py-2">
+            <div class="text-lg font-bold text-brand-700">{{ resumen.dias|length if resumen else 0 }}</div>
+            <div class="text-[10px] text-gray-400 uppercase">Días ocupados</div>
+        </div>
+    </div>
+
+    {% if plan.grupos_seleccionados %}
+    <div class="space-y-1.5 mb-4 max-h-56 overflow-y-auto pr-1">
+        {% for g in plan.grupos_seleccionados %}
+        <div class="flex items-center justify-between gap-2 bg-gray-50 rounded-lg px-3 py-1.5 text-sm">
+            <div class="flex-1 min-w-0">
+                <p class="font-medium text-gray-800 text-[13px] leading-tight truncate">{{ g.nombre }}</p>
+                <p class="text-gray-500 text-xs">Grupo {{ g.grupo }} &mdash; {{ g.docente }}</p>
+            </div>
+            <button type="button"
+                    onclick="window.__toggleGrupo({checked:false}, '{{ g.codigo_sis }}', '{{ g.grupo }}')"
+                    class="text-red-400 hover:text-red-600 hover:bg-red-50 text-base font-bold leading-none rounded px-1.5 py-1"
+                    title="Eliminar">
+                &times;
+            </button>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p class="text-sm text-gray-400 mb-4">No has seleccionado materias a&uacute;n.</p>
+    {% endif %}
+
+    {% if plan.grupos_seleccionados|length > 8 %}
+    <div class="bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 mb-4 text-xs text-amber-800">
+        <p class="font-semibold mb-0.5">Advertencia de carga acad&eacute;mica</p>
+        <p>Has superado las 8 materias recomendadas para un semestre regular. Puedes continuar, pero ten en cuenta la carga acad&eacute;mica.</p>
+    </div>
+    {% endif %}
+
+    {% if plan.conflictos %}
+    <div class="bg-red-50 border border-red-200 rounded-lg px-3 py-2 mb-4 text-xs text-red-700">
+        <p class="font-semibold mb-1">Conflicto de horario:</p>
+        {% for c in plan.conflictos %}
+        <p>{{ c.materia1 }} G{{ c.grupo1 }} &harr; {{ c.materia2 }} G{{ c.grupo2 }}</p>
+        <p class="text-red-500">{{ c.dia }} {{ c.hora_inicio1 }}-{{ c.hora_fin1 }} vs {{ c.hora_inicio2 }}-{{ c.hora_fin2 }}</p>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="flex items-center justify-between bg-gray-50 rounded-lg px-3 py-2 mb-4 text-sm">
+        <span class="text-gray-600">Horarios de auxiliares</span>
+        <button onclick="window.__toggleAux('/horario/parcial/aux')"
+                class="relative inline-flex items-center h-6 w-11 rounded-full transition
+                       {{ 'bg-emerald-600' if plan.modo_aux else 'bg-gray-300' }}"
+                role="switch"
+                aria-checked="{{ 'true' if plan.modo_aux else 'false' }}"
+                aria-label="Mostrar horarios de auxiliares">
+            <span class="inline-block w-4 h-4 transform bg-white rounded-full transition
+                         {{ 'translate-x-6' if plan.modo_aux else 'translate-x-1' }}"></span>
+        </button>
+    </div>
+</div>

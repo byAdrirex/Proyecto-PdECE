@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}Calendario Acad&eacute;mico - Planificador Acad&eacute;mico{% endblock %}
+
+{% block content %}
+<div class="max-w-6xl mx-auto">
+    <div class="mb-5">
+        <a href="/" class="text-sm text-brand-600 hover:text-brand-800 font-medium">&larr; Volver a la malla</a>
+        <p class="text-sm font-semibold tracking-widest text-brand-600 uppercase mt-5 mb-1">Informaci&oacute;n institucional</p>
+        <h1 class="text-3xl md:text-4xl font-bold text-brand-800">Calendario Acad&eacute;mico</h1>
+        <p class="text-gray-500 mt-2">Consulta las fechas acad&eacute;micas en el documento oficial.</p>
+    </div>
+
+    {% if pdf_disponible %}
+    <div class="rounded-xl border border-gray-200 bg-white shadow-sm overflow-hidden">
+        <div id="pdf-viewer" class="w-full min-h-[520px] md:min-h-[680px] bg-gray-100 p-2 sm:p-4" data-pdf-url="{{ url_for('static', filename='calendarios/' ~ pdf_filename) }}">
+            <p id="pdf-loading" class="text-center text-sm text-gray-500 py-8">Cargando calendario...</p>
+        </div>
+        <div class="p-3 text-center border-t border-gray-100 bg-gray-50">
+            <a href="{{ url_for('static', filename='calendarios/' ~ pdf_filename) }}"
+               class="text-sm font-semibold text-brand-700 hover:text-brand-900"
+               target="_blank" rel="noopener">Si tu celular no muestra el visor, ver el PDF en el navegador</a>
+        </div>
+    </div>
+    {% else %}
+    <div class="rounded-xl border border-amber-200 bg-amber-50 p-5 text-amber-900">
+        <h2 class="font-bold text-lg mb-2">Calendario pendiente de disponibilidad</h2>
+        <p>El visor est&aacute; preparado, pero todav&iacute;a no se encuentra el archivo oficial.</p>
+        <p class="text-sm mt-2">Coloca el PDF en <code class="font-mono">app/static/calendarios/calendario_academico.pdf</code> para mostrarlo aqu&iacute;.</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+    (function () {
+        var viewer = document.getElementById('pdf-viewer');
+        if (!viewer) { return; }
+        if (typeof pdfjsLib === 'undefined') {
+            var loading = document.getElementById('pdf-loading');
+            if (loading) { loading.textContent = 'Usa el enlace inferior para ver el PDF en tu navegador.'; }
+            return;
+        }
+        pdfjsLib.GlobalWorkerOptions.workerSrc =
+            'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+        var url = viewer.dataset.pdfUrl;
+        pdfjsLib.getDocument(url).promise.then(function (pdf) {
+            viewer.innerHTML = '';
+            var paginas = [];
+            for (var numero = 1; numero <= pdf.numPages; numero += 1) {
+                paginas.push(pdf.getPage(numero).then(function (page) {
+                    var base = page.getViewport({scale: 1});
+                    var ancho = Math.min(viewer.clientWidth - 16, 1100);
+                    var escala = Math.max(.65, ancho / base.width);
+                    var viewport = page.getViewport({scale: escala});
+                    var canvas = document.createElement('canvas');
+                    canvas.className = 'block w-full h-auto mx-auto mb-3 shadow-sm bg-white';
+                    canvas.width = viewport.width;
+                    canvas.height = viewport.height;
+                    viewer.appendChild(canvas);
+                    return page.render({canvasContext: canvas.getContext('2d'), viewport: viewport}).promise;
+                }));
+            }
+            return Promise.all(paginas);
+        }).catch(function () {
+            viewer.innerHTML = '<p class="text-center text-sm text-gray-600 py-8">No se pudo mostrar el visor integrado. Usa el enlace inferior para ver el PDF.</p>';
+        });
+    })();
+</script>
+{% endblock %}

@@ -1,0 +1,217 @@
+<div class="mb-4 flex items-center gap-4 flex-wrap">
+    <button type="button"
+            id="btn-menu"
+            onclick="window.__toggleMenu()"
+            class="text-gray-600 hover:text-brand-700 p-2 rounded-lg border border-gray-200 bg-white shadow-sm"
+            title="Mostrar u ocultar el men&uacute; de niveles">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+    </button>
+    <a href="/horario/cambiar-modo"
+       class="text-sm text-brand-600 hover:text-brand-800 font-medium">
+        {% if plan and plan.get("modo") == "academico" %}
+        Cambiar modo
+        {% else %}
+        Cambiar a modo con Kardex
+        {% endif %}
+    </a>
+    <a href="/malla" class="text-sm text-brand-600 hover:text-brand-800 font-medium">
+        Ver malla
+    </a>
+</div>
+
+<div class="grid grid-cols-1 gap-4 pde-grid">
+    <aside id="menu-lateral" class="lg:col-span-2">
+        <div class="bg-white text-gray-800 rounded-xl shadow-md p-3 border border-gray-200">
+            <div id="zona-niveles" class="mb-4">
+                {% include "horario/01_seleccionar_nivel.html" %}
+            </div>
+            <div id="zona-materias">
+                {% include "horario/10_placeholder_materias.html" %}
+            </div>
+            <div id="zona-grupos">
+                {% if materia_inicial %}
+                <div hx-get="/horario/parcial/grupos/{{ materia_inicial }}"
+                     hx-trigger="load"
+                     hx-target="#zona-grupos"
+                     hx-swap="outerHTML"></div>
+                {% endif %}
+            </div>
+        </div>
+    </aside>
+
+    <div id="zona-principal" class="lg:col-span-4 space-y-4">
+        <div id="zona-calendario"
+             hx-get="/horario/parcial/calendario"
+             hx-trigger="load"
+             hx-target="#zona-calendario"
+             hx-swap="innerHTML"></div>
+        <div id="col-seleccion">
+            <div id="zona-seleccion"
+                 class="w-full max-w-xl mx-auto"
+                 hx-get="/horario/parcial/sidebar"
+                 hx-trigger="load"
+                 hx-target="#zona-seleccion"
+                 hx-swap="innerHTML">
+            </div>
+        </div>
+    </div>
+</div>
+
+<button type="button"
+        id="btn-mostrar-seleccion"
+        onclick="window.__mostrarSeleccion()"
+        class="hidden fixed bottom-4 left-4 z-40 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-4 py-2 rounded-full shadow-lg text-sm">
+    Mostrar selecci&oacute;n
+</button>
+
+<div id="pde-toast"
+     class="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 hidden max-w-sm w-full px-4 py-3 rounded-lg shadow-lg text-sm font-medium text-white"></div>
+
+<style>
+    @media (min-width: 1024px) {
+        .pde-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1rem; }
+        #menu-lateral { grid-column: span 2 / span 2; }
+        #zona-principal { grid-column: span 4 / span 4; }
+        body.pde-menu-cerrado #zona-principal { grid-column: span 6 / span 6; }
+    }
+    @media (max-width: 1023px) {
+        #menu-lateral { max-height: 240px; overflow-y: auto; }
+        #zona-niveles { margin-bottom: .5rem; }
+    }
+</style>
+
+<script>
+window.__menuAbierto = true;
+window.__nivelAbierto = null;
+document.querySelectorAll('#botones-nivel button').forEach(function (boton) {
+    boton.addEventListener('click', function (event) {
+        var nivel = boton.textContent.trim();
+        var zona = document.getElementById('zona-materias');
+        if (window.__nivelAbierto === nivel) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            window.__nivelAbierto = null;
+            if (zona) {
+                zona.innerHTML = '<div class="rounded-lg border border-dashed border-gray-300 bg-gray-50 p-4 text-sm text-gray-500">Selecciona un nivel para ver sus materias.</div>';
+            }
+            var grupos = document.getElementById('zona-grupos');
+            if (grupos) { grupos.innerHTML = ''; }
+            boton.classList.remove('bg-brand-600', 'text-white', 'border-brand-400');
+            return;
+        }
+        window.__nivelAbierto = nivel;
+        document.querySelectorAll('#botones-nivel button').forEach(function (otro) {
+            otro.classList.remove('bg-brand-600', 'text-white', 'border-brand-400');
+        });
+        boton.classList.add('bg-brand-600', 'text-white', 'border-brand-400');
+    }, true);
+});
+window.__toggleMenu = function () {
+    var aside = document.getElementById('menu-lateral');
+    if (!aside) { return; }
+    window.__menuAbierto = !window.__menuAbierto;
+    document.body.classList.toggle('pde-menu-cerrado', !window.__menuAbierto);
+    aside.classList.toggle('hidden', !window.__menuAbierto);
+    try { localStorage.setItem('pde_menu', window.__menuAbierto ? '1' : '0'); } catch (e) {}
+    setTimeout(function () {
+        if (window.__pdeCal && window.__pdeCal.updateSize) { window.__pdeCal.updateSize(); }
+    }, 60);
+};
+window.__ocultarSeleccion = function () {
+    var col = document.getElementById('col-seleccion');
+    var btn = document.getElementById('btn-mostrar-seleccion');
+    if (col) { col.classList.add('hidden'); }
+    if (btn) { btn.classList.remove('hidden'); }
+};
+window.__mostrarSeleccion = function () {
+    var col = document.getElementById('col-seleccion');
+    var btn = document.getElementById('btn-mostrar-seleccion');
+    if (col) { col.classList.remove('hidden'); }
+    if (btn) { btn.classList.add('hidden'); }
+};
+window.__refrescarZonas = function () {
+    if (window.__pdeCal) { window.__pdeCal.refetchEvents(); }
+    fetch('/horario/parcial/sidebar')
+        .then(function (r) { return r.text(); })
+        .then(function (html) {
+            var zona = document.getElementById('zona-seleccion');
+            if (!zona) { return; }
+            zona.innerHTML = html;
+            if (window.htmx) { htmx.process(zona); }
+        })
+        .catch(function () {});
+};
+window.__toggleAux = function (url) {
+    fetch(url || '/horario/parcial/aux', {method: 'POST'})
+        .then(function () { window.__refrescarZonas(); })
+        .catch(function () {});
+};
+window.__toast = function (msg, tipo) {
+    var t = document.getElementById('pde-toast');
+    if (!t) { return; }
+    t.textContent = msg;
+    t.className = 'fixed bottom-4 left-1/2 -translate-x-1/2 z-50 max-w-sm w-full px-4 py-3 rounded-lg shadow-lg text-sm font-medium text-white ' +
+        (tipo === 'error' ? 'bg-red-600' : 'bg-emerald-600');
+    t.classList.remove('hidden');
+    clearTimeout(window.__toastTimer);
+    window.__toastTimer = setTimeout(function () { t.classList.add('hidden'); }, 4000);
+};
+window.__toggleGrupo = function (el, codigo, grupo) {
+    var url = el.checked ? '/horario/parcial/seleccionar' : '/horario/parcial/eliminar';
+    var body = new URLSearchParams();
+    body.append('codigo_sis', codigo);
+    body.append('grupo', grupo);
+    fetch(url, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: body.toString()
+    }).then(function (r) { return r.json(); })
+      .then(function (data) {
+          if (!data.ok) {
+              el.checked = false;
+              if (data.msg) { window.__toast(data.msg, 'error'); }
+              return;
+          }
+          window.__refrescarZonas();
+      })
+      .catch(function () {
+          el.checked = !el.checked;
+          window.__toast('No se pudo actualizar la seleccion.', 'error');
+      });
+};
+window.__toggleGrupos = function (codigo) {
+    var cont = document.getElementById('grupos-' + codigo);
+    if (!cont) { return; }
+    var tieneContenido = cont.getAttribute('data-cargado') === '1' || (cont.innerHTML.trim() !== '');
+    var estabaAbierto = tieneContenido && !cont.classList.contains('hidden');
+    document.querySelectorAll('[id^="grupos-"]').forEach(function (c) {
+        if (c.id !== 'grupos-' + codigo) { c.classList.add('hidden'); }
+    });
+    if (estabaAbierto) { cont.classList.add('hidden'); return; }
+    if (cont.getAttribute('data-cargado') !== '1' || !cont.innerHTML.trim()) {
+        if (window.htmx) {
+            htmx.ajax('GET', '/horario/parcial/grupos/' + codigo, {
+                target: '#grupos-' + codigo, swap: 'innerHTML'
+            });
+        }
+        cont.setAttribute('data-cargado', '1');
+    }
+    cont.classList.remove('hidden');
+};
+(function () {
+    try {
+        var guardado = localStorage.getItem('pde_menu');
+        if (guardado === '0' && window.__menuAbierto) {
+            window.__menuAbierto = false;
+            document.body.classList.add('pde-menu-cerrado');
+            var aside = document.getElementById('menu-lateral');
+            if (aside) { aside.classList.add('hidden'); }
+            setTimeout(function () {
+                if (window.__pdeCal && window.__pdeCal.updateSize) { window.__pdeCal.updateSize(); }
+            }, 250);
+        }
+    } catch (e) {}
+})();
+</script>

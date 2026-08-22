@@ -1,0 +1,116 @@
+<div class="bg-white rounded-xl shadow-md p-8 border border-gray-100 max-w-2xl mx-auto">
+    <div class="flex items-center justify-between mb-6">
+        <h2 class="text-xl font-semibold text-gray-700">
+            Agregar materias manualmente
+        </h2>
+        <button hx-get="/horario/parcial/limpiar-modo"
+                hx-target="#zona-modo"
+                hx-swap="innerHTML"
+                class="text-sm text-brand-600 hover:text-brand-800 font-medium">
+            &larr; Volver
+        </button>
+    </div>
+    <p class="text-sm text-gray-500 mb-6">
+        Si el reconocimiento de tu Kardex fall&oacute; o no tienes historial cargado,
+        agrega aqu&iacute; cada materia con su nota. Solo tienes que escribir la nota;
+        el sistema calcula el estado autom&aacute;ticamente.
+    </p>
+
+    <form hx-post="/horario/kardex/manual/agregar"
+          hx-target="#lista-manual"
+          hx-swap="innerHTML"
+          class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-6"
+          id="form-manual">
+        <label class="block text-sm font-medium text-gray-700 mb-1">
+            Materia (busca por c&oacute;digo o nombre)
+        </label>
+        <input type="text"
+               id="mat-busqueda"
+               list="mat-datalist"
+               placeholder="Ej: 1304001 o ECONOMIA GENERAL"
+               class="w-full border border-gray-300 rounded-lg px-3 py-2 mb-3 text-sm focus:ring-2 focus:ring-brand-500 focus:outline-none"
+               required
+               autocomplete="off">
+        <datalist id="mat-datalist">
+            {% for m in materias %}
+            <option value="{{ m.codigo }} - {{ m.nombre }}"></option>
+            {% endfor %}
+        </datalist>
+        <input type="hidden" name="codigo_sis" id="mat-codigo">
+
+        <div class="flex flex-wrap items-end gap-3">
+            <div class="flex-1 min-w-[160px]">
+                <label class="block text-sm font-medium text-gray-700 mb-1">
+                    Nota (0 - 100)
+                </label>
+                <input type="number"
+                       name="nota"
+                       min="0"
+                       max="100"
+                       step="0.01"
+                       placeholder="Ej: 71"
+                       class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-brand-500 focus:outline-none">
+            </div>
+            <button type="submit"
+                    class="bg-brand-600 hover:bg-brand-700 text-white font-semibold py-2 px-6 rounded-lg transition text-sm">
+                Agregar materia
+            </button>
+        </div>
+        <p id="mat-error" class="hidden text-red-600 text-xs mt-2">
+            Selecciona una materia de la lista de sugerencias.
+        </p>
+    </form>
+
+    <div id="lista-manual">
+        {% include "horario/07c_lista_manual.html" %}
+    </div>
+
+    <a href="/malla"
+       class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white text-center font-semibold py-3 rounded-lg transition text-sm">
+        Continuar a la malla <span class="sr-only">Continuar al planificador</span>
+    </a>
+</div>
+<script>
+    (function () {
+        var dl = document.getElementById('mat-datalist');
+        if (dl) {
+            var existentes = {};
+            dl.querySelectorAll('option').forEach(function (o) { existentes[o.value] = true; });
+            fetch('/horario/api/materias')
+                .then(function (r) { return r.json(); })
+                .then(function (lista) {
+                    lista.forEach(function (m) {
+                        var v = m.codigo + ' - ' + m.nombre;
+                        if (!existentes[v]) {
+                            var o = document.createElement('option');
+                            o.value = v;
+                            dl.appendChild(o);
+                            existentes[v] = true;
+                        }
+                    });
+                })
+                .catch(function () {});
+        }
+        var form = document.getElementById('form-manual');
+        var busq = document.getElementById('mat-busqueda');
+        var hidden = document.getElementById('mat-codigo');
+        var err = document.getElementById('mat-error');
+        if (!form || !busq || !hidden) { return; }
+        function sincronizar() {
+            var codigo = (busq.value || '').split(' - ')[0].trim();
+            hidden.value = codigo;
+            if (err) { err.classList.add('hidden'); }
+        }
+        busq.addEventListener('input', sincronizar);
+        busq.addEventListener('change', sincronizar);
+        form.addEventListener('submit', function (ev) {
+            var codigo = (busq.value || '').split(' - ')[0].trim();
+            if (!codigo) {
+                ev.preventDefault();
+                if (err) { err.classList.remove('hidden'); }
+                return;
+            }
+            hidden.value = codigo;
+        });
+    })();
+</script>

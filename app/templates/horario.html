@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Armar mi Horario - Planificador Academico{% endblock %}
+
+{% block head %}
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="mb-6 flex items-center justify-between">
+    <div>
+        <h1 class="text-2xl md:text-3xl font-bold text-brand-800">Armar mi Horario</h1>
+    </div>
+    <div class="flex items-center gap-3">
+        <a href="/malla" class="text-sm text-brand-600 hover:text-brand-800 font-medium">Malla curricular</a>
+        <button type="button" onclick="window.history.back()" class="text-sm text-brand-600 hover:text-brand-800 font-medium">
+            &larr; Volver
+        </button>
+    </div>
+</div>
+
+<div id="zona-modo">
+        {% if modo_inicio == "academico" and not kardex %}
+            {% include "horario/07_subir_kardex.html" %}
+        {% elif plan %}
+        {% include "horario/09_planificador.html" %}
+    {% else %}
+        {% include "horario/00_seleccionar_modo.html" %}
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% if not ok %}
+<div class="bg-red-50 border border-red-200 rounded-lg px-4 py-3 mb-4 text-sm text-red-700"
+     hx-trigger="this:every 5s"
+     hx-swap="outerHTML">
+    <p class="font-semibold">{{ msg }}</p>
+</div>
+{% else %}
+<div class="space-y-3" hx-trigger="load" hx-get="/horario/parcial/sidebar" hx-target="#zona-seleccion" hx-swap="innerHTML"></div>
+<div class="space-y-3" hx-trigger="load" hx-get="/horario/parcial/calendario" hx-target="#zona-calendario" hx-swap="innerHTML"></div>
+{% if msg %}
+<div class="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-sm text-amber-700">
+    <p>{{ msg }}</p>
+</div>
+{% endif %}
+{% for adv in plan.advertencias %}
+<div class="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-sm text-amber-700"
+     hx-trigger="this:every 8s"
+     hx-swap="outerHTML">
+    <p>{{ adv.mensaje }}</p>
+</div>
+{% endfor %}
+{% endif %}

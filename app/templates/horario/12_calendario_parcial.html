@@ -1,0 +1,129 @@
+<div class="mt-6 bg-white rounded-xl shadow-md p-2 sm:p-4 border border-gray-100">
+    <div class="flex items-center justify-between mb-3">
+        <h3 class="text-lg font-bold text-brand-800">MI HORARIO</h3>
+        {% if not plan.grupos_seleccionados %}
+        <p class="text-xs text-gray-400">Selecciona materias para ir llenando tu horario.</p>
+        {% endif %}
+    </div>
+    <div id="calendar-scroll" class="overflow-x-auto rounded-lg border border-gray-200">
+        <div id="calendar" class="rounded-lg"></div>
+    </div>
+</div>
+<style>
+    .fc-timegrid-slot-label { min-width: 110px; }
+    .fc-hora-rango { font-size: 13px; white-space: nowrap; font-weight: 600; color: #334155; }
+    .fc-bloque { height: 100%; min-height: 0; box-sizing: border-box; padding: 4px 5px; line-height: 1.1; display: flex; flex-direction: column; justify-content: center; gap: 1px; white-space: normal; overflow: hidden; overflow-wrap: anywhere; }
+    .fc-bloque-nombre { font-size: 12px; font-weight: 700; line-height: 1.1; overflow-wrap: anywhere; }
+    .fc-bloque-aula, .fc-bloque-grupo { font-size: 11px; line-height: 1.1; opacity: 0.95; overflow-wrap: anywhere; }
+    .fc-bloque-aux { font-size: 10px; font-weight: 700; text-transform: uppercase; }
+    .fc-bloque-alerta { font-size: 12px; font-weight: 700; margin-top: 2px; }
+    .fc-timegrid-event, .fc-timegrid-event-harness { border-radius: 6px !important; overflow: hidden !important; }
+    .fc-timegrid-slot, .fc-timegrid-slot-lane { height: var(--pde-slot-height, 88px) !important; }
+    @media (max-width: 767px) {
+        #calendar { min-width: 860px; }
+        .fc-timegrid-slot-label { min-width: 112px; }
+    }
+
+    /* Encabezados de dias en azul pastel */
+    .fc-col-header-cell { background: #dbeafe !important; }
+    .fc-col-header-cell .fc-col-header-cell-cushion {
+        color: #1e40af; font-weight: 600; text-transform: capitalize; font-size: 16px; padding: 6px 2px;
+    }
+
+    /* Solo la columna de horas (izquierda) con fondo gris; el resto en blanco */
+    .fc-timegrid-slots { background: #ffffff; }
+    .fc-timegrid-slots .fc-timegrid-slot { background: transparent; }
+    .fc-timegrid-slot-label, .fc-timegrid-slot-label-frame { background: #e2e8f0; }
+    .fc-timegrid-slot-main, .fc-timegrid-col { background: #ffffff; }
+    .fc-timegrid-col { border-left: 1px solid #e5e7eb; }
+    .fc-timegrid-col:first-child { border-left: 0; }
+
+    /* Celda A1 (esquina): gris, etiqueta "Hora" */
+    .fc-timegrid-axis.fc-col-header-cell { background: #e2e8f0 !important; color: #334155; font-size: 14px; font-weight: 700; }
+    .fc-timegrid-axis.fc-col-header-cell .fc-col-header-cell-cushion {
+        color: #334155; font-size: 14px; font-weight: 700;
+    }
+
+    /* Quitar el resaltado del dia actual SOLO en las columnas de horario (cuerpo);
+       los encabezados de dia (p.ej. Miercoles) conservan el azul pastel */
+    .fc-timegrid-col.fc-day-today, .fc-timegrid-col.fc-day-today .fc-timegrid-col-frame {
+        background: transparent !important;
+    }
+
+    /* Conflictos en rojo intenso */
+    .fc-bloque-conflicto { background: #ef4444 !important; border-color: #b91c1c !important; }
+    .fc-bloque-conflicto .fc-bloque-alerta { color: #ffffff !important; }
+</style>
+<script>
+    (function () {
+        var calendarEl = document.getElementById('calendar');
+        if (!calendarEl || typeof FullCalendar === 'undefined') { return; }
+        if (calendarEl.__pde_calendar) { calendarEl.__pde_calendar.destroy(); }
+        function fmt(d) {
+            var h = d.getHours();
+            var m = d.getMinutes();
+            return ('0' + h).slice(-2) + ':' + ('0' + m).slice(-2);
+        }
+        var cal = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'timeGridWeek',
+            locale: 'es',
+            headerToolbar: false,
+            slotDuration: '01:30:00',
+            slotMinHeight: 88,
+            slotMinTime: '06:45:00',
+            slotMaxTime: '21:45:00',
+            hiddenDays: [0],
+            allDaySlot: false,
+            height: 'auto',
+            expandRows: false,
+            events: '/horario/parcial/calendario-eventos',
+            dayHeaderFormat: { weekday: 'long' },
+            displayEventTime: false,
+            eventDisplay: 'block',
+            eventDidMount: function () {
+                requestAnimationFrame(ajustarAlturaDeSlots);
+            },
+            eventContent: function (info) {
+                var ep = info.event.extendedProps || {};
+                var html = '<div class="fc-bloque' + (ep.conflicto ? ' fc-bloque-conflicto' : '') + '">';
+                html += '<div class="fc-bloque-nombre">' + (ep.nombre || info.event.title || '') + '</div>';
+                html += '<div class="fc-bloque-aula">Aula: ' + (ep.aula || '-') + '</div>';
+                html += '<div class="fc-bloque-grupo">Grupo: ' + (ep.grupo || '-') + '</div>';
+                if (ep.tipo === 'AUX') { html += '<div class="fc-bloque-aux">[AUX]</div>'; }
+                if (ep.conflicto) { html += '<div class="fc-bloque-alerta">Conflicto de horario</div>'; }
+                html += '</div>';
+                return { html: html };
+            },
+            slotLabelContent: function (arg) {
+                var d = arg.date;
+                var fin = new Date(d.getTime() + 90 * 60 * 1000);
+                return { html: '<span class="fc-hora-rango">' + fmt(d) + ' - ' + fmt(fin) + '</span>' };
+            }
+        });
+        var alturaMinima = 88;
+        function ajustarAlturaDeSlots() {
+            var alturaNecesaria = alturaMinima;
+            calendarEl.querySelectorAll('.fc-bloque').forEach(function (bloque) {
+                alturaNecesaria = Math.max(alturaNecesaria, Math.ceil(bloque.scrollHeight));
+            });
+            if (alturaNecesaria > alturaMinima) {
+                alturaMinima = alturaNecesaria;
+                cal.setOption('slotMinHeight', alturaMinima);
+                calendarEl.querySelectorAll('.fc-timegrid-slot').forEach(function (slot) {
+                    slot.style.height = alturaMinima + 'px';
+                });
+                calendarEl.style.setProperty('--pde-slot-height', alturaMinima + 'px');
+                if (cal.updateSize) { cal.updateSize(); }
+            }
+        }
+        cal.render();
+        calendarEl.__pde_calendar = cal;
+        window.__pdeCal = cal;
+        requestAnimationFrame(ajustarAlturaDeSlots);
+        var axis = calendarEl.querySelector('.fc-timegrid-axis.fc-col-header-cell');
+        if (axis) {
+            var cushion = axis.querySelector('.fc-col-header-cell-cushion') || axis;
+            cushion.textContent = 'Hora';
+        }
+    })();
+</script>
