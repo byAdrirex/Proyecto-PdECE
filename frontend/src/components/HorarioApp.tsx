@@ -1,9 +1,12 @@
 import { useEffect, useMemo, useState } from 'react';
 
 import catalogFixture from '../data/catalog.json';
+import objectivesFixture from '../data/objectives.json';
 import offerFixture from '../data/offer.json';
 import { subjectState } from '../lib/domain/academic';
+import { buildMallaModel } from '../lib/domain/curriculum';
 import { normalizeAttempts } from '../lib/domain/kardex';
+import { applyObjectiveSelections } from '../lib/domain/objectives';
 import {
   createPlan,
   detectConflicts,
@@ -15,7 +18,7 @@ import {
   type PlannerMode,
   type PlannerPlan,
 } from '../lib/domain/planner';
-import type { Catalog, Offer, Subject } from '../lib/domain/types';
+import type { Catalog, ObjectivesData, Offer, Subject } from '../lib/domain/types';
 import { AcademicWorkspace } from './AcademicWorkspace';
 import { CalendarView } from './CalendarView';
 import { Button } from './ui/Button';
@@ -23,6 +26,7 @@ import { StatusBadge } from './ui/StatusBadge';
 import { useWorkspace } from './useWorkspace';
 
 const catalog = catalogFixture as Catalog;
+const objectives = objectivesFixture as ObjectivesData;
 const offer = offerFixture as Offer;
 const emptyKardex = normalizeAttempts([]);
 const dayNames: Record<string, string> = {
@@ -40,6 +44,7 @@ export function HorarioApp({ calendarOnly = false }: HorarioAppProps) {
   const [workspace, updateWorkspace] = useWorkspace();
   const [query, setQuery] = useState('');
   const [level, setLevel] = useState<string | null>(null);
+  const [trajectoryOnly, setTrajectoryOnly] = useState(false);
   const [openSubjectCode, setOpenSubjectCode] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
   const plan = workspace.plan;
@@ -79,13 +84,20 @@ export function HorarioApp({ calendarOnly = false }: HorarioAppProps) {
 
   const offeredSubjects = useMemo(() => catalog.subjects.filter((subject) =>
     (offer.groupsBySubject[subject.code]?.length ?? 0) > 0), []);
+  const objectiveModel = useMemo(() => applyObjectiveSelections(
+    buildMallaModel(catalog, workspace.kardex ?? emptyKardex, offer),
+    objectives,
+    { mentions: workspace.activeMentions, technicians: workspace.activeTechnicians },
+  ), [workspace.kardex, workspace.activeMentions, workspace.activeTechnicians]);
+  const objectiveCodes = useMemo(() => new Set(Object.keys(objectiveModel.integrated)), [objectiveModel]);
   const visibleSubjects = useMemo(() => {
     const normalized = query.trim().toLocaleLowerCase('es');
     return offeredSubjects
       .filter((subject) => !level || subject.level === level)
+      .filter((subject) => !trajectoryOnly || objectiveCodes.has(subject.code))
       .filter((subject) => !normalized || subject.code.includes(normalized) || subject.name.toLocaleLowerCase('es').includes(normalized))
       .slice(0, normalized ? 20 : 12);
-  }, [level, offeredSubjects, query]);
+  }, [level, objectiveCodes, offeredSubjects, query, trajectoryOnly]);
   const openSubject = openSubjectCode
     ? catalog.subjects.find((subject) => subject.code === openSubjectCode) ?? null
     : null;
@@ -179,13 +191,25 @@ export function HorarioApp({ calendarOnly = false }: HorarioAppProps) {
           <div className="level-filter" aria-label="Filtrar por nivel">
             <Button variant={level === null ? 'primary' : 'quiet'} onClick={() => setLevel(null)}>Todos</Button>
             {catalog.levels.map((candidate) => <Button variant={level === candidate ? 'primary' : 'quiet'} key={candidate} onClick={() => setLevel(level === candidate ? null : candidate)}>Nivel {candidate}</Button>)}
+            {objectiveCodes.size > 0 && (
+              <Button
+                variant={trajectoryOnly ? 'primary' : 'quiet'}
+                aria-label="Filtrar trayectorias activas"
+                onClick={() => setTrajectoryOnly((active) => !active)}
+              >Trayectorias</Button>
+            )}
           </div>
           <div className="subject-results">
             {visibleSubjects.map((subject) => {
               const academic = subjectState(subject.code, catalog, workspace.kardex ?? emptyKardex, offer);
+              const memberships = objectiveModel.integrated[subject.code]?.memberships ?? [];
               return (
                 <article key={subject.code} className={openSubjectCode === subject.code ? 'is-open' : ''}>
-                  <div><strong>{subject.name}</strong><small>{subject.code} · Nivel {subject.level}</small>{plan.mode === 'academic' && <StatusBadge status={academic.status} />}</div>
+                  <div>
+                    <strong>{subject.name}</strong><small>{subject.code} · Nivel {subject.level}</small>
+                    {memberships.length > 0 && <span className="trajectory-tags">{memberships.map(({ name }) => name).join(' · ')}</span>}
+                    {plan.mode === 'academic' && <StatusBadge status={academic.status} />}
+                  </div>
                   <Button variant="quiet" aria-label={`Ver grupos de ${subject.name}`} onClick={() => setOpenSubjectCode(openSubjectCode === subject.code ? null : subject.code)}>Grupos</Button>
                 </article>
               );

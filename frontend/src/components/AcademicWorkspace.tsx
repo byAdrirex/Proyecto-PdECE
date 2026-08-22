@@ -29,6 +29,7 @@ export function AcademicWorkspace({ view = 'progress' }: AcademicWorkspaceProps)
   const [workspace, updateWorkspace] = useWorkspace();
   const [manualOpen, setManualOpen] = useState(view === 'planner');
   const [query, setQuery] = useState('');
+  const [manualGrades, setManualGrades] = useState<Record<string, string>>({});
   const [message, setMessage] = useState<string | null>(null);
   const [loadingPdf, setLoadingPdf] = useState(false);
   const kardex = workspace.kardex;
@@ -52,6 +53,16 @@ export function AcademicWorkspace({ view = 'progress' }: AcademicWorkspaceProps)
       .filter((subject) => !kardex?.attempts[subject.code])
       .slice(0, 8);
   }, [query, kardex]);
+  const trajectoryProgress = useMemo(() => [
+    ...Object.entries(summary.mentions).flatMap(([id, category]) => {
+      const objective = objectives.mentions.find((candidate) => candidate.id === id);
+      return objective ? [{ objective, category }] : [];
+    }),
+    ...Object.entries(summary.technicians).flatMap(([id, category]) => {
+      const objective = objectives.technicians.find((candidate) => candidate.id === id);
+      return objective ? [{ objective, category }] : [];
+    }),
+  ], [summary.mentions, summary.technicians]);
 
   const replaceKardex = (nextKardex: KardexState, success: string): void => {
     updateWorkspace((current) => ({
@@ -65,16 +76,33 @@ export function AcademicWorkspace({ view = 'progress' }: AcademicWorkspaceProps)
     setMessage(success);
   };
 
-  const addApproved = (code: string, name: string): void => {
+  const addManualGrade = (code: string, name: string): void => {
+    const final = Number(manualGrades[code]);
+    if (manualGrades[code]?.trim() === '' || !Number.isFinite(final) || final < 0 || final > 100) {
+      setMessage('Ingresa una nota final valida entre 0 y 100.');
+      return;
+    }
     const current = kardex ?? emptyKardex();
+    const result = final >= 51 ? 'APR' : 'REP';
     const next = normalizeAttempts({
       attempts: {
         ...current.attempts,
-        [code]: [{ year: 2026, term: 2, final: 51, result: 'APR', mode: 'N' }],
+        [code]: [{
+          year: current.currentYear ?? 2026,
+          term: current.currentTerm ?? 2,
+          final,
+          result,
+          mode: 'N',
+        }],
       },
       configuration: { currentYear: current.currentYear ?? 2026, currentTerm: current.currentTerm ?? 2 },
     });
-    replaceKardex(next, `${name} se agrego como aprobada.`);
+    replaceKardex(next, `${name} se registro como ${result === 'APR' ? 'aprobada' : 'reprobada'}.`);
+    setManualGrades((grades) => {
+      const updated = { ...grades };
+      delete updated[code];
+      return updated;
+    });
     setQuery('');
   };
 
@@ -166,7 +194,20 @@ export function AcademicWorkspace({ view = 'progress' }: AcademicWorkspaceProps)
               {matches.map((subject) => (
                 <li key={subject.code}>
                   <span><strong>{subject.name}</strong><small>{subject.code}</small></span>
-                  <Button aria-label={`Agregar ${subject.name} como aprobada`} onClick={() => addApproved(subject.code, subject.name)}>Agregar aprobada</Button>
+                  <label className="grade-field">
+                    <span>Nota final</span>
+                    <input
+                      type="number"
+                      min="0"
+                      max="100"
+                      step="1"
+                      inputMode="numeric"
+                      aria-label={`Nota final para ${subject.name}`}
+                      value={manualGrades[subject.code] ?? ''}
+                      onChange={(event) => setManualGrades((grades) => ({ ...grades, [subject.code]: event.target.value }))}
+                    />
+                  </label>
+                  <Button aria-label={`Registrar ${subject.name}`} onClick={() => addManualGrade(subject.code, subject.name)}>Registrar nota</Button>
                 </li>
               ))}
             </ul>
@@ -190,6 +231,21 @@ export function AcademicWorkspace({ view = 'progress' }: AcademicWorkspaceProps)
             <article><span>Electivas</span><strong>{summary.electives.approved.length} / {summary.electives.required}</strong></article>
             <article><span>Créditos</span><strong>{summary.approvedCredits}</strong></article>
           </div>
+          {trajectoryProgress.length > 0 && (
+            <section className="trajectory-progress" aria-labelledby="trajectory-progress-title">
+              <div className="section-heading"><h2 id="trajectory-progress-title">Progreso de trayectorias activas</h2><span>{trajectoryProgress.length}</span></div>
+              <div className="trajectory-progress__grid">
+                {trajectoryProgress.map(({ objective, category }) => (
+                  <article className="surface" key={objective.id}>
+                    <p className="eyebrow">{objective.kind === 'mention' ? 'Mención' : 'Técnico Superior'}</p>
+                    <h3>{objective.name}</h3>
+                    <strong>{category.approved} de {category.total}</strong>
+                    <ProgressBar value={category.percentage} label={`Progreso de ${objective.name}`} />
+                  </article>
+                ))}
+              </div>
+            </section>
+          )}
         </>
       )}
 

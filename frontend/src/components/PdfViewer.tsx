@@ -5,9 +5,14 @@ import { getDocument } from '../lib/pdf/pdf-worker';
 export interface PdfViewerProps {
   src: string;
   title?: string;
+  fallbackHref?: string;
 }
 
-export function PdfViewer({ src, title = 'Calendario Académico' }: PdfViewerProps) {
+export function PdfViewer({
+  src,
+  title = 'Calendario Académico',
+  fallbackHref = 'https://www.fce.umss.edu.bo/webpage/',
+}: PdfViewerProps) {
   const container = useRef<HTMLDivElement>(null);
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
 
@@ -56,8 +61,8 @@ export function PdfViewer({ src, title = 'Calendario Académico' }: PdfViewerPro
       {status === 'error' && (
         <div className="pdf-fallback" role="status">
           <h2>No se pudo mostrar el visor integrado</h2>
-          <p>El calendario oficial todavía no está disponible o tu navegador no puede abrirlo.</p>
-          <a className="button button--secondary" href={src} target="_blank" rel="noopener noreferrer">Ver el PDF en el navegador</a>
+          <p>El archivo local todavía no está disponible. Consulta la publicación vigente en el sitio institucional.</p>
+          <a className="button button--secondary" href={fallbackHref} target="_blank" rel="noopener noreferrer">Consultar el calendario en el sitio oficial de la FCE</a>
         </div>
       )}
       <div ref={container} className="pdf-pages" hidden={status === 'error'} />

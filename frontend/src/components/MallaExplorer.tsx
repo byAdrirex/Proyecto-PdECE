@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import catalogFixture from '../data/catalog.json';
 import objectivesFixture from '../data/objectives.json';
@@ -22,6 +22,8 @@ export interface MallaExplorerProps {
 export function MallaExplorer({ showBackLink = false }: MallaExplorerProps) {
   const [workspace, updateWorkspace] = useWorkspace();
   const [selectedCode, setSelectedCode] = useState<string | null>(null);
+  const closeButton = useRef<HTMLButtonElement>(null);
+  const lastSubjectTrigger = useRef<HTMLButtonElement>(null);
   const base = useMemo(
     () => buildMallaModel(catalog, workspace.kardex ?? normalizeAttempts([]), offer),
     [workspace.kardex],
@@ -34,9 +36,27 @@ export function MallaExplorer({ showBackLink = false }: MallaExplorerProps) {
     [base, workspace.activeMentions, workspace.activeTechnicians],
   );
   const selected = selectedCode ? model.subjects[selectedCode] ?? null : null;
-  const related = useMemo(() => selected
-    ? new Set([selected.code, ...selected.prerequisites, ...selected.dependents])
-    : new Set<string>(), [selected]);
+  const selectedConnections = useMemo(() => selectedCode
+    ? model.connections.filter(({ from, to }) => from === selectedCode || to === selectedCode)
+    : [], [model.connections, selectedCode]);
+  const related = useMemo(() => selectedCode
+    ? new Set([selectedCode, ...selectedConnections.flatMap(({ from, to }) => [from, to])])
+    : new Set<string>(), [selectedCode, selectedConnections]);
+
+  const closeDialog = useCallback((): void => {
+    setSelectedCode(null);
+    lastSubjectTrigger.current?.focus();
+  }, []);
+
+  useEffect(() => {
+    if (!selectedCode) return;
+    closeButton.current?.focus();
+    const closeOnEscape = (event: KeyboardEvent): void => {
+      if (event.key === 'Escape') closeDialog();
+    };
+    document.addEventListener('keydown', closeOnEscape);
+    return () => document.removeEventListener('keydown', closeOnEscape);
+  }, [closeDialog, selectedCode]);
 
   const toggleObjective = (id: string, kind: 'mention' | 'technician'): void => {
     updateWorkspace((current) => {
@@ -54,7 +74,10 @@ export function MallaExplorer({ showBackLink = false }: MallaExplorerProps) {
       type="button"
       className={`subject-card subject-card--${subject.status.toLowerCase()}${selected && !related.has(subject.code) ? ' subject-card--dimmed' : ''}`}
       data-subject-code={subject.code}
-      onClick={() => setSelectedCode(subject.code)}
+      onClick={(event) => {
+        lastSubjectTrigger.current = event.currentTarget;
+        setSelectedCode(subject.code);
+      }}
       style={subject.colorGradient ? { background: subject.colorGradient } : undefined}
     >
       <span className="subject-card__code">{subject.code}</span>
@@ -134,6 +157,7 @@ export function MallaExplorer({ showBackLink = false }: MallaExplorerProps) {
               type="button"
               key={objective.id}
               aria-pressed={workspace.activeTechnicians.includes(objective.id)}
+              aria-label={`${workspace.activeTechnicians.includes(objective.id) ? 'Desactivar' : 'Activar'} ${objective.name}`}
               onClick={() => toggleObjective(objective.id, 'technician')}
             >
               <span>Técnico Superior</span><strong>{objective.name}</strong>
@@ -145,6 +169,7 @@ export function MallaExplorer({ showBackLink = false }: MallaExplorerProps) {
               type="button"
               key={objective.id}
               aria-pressed={workspace.activeMentions.includes(objective.id)}
+              aria-label={`${workspace.activeMentions.includes(objective.id) ? 'Desactivar' : 'Activar'} ${objective.name}`}
               onClick={() => toggleObjective(objective.id, 'mention')}
             >
               <span>Mención</span><strong>{objective.name}</strong>
@@ -155,11 +180,11 @@ export function MallaExplorer({ showBackLink = false }: MallaExplorerProps) {
       </section>
 
       {selected && (
-        <div className="modal-backdrop" onMouseDown={(event) => event.target === event.currentTarget && setSelectedCode(null)}>
+        <div className="modal-backdrop" onMouseDown={(event) => event.target === event.currentTarget && closeDialog()}>
           <section role="dialog" aria-modal="true" aria-label={`Detalle de ${selected.name}`} className="subject-dialog">
             <header>
               <div><p className="eyebrow">SIS {selected.code}</p><h2>{selected.name}</h2></div>
-              <Button variant="quiet" aria-label="Cerrar detalle" onClick={() => setSelectedCode(null)}>×</Button>
+              <Button ref={closeButton} variant="quiet" aria-label="Cerrar detalle" onClick={closeDialog}>×</Button>
             </header>
             <div className="subject-dialog__meta">
               <StatusBadge status={selected.status} />
@@ -170,6 +195,16 @@ export function MallaExplorer({ showBackLink = false }: MallaExplorerProps) {
               <div><h3>Prerrequisitos</h3>{selected.prerequisites.length ? selected.prerequisites.map(subjectLink) : <p>No requiere prerrequisitos</p>}</div>
               <div><h3>Materias que habilita</h3>{selected.dependents.length ? selected.dependents.map(subjectLink) : <p>No habilita otras materias</p>}</div>
             </div>
+            <section className="connection-list" aria-label={`Conexiones de ${selected.name}`}>
+              <h3>Conexiones de prerrequisitos</h3>
+              <ul>
+                {selectedConnections.map(({ from, to }) => (
+                  <li key={`${from}-${to}`}>
+                    {model.subjects[from]?.name ?? from} → {model.subjects[to]?.name ?? to}
+                  </li>
+                ))}
+              </ul>
+            </section>
             {selected.offered && <a className="button button--primary" href={`/horario?materia=${selected.code}`}>Ver {selected.groupCount} grupos disponibles</a>}
           </section>
         </div>

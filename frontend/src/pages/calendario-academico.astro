@@ -11,6 +11,10 @@ import AppLayout from '../layouts/AppLayout.astro';
       <h1>Calendario Académico</h1>
       <p>Consulta las fechas académicas en el documento oficial.</p>
     </header>
-    <PdfViewer src="/calendario-academico.pdf" client:load />
+    <PdfViewer
+      src="/calendario-academico.pdf"
+      fallbackHref="https://www.fce.umss.edu.bo/webpage/"
+      client:only="react"
+    />
   </section>
 </AppLayout>

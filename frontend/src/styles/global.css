@@ -93,6 +93,9 @@ h2 { font-size: clamp(1.35rem, 2vw, 2rem); }
 .relation-grid > div { padding: 1rem; border-radius: 12px; background: #f4f7fa; }
 .relation-grid h3 { font-size: .85rem; }
 .relation-grid p { color: var(--muted); font-size: .77rem; }
+.connection-list { margin-bottom: 1rem; padding: .9rem 1rem; border: 1px solid var(--line); border-radius: 12px; }
+.connection-list h3 { margin-bottom: .5rem; font-size: .82rem; }
+.connection-list ul { margin: 0; padding-left: 1.1rem; color: var(--muted); font-size: .72rem; line-height: 1.7; }
 .text-link { display: block; width: 100%; margin-bottom: .35rem; padding: 0; border: 0; background: transparent; color: var(--brand); font-size: .76rem; font-weight: 700; text-align: left; cursor: pointer; }
 .content-page, .academic-workspace, .planner-calendar-page { width: min(1200px,100%); margin: auto; }
 .narrow-page { width: min(650px,100%); margin: 3rem auto; padding: clamp(1.4rem,4vw,2.5rem); text-align: center; }
@@ -110,6 +113,8 @@ input[type='search'] { width: 100%; height: 44px; border: 1px solid #bdcad6; bor
 .search-results li { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .7rem 0; border-top: 1px solid var(--line); }
 .search-results li > span, td > strong, td > small { display: block; }
 .search-results small, td small { color: var(--muted); font-size: .68rem; }
+.grade-field { width: 88px; }
+.grade-field input { width: 100%; height: 38px; border: 1px solid #bdcad6; border-radius: 8px; padding: 0 .55rem; }
 .progress-hero { display: grid; grid-template-columns: minmax(240px,.8fr) 1.2fr; align-items: center; gap: 2rem; }
 .progress-hero h2 { margin: 0; font-size: 2.7rem; }
 .progress-hero p:last-child { margin: .3rem 0 0; color: var(--muted); font-size: .78rem; }
@@ -119,6 +124,11 @@ input[type='search'] { width: 100%; height: 44px; border: 1px solid #bdcad6; bor
 .metric-grid article { display: grid; gap: .3rem; min-height: 95px; padding: 1rem; border: 1px solid var(--line); border-radius: 13px; background: #fff; }
 .metric-grid article span { color: var(--muted); font-size: .68rem; text-transform: uppercase; }
 .metric-grid article strong { color: var(--brand-deep); font-size: 1.3rem; }
+.trajectory-progress { margin: 1.4rem 0; }
+.trajectory-progress__grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(230px,1fr)); gap: .7rem; }
+.trajectory-progress__grid article { padding: 1rem; }
+.trajectory-progress__grid h3 { min-height: 2.4em; font-size: .82rem; }
+.trajectory-progress__grid strong { display: block; margin-bottom: .55rem; color: var(--brand); font-size: .8rem; }
 .table-scroll { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; }
 th, td { padding: .75rem; border-bottom: 1px solid var(--line); text-align: left; font-size: .75rem; }
@@ -140,6 +150,7 @@ th { color: var(--muted); font-size: .65rem; text-transform: uppercase; }
 .subject-results article > div { display: grid; gap: .2rem; }
 .subject-results strong { font-size: .75rem; line-height: 1.25; }
 .subject-results small { color: var(--muted); font-size: .62rem; }
+.trajectory-tags { width: fit-content; padding: .2rem .4rem; border-radius: 6px; background: #f4e9cb; color: #79531b; font-size: .58rem; font-weight: 800; }
 .subject-results .status { margin-top: .2rem; }
 .group-panel { margin-top: 1rem; padding-top: 1rem; border-top: 2px solid #cad8e4; }
 .group-panel h2 { font-family: inherit; font-size: 1rem; }
@@ -214,4 +225,4 @@ th { color: var(--muted); font-size: .65rem; text-transform: uppercase; }
 .pdf-external { display: block; padding-top: 1rem; text-align: center; font-size: .78rem; font-weight: 700; }
 @media (max-width: 900px) { .site-nav { align-items: flex-start; padding: .8rem 0; flex-direction: column; gap: .4rem; } .site-links { width: 100%; justify-content: flex-start; overflow-x: auto; } .site-links a { white-space: nowrap; } .planner-layout { grid-template-columns: 1fr; } .planner-browser { position: static; max-height: none; } .objective-grid, .guide-links { grid-template-columns: repeat(2,1fr); } .quick-links, .metric-grid { grid-template-columns: repeat(2,1fr); } }
 @media (max-width: 600px) { .site-main, .site-nav { width: min(100% - 1rem,1680px); } .site-footer { flex-direction: column; } .floating-actions a span { display: none; } .page-heading h1 { font-size: 2.35rem; } .quick-links, .objective-grid, .guide-links, .import-grid, .metric-grid, .relation-grid, .progress-hero, .calendar-event-list { grid-template-columns: 1fr; } .planner-heading { align-items: flex-start; flex-direction: column; } .semester-grid { grid-template-columns: repeat(9,80vw); min-width: calc(9 * 80vw + 8 * .8rem); } .action-row { flex-direction: column; } .metric-grid--planner { grid-template-columns: 1fr; } .search-results li { align-items: stretch; flex-direction: column; } .site-links a { font-size: .75rem; } }
-@media print { body { background: #fff; } .site-header, .site-footer, .floating-actions, .quick-links, .planner-toolbar, .back-link, button, input, .action-row { display: none !important; } .site-main { width: 100%; max-width: none; padding: 0; } .surface { box-shadow: none; } .semester-scroll, .calendar-overflow { overflow: visible; } .semester-grid { transform-origin: top left; transform: scale(.56); width: 178%; min-width: 0; grid-template-columns: repeat(9,1fr); } .planner-layout { display: block; } .planner-browser { display: none; } .calendar-canvas { min-width: 0; } }
+@media print { body { background: #fff; } .site-header, .site-footer, .floating-actions, .quick-links, .planner-toolbar, .back-link, .button, input, .action-row, .level-filter, .aux-toggle button { display: none !important; } .subject-card, .objective-grid button { display: block !important; color: #17263b !important; } .site-main { width: 100%; max-width: none; padding: 0; } .surface { box-shadow: none; } .semester-scroll, .calendar-overflow { overflow: visible; } .semester-grid { transform-origin: top left; transform: scale(.56); width: 178%; min-width: 0; grid-template-columns: repeat(9,1fr); } .planner-layout { display: block; } .planner-browser { display: none; } .calendar-canvas { min-width: 0; } }

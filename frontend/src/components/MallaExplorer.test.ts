@@ -2,7 +2,8 @@ import { afterEach, describe, expect, it } from 'vitest';
 import { createElement } from 'react';
 
 import { MallaExplorer } from './MallaExplorer';
-import { click, elementByText, renderComponent, type RenderedComponent } from './test-utils';
+import { act } from 'react';
+import { buttonByName, click, elementByText, renderComponent, type RenderedComponent } from './test-utils';
 
 let rendered: RenderedComponent | null = null;
 
@@ -24,13 +25,20 @@ describe('MallaExplorer', () => {
     expect(dialog?.textContent).toContain('No requiere prerrequisitos');
     expect(dialog?.textContent).toContain('Materias que habilita');
     expect(dialog?.textContent).toContain('MICROECONOMIA I');
+    const connections = rendered.container.querySelector('[aria-label="Conexiones de ECONOMIA GENERAL"]');
+    expect(connections?.textContent).toContain('ECONOMIA GENERAL → MICROECONOMIA I');
+    expect(document.activeElement?.getAttribute('aria-label')).toBe('Cerrar detalle');
+
+    await act(async () => document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape' })));
+    expect(rendered.container.querySelector('[role="dialog"]')).toBeNull();
+    expect(document.activeElement?.textContent).toContain('ECONOMIA GENERAL');
   });
 
   it('renders all nine semesters and persists active trajectory selections', async () => {
     rendered = await renderComponent(createElement(MallaExplorer));
 
     expect(rendered.container.querySelectorAll('[data-semester]')).toHaveLength(9);
-    await click(elementByText(rendered.container, 'ECONOMIA DEL DESARROLLO'));
+    await click(buttonByName(rendered.container, 'Activar ECONOMIA DEL DESARROLLO'));
 
     expect(localStorage.getItem('pde.workspace.v1')).toContain('M01');
     expect(rendered.container.querySelector('[aria-pressed="true"]')?.textContent).toContain(

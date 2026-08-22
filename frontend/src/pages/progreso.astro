@@ -4,5 +4,5 @@ import AppLayout from '../layouts/AppLayout.astro';
 ---
 
 <AppLayout title="Mi Progreso · Planificador Académico UMSS">
-  <AcademicWorkspace view="progress" client:load />
+  <AcademicWorkspace view="progress" client:only="react" />
 </AppLayout>

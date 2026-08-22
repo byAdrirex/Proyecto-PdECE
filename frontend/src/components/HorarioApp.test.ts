@@ -2,6 +2,8 @@ import { createElement } from 'react';
 import { afterEach, describe, expect, it } from 'vitest';
 
 import { loadWorkspace } from '../lib/storage';
+import { createPlan } from '../lib/domain/planner';
+import { saveWorkspace } from '../lib/storage';
 import { HorarioApp } from './HorarioApp';
 import {
   buttonByName,
@@ -64,5 +66,21 @@ describe('HorarioApp', () => {
     expect(rendered.container.textContent).toContain('1 conflicto de horario');
     expect(rendered.container.textContent).toContain('Martes 09:45–11:15');
     expect(loadWorkspace().plan?.conflicts).toHaveLength(1);
+  });
+
+  it('filters and labels offered subjects from active objective projections', async () => {
+    saveWorkspace({
+      ...loadWorkspace(),
+      activeMentions: ['M01'],
+      mode: 'manual',
+      plan: createPlan('manual', 2026, 2),
+    });
+    rendered = await renderComponent(createElement(HorarioApp));
+
+    await click(buttonByName(rendered.container, 'Filtrar trayectorias activas'));
+
+    expect(rendered.container.textContent).toContain('DEMOGRAFIA');
+    expect(rendered.container.textContent).toContain('ECONOMIA DEL DESARROLLO');
+    expect(rendered.container.textContent).not.toContain('ECONOMIA GENERAL');
   });
 });
