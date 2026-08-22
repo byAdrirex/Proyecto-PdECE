@@ -1,43 +1,48 @@
-# Astro Starter Kit: Minimal
+# Planificador Académico UMSS — Astro + React
+
+Frontend estático para explorar la malla curricular, revisar progreso y armar horarios. Todo el trabajo personalizado ocurre en el navegador: el Kardex se procesa con PDF.js y se guarda en `localStorage`; ningún PDF ni dato personal se envía al Worker.
+
+## Desarrollo y verificación
+
+Desde `frontend/`:
 
 ```sh
-npm create astro@latest -- --template minimal
+npm install
+npm run dev
+npm run test
+npm run check
+npm run build
+npm run preview
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+El build estático se genera en `frontend/dist/`.
 
-## 🚀 Project Structure
+## Deploy temporal en Cloudflare Workers
 
-Inside of your Astro project, you'll see the following folders and files:
+El Worker usa Assets estáticos y el nombre temporal `planificador-academico-umss-temp`.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```sh
+npx wrangler login
+npm run deploy:dry
+npm run deploy
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+`wrangler login` abre el navegador para autorizar la cuenta de Cloudflare. El deploy devuelve una URL `https://planificador-academico-umss-temp.<subdominio>.workers.dev` para las pruebas.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Para publicar con tu dominio:
 
-Any static assets, like images, can be placed in the `public/` directory.
+1. Ejecuta `npx wrangler login` con la cuenta que administra el dominio.
+2. Cambia `name` en `wrangler.jsonc` al nombre definitivo del Worker.
+3. En Cloudflare, abre **Workers & Pages → tu Worker → Settings → Domains & Routes → Add Custom Domain** y selecciona el dominio/subdominio.
+4. También puedes declarar `routes` en `wrangler.jsonc` si necesitas una ruta administrada por zona; el DNS y el dominio deben estar en la misma cuenta.
+5. Verifica `/`, `/malla`, `/progreso`, `/horario` y `/calendario-academico` después del deploy.
 
-## 🧞 Commands
+El sitio no requiere KV, D1, R2, Durable Objects ni endpoints. La información de Kardex permanece local en cada navegador; limpiar los datos del sitio elimina ese historial.
 
-All commands are run from the root of the project, from a terminal:
+## Rutas
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- `/` y `/malla`: malla curricular, relaciones, menciones y técnicos.
+- `/progreso` y `/nuevo`: progreso y carga/registro de Kardex.
+- `/horario` y `/horario/calendario`: planificador y calendario.
+- `/guia`: instrucciones de uso.
+- `/calendario-academico`: visor/fallback del calendario institucional.
